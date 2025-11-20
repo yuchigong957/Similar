@@ -1,0 +1,123 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_3",
+            "idx": 0,
+            "mem_used_rate": 0.05078125,
+            "malloc": [
+                {
+                    "addr": 3981312,
+                    "ori_size": 0,
+                    "size": 212992
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_3",
+                    "addr": 3981312,
+                    "size": 212992
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_4",
+            "idx": 1,
+            "mem_used_rate": 0.1015625,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 212992
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_3",
+                    "addr": 3981312,
+                    "size": 212992
+                },
+                {
+                    "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_4",
+                    "addr": 0,
+                    "size": 212992
+                }
+            ],
+            "free": []
+        },
+        "kernel[2]": {
+            "name": "Concat.layer.im_propagate_output_names_generated_span_1",
+            "idx": 2,
+            "mem_used_rate": 0.15234375,
+            "malloc": [
+                {
+                    "addr": 212992,
+                    "ori_size": 0,
+                    "size": 425984
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_3",
+                    "addr": 3981312,
+                    "size": 212992
+                },
+                {
+                    "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_4",
+                    "addr": 0,
+                    "size": 212992
+                },
+                {
+                    "name": "Concat.layer.im_propagate_output_names_generated_span_1",
+                    "addr": 212992,
+                    "size": 425984
+                }
+            ],
+            "free": [
+                {
+                    "name": "Concat.layer.im_propagate_output_names_generated_span_1",
+                    "addr": 3981312,
+                    "size": 212992
+                },
+                {
+                    "name": "Concat.layer.im_propagate_output_names_generated_span_1",
+                    "addr": 0,
+                    "size": 212992
+                }
+            ]
+        },
+        "kernel[3]": {
+            "name": "DmaOut.layer.copy_out__im_PropagateOutputNames_added_name_5",
+            "idx": 3,
+            "mem_used_rate": 0.1015625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "Concat.layer.im_propagate_output_names_generated_span_1",
+                    "addr": 212992,
+                    "size": 425984
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out__im_PropagateOutputNames_added_name_5",
+                    "addr": 212992,
+                    "size": 425984
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 425984
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["2Fmodel2Fbackbone2Fstage42Fstage42E22Fconv12Factivate2FRelu_output_0","2Fmodel2Fbackbone2Fstage42Fstage42E22Fpoolings2FMaxPool_output_0"],
+    "input_shape": [{"dim": [1,128,13,13],"dtype": "f16","pack": 0},
+        {"dim": [1,128,13,13],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["_im_PropagateOutputNames_added_name_14"],
+    "output_shape": [{"dim": [1,256,13,13],"dtype": "f16","pack": 0}
+],
+    "layer": [{"inst_name": "im_propagate_output_names_generated_span_6","type_name": "Concat2",            "bottom": ["2Fmodel2Fbackbone2Fstage42Fstage42E22Fconv12Factivate2FRelu_output_0","2Fmodel2Fbackbone2Fstage42Fstage42E22Fpoolings2FMaxPool_output_0"],
+            "top": ["_im_PropagateOutputNames_added_name_14"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {"dim": 1}
+        }
+]
+}

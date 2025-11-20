@@ -1,0 +1,16 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["2Fmodel2Fbackbone2Fstage12Fstage12E12Fmain_conv2Factivate2FRelu_output_0"],
+    "input_shape": [{"dim": [1,32,104,104],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["_im_PropagateOutputNames_added_name_1"],
+    "output_shape": [{"dim": [1,16,104,104],"dtype": "f16","pack": 0}
+],
+    "layer": [{"inst_name": "/model/backbone/stage1/stage1.1/Split_im_0","type_name": "Slice2",            "bottom": ["2Fmodel2Fbackbone2Fstage12Fstage12E12Fmain_conv2Factivate2FRelu_output_0"],
+            "top": ["_im_PropagateOutputNames_added_name_1"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {"dim": 1,"start_index": 16,"output_size": 16}
+        }
+]
+}

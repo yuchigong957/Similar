@@ -1,0 +1,317 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_2Fmodel2Fneck2Fout_convs2E22Fcna2Factivate2FRelu_output_0",
+            "idx": 0,
+            "mem_used_rate": 0.00634765625,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 26624
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fneck2Fout_convs2E22Fcna2Factivate2FRelu_output_0",
+                    "addr": 0,
+                    "size": 26624
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "FetchParam.layer.Conv2d.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.h.0.fetch_param_data.layer",
+            "idx": 1,
+            "mem_used_rate": 0.00653076171875,
+            "malloc": [
+                {
+                    "addr": 26624,
+                    "ori_size": 0,
+                    "size": 768
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fneck2Fout_convs2E22Fcna2Factivate2FRelu_output_0",
+                    "addr": 0,
+                    "size": 26624
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.h.0.fetch_param_data.layer",
+                    "addr": 26624,
+                    "size": 768
+                }
+            ],
+            "free": []
+        },
+        "kernel[2]": {
+            "name": "FetchParam.layer.Conv2d.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.h.1.fetch_param_data.layer",
+            "idx": 2,
+            "mem_used_rate": 0.0067138671875,
+            "malloc": [
+                {
+                    "addr": 27392,
+                    "ori_size": 0,
+                    "size": 768
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fneck2Fout_convs2E22Fcna2Factivate2FRelu_output_0",
+                    "addr": 0,
+                    "size": 26624
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.h.0.fetch_param_data.layer",
+                    "addr": 26624,
+                    "size": 768
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.h.1.fetch_param_data.layer",
+                    "addr": 27392,
+                    "size": 768
+                }
+            ],
+            "free": []
+        },
+        "kernel[3]": {
+            "name": "DummyConcat.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.split_h",
+            "idx": 3,
+            "mem_used_rate": 0.007110595703125,
+            "malloc": [
+                {
+                    "addr": 28160,
+                    "ori_size": 0,
+                    "size": 1664
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fneck2Fout_convs2E22Fcna2Factivate2FRelu_output_0",
+                    "addr": 0,
+                    "size": 26624
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.h.0.fetch_param_data.layer",
+                    "addr": 26624,
+                    "size": 768
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.h.1.fetch_param_data.layer",
+                    "addr": 27392,
+                    "size": 768
+                },
+                {
+                    "name": "DummyConcat.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.split_h",
+                    "addr": 28160,
+                    "size": 1664
+                }
+            ],
+            "free": []
+        },
+        "kernel[4]": {
+            "name": "Conv2d.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.h.0",
+            "idx": 4,
+            "mem_used_rate": 0.007110595703125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fneck2Fout_convs2E22Fcna2Factivate2FRelu_output_0",
+                    "addr": 0,
+                    "size": 26624
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.h.0.fetch_param_data.layer",
+                    "addr": 26624,
+                    "size": 768
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.h.1.fetch_param_data.layer",
+                    "addr": 27392,
+                    "size": 768
+                },
+                {
+                    "name": "DummyConcat.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.split_h",
+                    "addr": 28160,
+                    "size": 1664
+                }
+            ],
+            "free": [
+                {
+                    "name": "Conv2d.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.h.0",
+                    "addr": 26624,
+                    "size": 768
+                }
+            ]
+        },
+        "kernel[5]": {
+            "name": "Conv2d.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.h.1",
+            "idx": 5,
+            "mem_used_rate": 0.000579833984375,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fneck2Fout_convs2E22Fcna2Factivate2FRelu_output_0",
+                    "addr": 0,
+                    "size": 26624
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.h.1.fetch_param_data.layer",
+                    "addr": 27392,
+                    "size": 768
+                },
+                {
+                    "name": "DummyConcat.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.split_h",
+                    "addr": 28160,
+                    "size": 1664
+                }
+            ],
+            "free": [
+                {
+                    "name": "Conv2d.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.h.1",
+                    "addr": 0,
+                    "size": 26624
+                },
+                {
+                    "name": "Conv2d.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.h.1",
+                    "addr": 27392,
+                    "size": 768
+                }
+            ]
+        },
+        "kernel[6]": {
+            "name": "FetchParam.layer./model/pet/head_module/Exp_2.fetch_param_data.kernel",
+            "idx": 6,
+            "mem_used_rate": 0.000640869140625,
+            "malloc": [
+                {
+                    "addr": 29952,
+                    "ori_size": 0,
+                    "size": 1024
+                }
+            ],
+            "used": [
+                {
+                    "name": "DummyConcat.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.split_h",
+                    "addr": 28160,
+                    "size": 1664
+                },
+                {
+                    "name": "FetchParam.layer./model/pet/head_module/Exp_2.fetch_param_data.kernel",
+                    "addr": 29952,
+                    "size": 1024
+                }
+            ],
+            "free": []
+        },
+        "kernel[7]": {
+            "name": "DummyConcat.layer./model/pet/head_module/Exp_2.0",
+            "idx": 7,
+            "mem_used_rate": 0.00103759765625,
+            "malloc": [
+                {
+                    "addr": 30976,
+                    "ori_size": 0,
+                    "size": 1664
+                }
+            ],
+            "used": [
+                {
+                    "name": "DummyConcat.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.split_h",
+                    "addr": 28160,
+                    "size": 1664
+                },
+                {
+                    "name": "FetchParam.layer./model/pet/head_module/Exp_2.fetch_param_data.kernel",
+                    "addr": 29952,
+                    "size": 1024
+                },
+                {
+                    "name": "DummyConcat.layer./model/pet/head_module/Exp_2.0",
+                    "addr": 30976,
+                    "size": 1664
+                }
+            ],
+            "free": []
+        },
+        "kernel[8]": {
+            "name": "Activation.layer./model/pet/head_module/Exp_2.h.1",
+            "idx": 8,
+            "mem_used_rate": 0.000640869140625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DummyConcat.layer./model/pet/head_module/bbox_pred.2/Conv_im_0.split_h",
+                    "addr": 28160,
+                    "size": 1664
+                },
+                {
+                    "name": "FetchParam.layer./model/pet/head_module/Exp_2.fetch_param_data.kernel",
+                    "addr": 29952,
+                    "size": 1024
+                },
+                {
+                    "name": "DummyConcat.layer./model/pet/head_module/Exp_2.0",
+                    "addr": 30976,
+                    "size": 1664
+                }
+            ],
+            "free": [
+                {
+                    "name": "Activation.layer./model/pet/head_module/Exp_2.h.1",
+                    "addr": 28160,
+                    "size": 896
+                },
+                {
+                    "name": "Activation.layer./model/pet/head_module/Exp_2.h.1",
+                    "addr": 29056,
+                    "size": 768
+                },
+                {
+                    "name": "Activation.layer./model/pet/head_module/Exp_2.h.1",
+                    "addr": 29952,
+                    "size": 1024
+                }
+            ]
+        },
+        "kernel[9]": {
+            "name": "DmaOut.layer.copy_out_2Fmodel2Fpet2Fhead_module2FExp_2_output_0",
+            "idx": 9,
+            "mem_used_rate": 0.00018310546875,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DummyConcat.layer./model/pet/head_module/Exp_2.0",
+                    "addr": 30976,
+                    "size": 1664
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_2Fmodel2Fpet2Fhead_module2FExp_2_output_0",
+                    "addr": 30976,
+                    "size": 896
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_2Fmodel2Fpet2Fhead_module2FExp_2_output_0",
+                    "addr": 31872,
+                    "size": 768
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 28160
+        }
+    ]
+}

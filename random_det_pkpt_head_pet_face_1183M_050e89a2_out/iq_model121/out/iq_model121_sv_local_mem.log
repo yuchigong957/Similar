@@ -1,0 +1,222 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_2Fmodel2Fneck2Ftop_down_blocks2E12Fcv22Fcna2Factivate2FRelu_output_0",
+            "idx": 0,
+            "mem_used_rate": 0.1015625,
+            "malloc": [
+                {
+                    "addr": 3768320,
+                    "ori_size": 0,
+                    "size": 425984
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fneck2Ftop_down_blocks2E12Fcv22Fcna2Factivate2FRelu_output_0",
+                    "addr": 3768320,
+                    "size": 425984
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "FetchParam.layer.ConvFusion.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.split.co.0.fetch_param_data.layer",
+            "idx": 1,
+            "mem_used_rate": 0.11138916015625,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 41216
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fneck2Ftop_down_blocks2E12Fcv22Fcna2Factivate2FRelu_output_0",
+                    "addr": 3768320,
+                    "size": 425984
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.split.co.0.fetch_param_data.layer",
+                    "addr": 0,
+                    "size": 41216
+                }
+            ],
+            "free": []
+        },
+        "kernel[2]": {
+            "name": "FetchParam.layer.ConvFusion.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.split.co.1.fetch_param_data.layer",
+            "idx": 2,
+            "mem_used_rate": 0.1212158203125,
+            "malloc": [
+                {
+                    "addr": 41216,
+                    "ori_size": 0,
+                    "size": 41216
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fneck2Ftop_down_blocks2E12Fcv22Fcna2Factivate2FRelu_output_0",
+                    "addr": 3768320,
+                    "size": 425984
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.split.co.0.fetch_param_data.layer",
+                    "addr": 0,
+                    "size": 41216
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.split.co.1.fetch_param_data.layer",
+                    "addr": 41216,
+                    "size": 41216
+                }
+            ],
+            "free": []
+        },
+        "kernel[3]": {
+            "name": "DummyConcat.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.0",
+            "idx": 3,
+            "mem_used_rate": 0.1466064453125,
+            "malloc": [
+                {
+                    "addr": 82432,
+                    "ori_size": 0,
+                    "size": 106496
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fneck2Ftop_down_blocks2E12Fcv22Fcna2Factivate2FRelu_output_0",
+                    "addr": 3768320,
+                    "size": 425984
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.split.co.0.fetch_param_data.layer",
+                    "addr": 0,
+                    "size": 41216
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.split.co.1.fetch_param_data.layer",
+                    "addr": 41216,
+                    "size": 41216
+                },
+                {
+                    "name": "DummyConcat.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.0",
+                    "addr": 82432,
+                    "size": 106496
+                }
+            ],
+            "free": []
+        },
+        "kernel[4]": {
+            "name": "ConvFusion.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.split.co.0",
+            "idx": 4,
+            "mem_used_rate": 0.1466064453125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fneck2Ftop_down_blocks2E12Fcv22Fcna2Factivate2FRelu_output_0",
+                    "addr": 3768320,
+                    "size": 425984
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.split.co.0.fetch_param_data.layer",
+                    "addr": 0,
+                    "size": 41216
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.split.co.1.fetch_param_data.layer",
+                    "addr": 41216,
+                    "size": 41216
+                },
+                {
+                    "name": "DummyConcat.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.0",
+                    "addr": 82432,
+                    "size": 106496
+                }
+            ],
+            "free": [
+                {
+                    "name": "ConvFusion.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.split.co.0",
+                    "addr": 0,
+                    "size": 41216
+                }
+            ]
+        },
+        "kernel[5]": {
+            "name": "ConvFusion.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.split.co.1",
+            "idx": 5,
+            "mem_used_rate": 0.03521728515625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fneck2Ftop_down_blocks2E12Fcv22Fcna2Factivate2FRelu_output_0",
+                    "addr": 3768320,
+                    "size": 425984
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.split.co.1.fetch_param_data.layer",
+                    "addr": 41216,
+                    "size": 41216
+                },
+                {
+                    "name": "DummyConcat.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.0",
+                    "addr": 82432,
+                    "size": 106496
+                }
+            ],
+            "free": [
+                {
+                    "name": "ConvFusion.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.split.co.1",
+                    "addr": 3768320,
+                    "size": 425984
+                },
+                {
+                    "name": "ConvFusion.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.split.co.1",
+                    "addr": 41216,
+                    "size": 41216
+                }
+            ]
+        },
+        "kernel[6]": {
+            "name": "DmaOut.layer.copy_out_2Fmodel2Fneck2Fdownsamples2E02Fcna2Factivate2FRelu_output_0",
+            "idx": 6,
+            "mem_used_rate": 0.0126953125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DummyConcat.layer./model/neck/downsamples.0/cna/conv/Conv_im_0.fused./model/neck/downsamples.0/cna/activate/Relu.0",
+                    "addr": 82432,
+                    "size": 106496
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_2Fmodel2Fneck2Fdownsamples2E02Fcna2Factivate2FRelu_output_0",
+                    "addr": 82432,
+                    "size": 53248
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_2Fmodel2Fneck2Fdownsamples2E02Fcna2Factivate2FRelu_output_0",
+                    "addr": 135680,
+                    "size": 53248
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 508416
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["2Fmodel2Fneck2Fbottom_up_blocks2E02Fcv22Fcna2Factivate2FRelu_output_0"],
+    "input_shape": [{"dim": [1,128,26,26],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["2Fmodel2Fneck2Fout_convs2E12Fcna2Factivate2FRelu_output_0"],
+    "output_shape": [{"dim": [1,64,26,26],"dtype": "f16","pack": 0}
+],
+    "layer": [{"inst_name": "/model/neck/out_convs.1/cna/conv/Conv_im_0","type_name": "Wino2d",            "bottom": ["2Fmodel2Fneck2Fbottom_up_blocks2E02Fcv22Fcna2Factivate2FRelu_output_0"],
+            "top": ["2Fmodel2Fneck2Fout_convs2E12Fcna2Fconv2FConv_output_0"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {
+                "num_output": 64,
+                "bias_term": 1,
+                "group": 1,
+                "pad_h": 1,
+                "pad_w": 1,
+                "kernel_h": 3,
+                "kernel_w": 3,
+                "stride_h": 1,
+                "stride_w": 1,
+                "dilation_h": 1,
+                "dilation_w": 1,
+                "num_input": 128,
+                "padding_mode": 0
+            },
+            "data": {
+                "coef": [],
+                "bias": [],
+                "factor_scale": [15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,
+                    15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,
+                    15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,
+                    15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360],
+                "coef_dtype": 1,
+                "coef_acc": [5,10,15],
+                "input_dtype": 1,
+                "input_acc": [5,10,15],
+                "output_dtype": 1,
+                "output_acc": [5,10,15]
+            }
+        },
+        {
+            "inst_name": "/model/neck/out_convs.1/cna/activate/Relu",
+            "type_name": "Activation4",
+            "bottom": ["2Fmodel2Fneck2Fout_convs2E12Fcna2Fconv2FConv_output_0"],
+            "top": ["2Fmodel2Fneck2Fout_convs2E12Fcna2Factivate2FRelu_output_0"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {"function": "ReLU","coeff": 1,"coeff2": 1,"num_input": 64,"num_output": 64},
+            "data": {"input_dtype": 1,"input_acc": [5,10,15],"output_dtype": 1,"output_acc": [5,10,15]}
+        }
+]
+}

@@ -1,0 +1,62 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E12Fdepthwise_conv2Fconv2FConv_output_0","2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E12Fdepthwise_conv2Factivate2FSigmoid_output_0"],
+    "input_shape": [{"dim": [1,64,52,52],"dtype": "f16","pack": 0},
+        {"dim": [1,64,52,52],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E12Fpointwise_conv2Fconv2FConv_output_0"],
+    "output_shape": [{"dim": [1,64,52,52],"dtype": "f16","pack": 0}
+],
+    "layer": [{"param": {"operation": 2,"num_channel": 64,"src_mode": "ONLINE","brc_mode": "CHW"},"data": {"input0_dtype": 1,                "input0_acc": [5,10,15],
+                "input1_dtype": 1,
+                "input1_acc": [5,10,15],
+                "output_dtype": 1,
+                "output_acc": [5,10,15],
+                "coef": []
+            },
+            "inst_name": "/model/person/head_module/kpt_pred.0/kpt_pred.0.1/depthwise_conv/activate/Mul",
+            "type_name": "Eltwise3",
+            "bottom": ["2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E12Fdepthwise_conv2Fconv2FConv_output_0","2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E12Fdepthwise_conv2Factivate2FSigmoid_output_0"],
+            "top": ["2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E12Fdepthwise_conv2Factivate2FMul_output_0"],
+            "hw": 1,
+            "hw_acc": [5,10,15]
+        },
+        {
+            "inst_name": "/model/person/head_module/kpt_pred.0/kpt_pred.0.1/pointwise_conv/conv/Conv_im_0",
+            "type_name": "Conv2d",
+            "bottom": ["2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E12Fdepthwise_conv2Factivate2FMul_output_0"],
+            "top": ["2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E12Fpointwise_conv2Fconv2FConv_output_0"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {
+                "num_output": 64,
+                "bias_term": 1,
+                "group": 1,
+                "pad_h": 0,
+                "pad_w": 0,
+                "kernel_h": 1,
+                "kernel_w": 1,
+                "stride_h": 1,
+                "stride_w": 1,
+                "dilation_h": 1,
+                "dilation_w": 1,
+                "num_input": 64,
+                "padding_mode": 0
+            },
+            "data": {
+                "coef": [],
+                "bias": [],
+                "factor_scale": [15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,
+                    15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,
+                    15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,
+                    15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360,15360],
+                "coef_dtype": 1,
+                "coef_acc": [5,10,15],
+                "input_dtype": 1,
+                "input_acc": [5,10,15],
+                "output_dtype": 1,
+                "output_acc": [5,10,15]
+            }
+        }
+]
+}

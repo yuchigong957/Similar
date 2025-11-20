@@ -1,0 +1,17 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["_im_PropagateOutputNames_added_name_7","_im_PropagateOutputNames_added_name_8"],
+    "input_shape": [{"dim": [1,64,26,26],"dtype": "f16","pack": 0},
+        {"dim": [1,64,26,26],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["_im_PropagateOutputNames_added_name_9"],
+    "output_shape": [{"dim": [1,128,26,26],"dtype": "f16","pack": 0}
+],
+    "layer": [{"inst_name": "im_propagate_output_names_generated_span_3","type_name": "Concat2",            "bottom": ["_im_PropagateOutputNames_added_name_7","_im_PropagateOutputNames_added_name_8"],
+            "top": ["_im_PropagateOutputNames_added_name_9"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {"dim": 1}
+        }
+]
+}

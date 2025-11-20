@@ -1,0 +1,57 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.DmaIn.layer.copy_in_2Fmodel2Fbackbone2Fstage12Fstage12E12Fmain_conv2Factivate2FRelu_output_0.0",
+            "idx": 0,
+            "mem_used_rate": 0.0888671875,
+            "malloc": [
+                {
+                    "addr": 3821568,
+                    "ori_size": 0,
+                    "size": 372736
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_2Fmodel2Fbackbone2Fstage12Fstage12E12Fmain_conv2Factivate2FRelu_output_0.0",
+                    "addr": 3821568,
+                    "size": 372736
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "DmaOut.layer.copy_out__im_PropagateOutputNames_added_name_0",
+            "idx": 1,
+            "mem_used_rate": 0.0888671875,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_2Fmodel2Fbackbone2Fstage12Fstage12E12Fmain_conv2Factivate2FRelu_output_0.0",
+                    "addr": 3821568,
+                    "size": 372736
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out__im_PropagateOutputNames_added_name_0",
+                    "addr": 3821568,
+                    "size": 372736
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 372736
+        }
+    ]
+}

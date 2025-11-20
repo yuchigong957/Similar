@@ -1,0 +1,18 @@
+{
+    "layers": [
+        {
+            "op_name": "/model/neck/upsample_1/Resize",
+            "hwlayer_names": [
+                "Interp.layer./model/neck/upsample_1/Resize"
+            ],
+            "tops": [
+                {
+                    "top_name": "2Fmodel2Fneck2Fupsample_12FResize_output_0",
+                    "in_hwlayer_id": 2,
+                    "out_hwlayer_id": 1,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["_im_PropagateOutputNames_added_name_24","2Fmodel2Fface2Fhead_module2FExp_output_0"],
+    "input_shape": [{"dim": [1,67,52,52],"dtype": "f16","pack": 0},
+        {"dim": [1,4,52,52],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["level0"],
+    "output_shape": [{"dim": [1,71,52,52],"dtype": "f16","pack": 0}
+],
+    "layer": [{"inst_name": "/Concat","type_name": "Concat2",            "bottom": ["_im_PropagateOutputNames_added_name_24","2Fmodel2Fface2Fhead_module2FExp_output_0"],
+            "top": ["level0"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {"dim": 1}
+        }
+]
+}

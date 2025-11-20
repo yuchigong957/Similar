@@ -1,0 +1,18 @@
+{
+    "layers": [
+        {
+            "op_name": "/model/backbone/stage4/stage4.2/poolings_1/MaxPool",
+            "hwlayer_names": [
+                "Pool2d.layer./model/backbone/stage4/stage4.2/poolings_1/MaxPool"
+            ],
+            "tops": [
+                {
+                    "top_name": "2Fmodel2Fbackbone2Fstage42Fstage42E22Fpoolings_12FMaxPool_output_0",
+                    "in_hwlayer_id": 2,
+                    "out_hwlayer_id": 1,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        }
+    ]
+}

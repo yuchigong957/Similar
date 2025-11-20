@@ -1,0 +1,88 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_2Fmodel2Fneck2Ftop_down_blocks2E02Fcv22Fcna2Factivate2FRelu_output_0",
+            "idx": 0,
+            "mem_used_rate": 0.05078125,
+            "malloc": [
+                {
+                    "addr": 3981312,
+                    "ori_size": 0,
+                    "size": 212992
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fneck2Ftop_down_blocks2E02Fcv22Fcna2Factivate2FRelu_output_0",
+                    "addr": 3981312,
+                    "size": 212992
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "Interp.layer./model/neck/upsample_1/Resize",
+            "idx": 1,
+            "mem_used_rate": 0.25390625,
+            "malloc": [
+                {
+                    "addr": 3129344,
+                    "ori_size": 0,
+                    "size": 851968
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fneck2Ftop_down_blocks2E02Fcv22Fcna2Factivate2FRelu_output_0",
+                    "addr": 3981312,
+                    "size": 212992
+                },
+                {
+                    "name": "Interp.layer./model/neck/upsample_1/Resize",
+                    "addr": 3129344,
+                    "size": 851968
+                }
+            ],
+            "free": [
+                {
+                    "name": "Interp.layer./model/neck/upsample_1/Resize",
+                    "addr": 3981312,
+                    "size": 212992
+                }
+            ]
+        },
+        "kernel[2]": {
+            "name": "DmaOut.layer.copy_out_2Fmodel2Fneck2Fupsample_12FResize_output_0",
+            "idx": 2,
+            "mem_used_rate": 0.203125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "Interp.layer./model/neck/upsample_1/Resize",
+                    "addr": 3129344,
+                    "size": 851968
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_2Fmodel2Fneck2Fupsample_12FResize_output_0",
+                    "addr": 3129344,
+                    "size": 851968
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 851968
+        }
+    ]
+}

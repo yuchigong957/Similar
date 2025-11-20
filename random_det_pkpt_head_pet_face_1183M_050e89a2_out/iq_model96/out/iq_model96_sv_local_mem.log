@@ -1,0 +1,113 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_2Fmodel2Fbackbone2Fstage42Fstage42E12Fblocks2E02Fconv22Factivate2FRelu_output_0",
+            "idx": 0,
+            "mem_used_rate": 0.0126953125,
+            "malloc": [
+                {
+                    "addr": 4141056,
+                    "ori_size": 0,
+                    "size": 53248
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fbackbone2Fstage42Fstage42E12Fblocks2E02Fconv22Factivate2FRelu_output_0",
+                    "addr": 4141056,
+                    "size": 53248
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_12",
+            "idx": 1,
+            "mem_used_rate": 0.025390625,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 53248
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fbackbone2Fstage42Fstage42E12Fblocks2E02Fconv22Factivate2FRelu_output_0",
+                    "addr": 4141056,
+                    "size": 53248
+                },
+                {
+                    "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_12",
+                    "addr": 0,
+                    "size": 53248
+                }
+            ],
+            "free": []
+        },
+        "kernel[2]": {
+            "name": "Eltwise.layer./model/backbone/stage4/stage4.1/blocks.0/Add",
+            "idx": 2,
+            "mem_used_rate": 0.025390625,
+            "malloc": [
+                {
+                    "addr": 4141056,
+                    "ori_size": 0,
+                    "size": 53248
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fbackbone2Fstage42Fstage42E12Fblocks2E02Fconv22Factivate2FRelu_output_0",
+                    "addr": 4141056,
+                    "size": 53248
+                },
+                {
+                    "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_12",
+                    "addr": 0,
+                    "size": 53248
+                }
+            ],
+            "free": [
+                {
+                    "name": "Eltwise.layer./model/backbone/stage4/stage4.1/blocks.0/Add",
+                    "addr": 0,
+                    "size": 53248
+                }
+            ]
+        },
+        "kernel[3]": {
+            "name": "DmaOut.layer.copy_out_2Fmodel2Fbackbone2Fstage42Fstage42E12Fblocks2E02FAdd_output_0",
+            "idx": 3,
+            "mem_used_rate": 0.0126953125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fbackbone2Fstage42Fstage42E12Fblocks2E02Fconv22Factivate2FRelu_output_0",
+                    "addr": 4141056,
+                    "size": 53248
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_2Fmodel2Fbackbone2Fstage42Fstage42E12Fblocks2E02FAdd_output_0",
+                    "addr": 4141056,
+                    "size": 53248
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 106496
+        }
+    ]
+}

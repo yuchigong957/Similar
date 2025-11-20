@@ -1,0 +1,19 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["_im_PropagateOutputNames_added_name_30","2Fmodel2Fpet2Fhead_module2FExp_1_output_0"],
+    "input_shape": [{"dim": [1,62,26,26],"dtype": "f16","pack": 0},
+        {"dim": [1,4,26,26],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["_im_PropagateOutputNames_added_name_31"],
+    "output_shape": [{"dim": [1,66,26,26],"dtype": "f16","pack": 0}
+],
+    "layer": [{"inst_name": "im_propagate_output_names_generated_span_23","type_name": "Concat2",            "bottom": ["_im_PropagateOutputNames_added_name_30","2Fmodel2Fpet2Fhead_module2FExp_1_output_0"],
+            "top": ["_im_PropagateOutputNames_added_name_31"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {"dim": 1},
+            "sv": 1,
+            "data": {"input_dtype": 1,"output_dtype": 1,"input_acc": [5,10,15],"output_acc": [5,10,15]}
+        }
+]
+}

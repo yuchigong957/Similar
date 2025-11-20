@@ -1,0 +1,18 @@
+{
+    "layers": [
+        {
+            "op_name": "im_propagate_output_names_generated_span_5",
+            "hwlayer_names": [
+                "Concat.layer.im_propagate_output_names_generated_span_5"
+            ],
+            "tops": [
+                {
+                    "top_name": "_im_PropagateOutputNames_added_name_13",
+                    "in_hwlayer_id": 3,
+                    "out_hwlayer_id": 2,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        }
+    ]
+}

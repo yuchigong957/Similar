@@ -1,0 +1,128 @@
+{
+  "name": "graph_aic",
+  "input_tensor": [
+    "2Fmodel2Fneck2Fout_convs2E22Fcna2Factivate2FRelu_output_0"
+  ],
+  "input_shape": [
+    {
+      "dim": [1,64,13,13],
+      "dtype": "f16",
+      "pack": 0
+    }
+  ],
+  "output_tensor": [
+    "2Fmodel2Fpet2Fhead_module2Fcls_pred2E22FConv_output_0"
+  ],
+  "output_shape": [
+    {
+      "dim": [1,1,13,13],
+      "dtype": "f16",
+      "pack": 0
+    }
+  ],
+  "layer": [
+    {
+      "inst_name": "/model/pet/head_module/cls_pred.2/Conv_im_0",
+      "type_name": "Conv2d",
+      "bottom": [
+        "2Fmodel2Fneck2Fout_convs2E22Fcna2Factivate2FRelu_output_0"
+      ],
+      "top": [
+        "2Fmodel2Fpet2Fhead_module2Fcls_pred2E22FConv_output_0"
+      ],
+      "hw": 1,
+      "hw_acc": [5,10,15],
+      "param": {
+        "num_output": 1,
+        "bias_term": 1,
+        "group": 1,
+        "pad_h": 0,
+        "pad_w": 0,
+        "kernel_h": 1,
+        "kernel_w": 1,
+        "stride_h": 1,
+        "stride_w": 1,
+        "dilation_h": 1,
+        "dilation_w": 1,
+        "num_input": 64,
+        "padding_mode": 0
+      },
+      "data": {
+        "coef": [
+          -0.341997,
+          -0.213703,
+          0.346928,
+          0.034929,
+          -0.209967,
+          0.0785475,
+          1.58822,
+          0.67892,
+          0.0658974,
+          0.190168,
+          0.480114,
+          -0.159711,
+          0.0962188,
+          -0.369484,
+          0.00670327,
+          -0.819151,
+          0.164455,
+          -0.493732,
+          -0.00159084,
+          -0.324698,
+          -1.63217,
+          0.107462,
+          -0.237532,
+          0.197321,
+          -0.0678925,
+          0.153215,
+          -1.36036,
+          -0.0582489,
+          -0.0569482,
+          0.0406742,
+          0.353952,
+          0.116384,
+          0.154388,
+          0.49152,
+          -0.0371504,
+          0.346194,
+          0.0566668,
+          -2.60525,
+          -0.0644067,
+          0.0222359,
+          0.300003,
+          0.807147,
+          -0.214439,
+          0.31346,
+          -0.0702269,
+          0.392801,
+          -3.71927,
+          -1.94285,
+          0.142523,
+          -0.0854091,
+          -1.16866,
+          -0.389319,
+          0.0923926,
+          -0.0618315,
+          0.0261573,
+          1.11533,
+          0.0548302,
+          -0.866704,
+          -3.58091,
+          0.487937,
+          0.238682,
+          0.630316,
+          -2.26251,
+          0.222136
+        ],
+        "bias": [-1.64129],
+        "factor_scale": [15360],
+        "coef_dtype": 1,
+        "coef_acc": [5,10,15],
+        "input_dtype": 1,
+        "input_acc": [5,10,15],
+        "output_dtype": 1,
+        "output_acc": [5,10,15]
+      }
+    }
+  ]
+}

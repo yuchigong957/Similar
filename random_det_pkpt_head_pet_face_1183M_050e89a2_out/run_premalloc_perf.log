@@ -1,0 +1,37 @@
+Running main() from /home/jenkins/argos_v3/im/testing/gtest/googletest/src/gtest_main.cpp
+Note: Google Test filter = ortwrapper_test.ort_rtm_premalloc_perf
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ortwrapper_test
+[ RUN      ] ortwrapper_test.ort_rtm_premalloc_perf
+change sv_gtest into fifo:50
+SetUp:147	: model_file: /data/tmp/random_det_pkpt_head_pet_face_1183M_050e89a2.bin
+SetUp:154	: load npubin ok! iterations=1
+PrepareIoTensors:262	: input tensor_name: images, filename: /data/tmp/input/images.bin, bytesize: 1038336
+PrepareIoTensors:265	: input_tensor_shape: 1, 3, 416, 416
+PrepareIoTensors:268	: input_tensor_stride: 1, 3, 416, 416
+PrepareIoTensors:291	: output tensor_name: level0, bytesize: 472576
+PrepareIoTensors:293	: output_tensor_shape: 1, 71, 52, 52
+PrepareIoTensors:296	: output_tensor_stride: 1, 71, 52, 64
+PrepareIoTensors:291	: output tensor_name: level1, bytesize: 118144
+PrepareIoTensors:293	: output_tensor_shape: 1, 71, 26, 26
+PrepareIoTensors:296	: output_tensor_stride: 1, 71, 26, 32
+PrepareIoTensors:291	: output tensor_name: level2, bytesize: 29536
+PrepareIoTensors:293	: output_tensor_shape: 1, 71, 13, 13
+PrepareIoTensors:296	: output_tensor_stride: 1, 71, 13, 16
+GetOutputTensors:319	: output tensor_name: level0, bytesize: 472576
+GetOutputTensors:330	: save /data/tmp/board_out/level0.bin done
+GetOutputTensors:319	: output tensor_name: level1, bytesize: 118144
+GetOutputTensors:330	: save /data/tmp/board_out/level1.bin done
+GetOutputTensors:319	: output tensor_name: level2, bytesize: 29536
+GetOutputTensors:330	: save /data/tmp/board_out/level2.bin done
+PrintTimingStats:52	: [1;33m[ort_rtm_premalloc_perf] Iterations=1[0m
+PrintTimingStats:53	: [1;32mPerformance: Average: 138158.00 us, Min: 138158 us, Max: 138158 us[0m
+TestBody:886	: IM Model RTM PreMalloc Performance Test ok!
+TearDown:166	: release model ok!
+[       OK ] ortwrapper_test.ort_rtm_premalloc_perf (1021 ms)
+[----------] 1 test from ortwrapper_test (1021 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1021 ms total)
+[  PASSED  ] 1 test.

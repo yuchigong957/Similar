@@ -1,0 +1,51 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["2Fmodel2Fneck2Fout_convs2E12Fcna2Factivate2FRelu_output_0"],
+    "input_shape": [{"dim": [1,64,26,26],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["2Fmodel2Fpet2Fhead_module2Fcls_pred2E12FConv_output_0"],
+    "output_shape": [{"dim": [1,1,26,26],"dtype": "f16","pack": 0}
+],
+    "layer": [{"inst_name": "/model/pet/head_module/cls_pred.1/Conv_im_0","type_name": "Conv2d",            "bottom": ["2Fmodel2Fneck2Fout_convs2E12Fcna2Factivate2FRelu_output_0"],
+            "top": ["2Fmodel2Fpet2Fhead_module2Fcls_pred2E12FConv_output_0"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {
+                "num_output": 1,
+                "bias_term": 1,
+                "group": 1,
+                "pad_h": 0,
+                "pad_w": 0,
+                "kernel_h": 1,
+                "kernel_w": 1,
+                "stride_h": 1,
+                "stride_w": 1,
+                "dilation_h": 1,
+                "dilation_w": 1,
+                "num_input": 64,
+                "padding_mode": 0,
+                "unpack_en": 1,
+                "pack_en": 1,
+                "partial_sum_order": [8,8,8,8,8,8,8,8,0,0,0,0,0,0,0,0,
+                    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+            },
+            "data": {
+                "coef": [48819,45116,14848,13672,44829,46518,43663,46681,46179,45650,13594,13071,49131,43489,11671,45498,
+                    11697,11544,15533,43061,15495,45582,12613,15210,44208,7894,49707,14339,47403,46820,45409,41387,
+                    14391,48347,46032,11695,48075,45513,14285,12209,7447,46731,43460,11106,44387,14318,13333,13025,
+                    42831,13308,46598,14932,15421,45464,44174,46561,12316,44037,44577,12646,12157,40429,9761,45510],
+                "bias": [50066],
+                "factor_scale": [15360],
+                "coef_dtype": 1,
+                "coef_acc": [5,10,15],
+                "input_dtype": 1,
+                "input_acc": [5,10,15],
+                "output_dtype": 1,
+                "output_acc": [5,10,15]
+            },
+            "sv": 1
+        }
+]
+}

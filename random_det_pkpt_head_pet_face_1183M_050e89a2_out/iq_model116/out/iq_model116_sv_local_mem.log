@@ -1,0 +1,123 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_24",
+            "idx": 0,
+            "mem_used_rate": 0.10791015625,
+            "malloc": [
+                {
+                    "addr": 3741696,
+                    "ori_size": 0,
+                    "size": 452608
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_24",
+                    "addr": 3741696,
+                    "size": 452608
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "DmaIn.layer.copy_in_2Fmodel2Fface2Fhead_module2FExp_output_0",
+            "idx": 1,
+            "mem_used_rate": 0.1142578125,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 26624
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_24",
+                    "addr": 3741696,
+                    "size": 452608
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fface2Fhead_module2FExp_output_0",
+                    "addr": 0,
+                    "size": 26624
+                }
+            ],
+            "free": []
+        },
+        "kernel[2]": {
+            "name": "Concat.layer./Concat",
+            "idx": 2,
+            "mem_used_rate": 0.12060546875,
+            "malloc": [
+                {
+                    "addr": 26624,
+                    "ori_size": 0,
+                    "size": 479232
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_24",
+                    "addr": 3741696,
+                    "size": 452608
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fface2Fhead_module2FExp_output_0",
+                    "addr": 0,
+                    "size": 26624
+                },
+                {
+                    "name": "Concat.layer./Concat",
+                    "addr": 26624,
+                    "size": 479232
+                }
+            ],
+            "free": [
+                {
+                    "name": "Concat.layer./Concat",
+                    "addr": 3741696,
+                    "size": 452608
+                },
+                {
+                    "name": "Concat.layer./Concat",
+                    "addr": 0,
+                    "size": 26624
+                }
+            ]
+        },
+        "kernel[3]": {
+            "name": "DmaOut.layer.copy_out_level0",
+            "idx": 3,
+            "mem_used_rate": 0.1142578125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "Concat.layer./Concat",
+                    "addr": 26624,
+                    "size": 479232
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_level0",
+                    "addr": 26624,
+                    "size": 479232
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 479232
+        }
+    ]
+}

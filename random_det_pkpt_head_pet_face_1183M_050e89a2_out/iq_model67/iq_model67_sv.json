@@ -1,0 +1,26 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["2Fmodel2Fbackbone2Fstage32Fstage32E12Fblocks2E02Fconv22Factivate2FRelu_output_0","_im_PropagateOutputNames_added_name_8"],
+    "input_shape": [{"dim": [1,64,26,26],"dtype": "f16","pack": 0},
+        {"dim": [1,64,26,26],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["2Fmodel2Fbackbone2Fstage32Fstage32E12Fblocks2E02FAdd_output_0"],
+    "output_shape": [{"dim": [1,64,26,26],"dtype": "f16","pack": 0}
+],
+    "layer": [{"param": {"operation": 0,"num_channel": 64,"src_mode": 0,"brc_mode": 0},"data": {"input0_dtype": 1,                "input0_acc": [5,10,15],
+                "input1_dtype": 1,
+                "input1_acc": [5,10,15],
+                "output_dtype": 1,
+                "output_acc": [5,10,15],
+                "coef": []
+            },
+            "inst_name": "/model/backbone/stage3/stage3.1/blocks.0/Add",
+            "type_name": "Eltwise3",
+            "bottom": ["2Fmodel2Fbackbone2Fstage32Fstage32E12Fblocks2E02Fconv22Factivate2FRelu_output_0","_im_PropagateOutputNames_added_name_8"],
+            "top": ["2Fmodel2Fbackbone2Fstage32Fstage32E12Fblocks2E02FAdd_output_0"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "sv": 1
+        }
+]
+}

@@ -1,0 +1,278 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E02Fdepthwise_conv2Fconv2FConv_output_0",
+            "idx": 0,
+            "mem_used_rate": 0.1015625,
+            "malloc": [
+                {
+                    "addr": 3768320,
+                    "ori_size": 0,
+                    "size": 425984
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E02Fdepthwise_conv2Fconv2FConv_output_0",
+                    "addr": 3768320,
+                    "size": 425984
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E02Fdepthwise_conv2Factivate2FSigmoid_output_0",
+            "idx": 1,
+            "mem_used_rate": 0.203125,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 425984
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E02Fdepthwise_conv2Fconv2FConv_output_0",
+                    "addr": 3768320,
+                    "size": 425984
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E02Fdepthwise_conv2Factivate2FSigmoid_output_0",
+                    "addr": 0,
+                    "size": 425984
+                }
+            ],
+            "free": []
+        },
+        "kernel[2]": {
+            "name": "Eltwise.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/depthwise_conv/activate/Mul",
+            "idx": 2,
+            "mem_used_rate": 0.203125,
+            "malloc": [
+                {
+                    "addr": 3768320,
+                    "ori_size": 0,
+                    "size": 425984
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E02Fdepthwise_conv2Fconv2FConv_output_0",
+                    "addr": 3768320,
+                    "size": 425984
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E02Fdepthwise_conv2Factivate2FSigmoid_output_0",
+                    "addr": 0,
+                    "size": 425984
+                }
+            ],
+            "free": [
+                {
+                    "name": "Eltwise.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/depthwise_conv/activate/Mul",
+                    "addr": 0,
+                    "size": 425984
+                }
+            ]
+        },
+        "kernel[3]": {
+            "name": "FetchParam.layer.Conv2d.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.split.co.0.fetch_param_data.layer",
+            "idx": 3,
+            "mem_used_rate": 0.10260009765625,
+            "malloc": [
+                {
+                    "addr": 425984,
+                    "ori_size": 0,
+                    "size": 4352
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E02Fdepthwise_conv2Fconv2FConv_output_0",
+                    "addr": 3768320,
+                    "size": 425984
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.split.co.0.fetch_param_data.layer",
+                    "addr": 425984,
+                    "size": 4352
+                }
+            ],
+            "free": []
+        },
+        "kernel[4]": {
+            "name": "FetchParam.layer.Conv2d.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.split.co.1.fetch_param_data.layer",
+            "idx": 4,
+            "mem_used_rate": 0.1036376953125,
+            "malloc": [
+                {
+                    "addr": 430336,
+                    "ori_size": 0,
+                    "size": 4352
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E02Fdepthwise_conv2Fconv2FConv_output_0",
+                    "addr": 3768320,
+                    "size": 425984
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.split.co.0.fetch_param_data.layer",
+                    "addr": 425984,
+                    "size": 4352
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.split.co.1.fetch_param_data.layer",
+                    "addr": 430336,
+                    "size": 4352
+                }
+            ],
+            "free": []
+        },
+        "kernel[5]": {
+            "name": "DummyConcat.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.0",
+            "idx": 5,
+            "mem_used_rate": 0.2052001953125,
+            "malloc": [
+                {
+                    "addr": 434688,
+                    "ori_size": 0,
+                    "size": 425984
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E02Fdepthwise_conv2Fconv2FConv_output_0",
+                    "addr": 3768320,
+                    "size": 425984
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.split.co.0.fetch_param_data.layer",
+                    "addr": 425984,
+                    "size": 4352
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.split.co.1.fetch_param_data.layer",
+                    "addr": 430336,
+                    "size": 4352
+                },
+                {
+                    "name": "DummyConcat.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.0",
+                    "addr": 434688,
+                    "size": 425984
+                }
+            ],
+            "free": []
+        },
+        "kernel[6]": {
+            "name": "Conv2d.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.split.co.0",
+            "idx": 6,
+            "mem_used_rate": 0.2052001953125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E02Fdepthwise_conv2Fconv2FConv_output_0",
+                    "addr": 3768320,
+                    "size": 425984
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.split.co.0.fetch_param_data.layer",
+                    "addr": 425984,
+                    "size": 4352
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.split.co.1.fetch_param_data.layer",
+                    "addr": 430336,
+                    "size": 4352
+                },
+                {
+                    "name": "DummyConcat.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.0",
+                    "addr": 434688,
+                    "size": 425984
+                }
+            ],
+            "free": [
+                {
+                    "name": "Conv2d.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.split.co.0",
+                    "addr": 425984,
+                    "size": 4352
+                }
+            ]
+        },
+        "kernel[7]": {
+            "name": "Conv2d.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.split.co.1",
+            "idx": 7,
+            "mem_used_rate": 0.10260009765625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E02Fdepthwise_conv2Fconv2FConv_output_0",
+                    "addr": 3768320,
+                    "size": 425984
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.split.co.1.fetch_param_data.layer",
+                    "addr": 430336,
+                    "size": 4352
+                },
+                {
+                    "name": "DummyConcat.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.0",
+                    "addr": 434688,
+                    "size": 425984
+                }
+            ],
+            "free": [
+                {
+                    "name": "Conv2d.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.split.co.1",
+                    "addr": 3768320,
+                    "size": 425984
+                },
+                {
+                    "name": "Conv2d.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.split.co.1",
+                    "addr": 430336,
+                    "size": 4352
+                }
+            ]
+        },
+        "kernel[8]": {
+            "name": "DmaOut.layer.copy_out_2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E02Fpointwise_conv2Fconv2FConv_output_0",
+            "idx": 8,
+            "mem_used_rate": 0.05078125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DummyConcat.layer./model/person/head_module/kpt_pred.0/kpt_pred.0.0/pointwise_conv/conv/Conv_im_0.0",
+                    "addr": 434688,
+                    "size": 425984
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E02Fpointwise_conv2Fconv2FConv_output_0",
+                    "addr": 434688,
+                    "size": 212992
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_2Fmodel2Fperson2Fhead_module2Fkpt_pred2E02Fkpt_pred2E02E02Fpointwise_conv2Fconv2FConv_output_0",
+                    "addr": 647680,
+                    "size": 212992
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 851968
+        }
+    ]
+}

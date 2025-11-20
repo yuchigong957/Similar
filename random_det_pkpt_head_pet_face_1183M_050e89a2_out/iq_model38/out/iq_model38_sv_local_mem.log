@@ -1,0 +1,123 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2Fcls_pred2E02FConv_output_0",
+            "idx": 0,
+            "mem_used_rate": 0.0015869140625,
+            "malloc": [
+                {
+                    "addr": 4187648,
+                    "ori_size": 0,
+                    "size": 6656
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2Fcls_pred2E02FConv_output_0",
+                    "addr": 4187648,
+                    "size": 6656
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2FExp_output_0",
+            "idx": 1,
+            "mem_used_rate": 0.0079345703125,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 26624
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2Fcls_pred2E02FConv_output_0",
+                    "addr": 4187648,
+                    "size": 6656
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2FExp_output_0",
+                    "addr": 0,
+                    "size": 26624
+                }
+            ],
+            "free": []
+        },
+        "kernel[2]": {
+            "name": "Concat.layer.im_propagate_output_names_generated_span_10",
+            "idx": 2,
+            "mem_used_rate": 0.01904296875,
+            "malloc": [
+                {
+                    "addr": 26624,
+                    "ori_size": 0,
+                    "size": 53248
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2Fcls_pred2E02FConv_output_0",
+                    "addr": 4187648,
+                    "size": 6656
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fperson2Fhead_module2FExp_output_0",
+                    "addr": 0,
+                    "size": 26624
+                },
+                {
+                    "name": "Concat.layer.im_propagate_output_names_generated_span_10",
+                    "addr": 26624,
+                    "size": 53248
+                }
+            ],
+            "free": [
+                {
+                    "name": "Concat.layer.im_propagate_output_names_generated_span_10",
+                    "addr": 4187648,
+                    "size": 6656
+                },
+                {
+                    "name": "Concat.layer.im_propagate_output_names_generated_span_10",
+                    "addr": 0,
+                    "size": 26624
+                }
+            ]
+        },
+        "kernel[3]": {
+            "name": "DmaOut.layer.copy_out__im_PropagateOutputNames_added_name_18",
+            "idx": 3,
+            "mem_used_rate": 0.0126953125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "Concat.layer.im_propagate_output_names_generated_span_10",
+                    "addr": 26624,
+                    "size": 53248
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out__im_PropagateOutputNames_added_name_18",
+                    "addr": 26624,
+                    "size": 53248
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 53248
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "layers": [
+        {
+            "op_name": "copy_in_2Fmodel2Fneck2Ftop_down_blocks2E12Fcv12Fcna2Factivate2FRelu_output_0",
+            "hwlayer_names": [
+                "DummySlice.layer.DmaIn.layer.copy_in_2Fmodel2Fneck2Ftop_down_blocks2E12Fcv12Fcna2Factivate2FRelu_output_0.slice.input.0"
+            ],
+            "tops": null
+        }
+    ]
+}

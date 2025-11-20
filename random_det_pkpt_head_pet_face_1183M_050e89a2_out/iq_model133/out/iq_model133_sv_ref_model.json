@@ -1,0 +1,227 @@
+{
+    "name": "graph_aic",
+    "input_tensor": [
+        "2Fmodel2Fneck2Fout_convs2E02Fcna2Factivate2FRelu_output_0"
+    ],
+    "input_shape": [
+        {
+            "dim": [
+                1,
+                64,
+                52,
+                52
+            ],
+            "dtype": "f16",
+            "pack": 0
+        }
+    ],
+    "output_tensor": [
+        "2Fmodel2Fperson2Fhead_module2Fcls_pred2E02FConv_output_0"
+    ],
+    "output_shape": [
+        {
+            "dim": [
+                1,
+                1,
+                52,
+                52
+            ],
+            "dtype": "f16",
+            "pack": 0
+        }
+    ],
+    "layer": [
+        {
+            "inst_name": "/model/person/head_module/cls_pred.0/Conv_im_0",
+            "type_name": "Conv2d",
+            "bottom": [
+                "2Fmodel2Fneck2Fout_convs2E02Fcna2Factivate2FRelu_output_0"
+            ],
+            "top": [
+                "2Fmodel2Fperson2Fhead_module2Fcls_pred2E02FConv_output_0"
+            ],
+            "hw": 1,
+            "hw_acc": [
+                5,
+                10,
+                15
+            ],
+            "param": {
+                "num_output": 1,
+                "bias_term": 1,
+                "group": 1,
+                "pad_h": 0,
+                "pad_w": 0,
+                "kernel_h": 1,
+                "kernel_w": 1,
+                "stride_h": 1,
+                "stride_w": 1,
+                "dilation_h": 1,
+                "dilation_w": 1,
+                "num_input": 64,
+                "padding_mode": 0,
+                "unpack_en": 1,
+                "pack_en": 1,
+                "partial_sum_order": [
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "data": {
+                "coef": [
+                    42804,
+                    13509,
+                    13622,
+                    14563,
+                    43641,
+                    49910,
+                    13997,
+                    14586,
+                    43157,
+                    12485,
+                    14927,
+                    46400,
+                    13499,
+                    43804,
+                    48504,
+                    13785,
+                    14205,
+                    10049,
+                    12303,
+                    13484,
+                    13459,
+                    46328,
+                    47617,
+                    13579,
+                    47335,
+                    15921,
+                    13869,
+                    47320,
+                    12629,
+                    14037,
+                    46153,
+                    13361,
+                    48241,
+                    10976,
+                    12656,
+                    14149,
+                    13320,
+                    13550,
+                    46395,
+                    44140,
+                    47418,
+                    12631,
+                    13539,
+                    10318,
+                    13888,
+                    15279,
+                    12272,
+                    46590,
+                    12431,
+                    14411,
+                    13386,
+                    14343,
+                    10975,
+                    12220,
+                    47196,
+                    12931,
+                    14011,
+                    47390,
+                    14843,
+                    13494,
+                    44689,
+                    12137,
+                    12515,
+                    44544
+                ],
+                "bias": [
+                    50234
+                ],
+                "factor_scale": [
+                    15360
+                ],
+                "coef_dtype": 1,
+                "coef_acc": [
+                    5,
+                    10,
+                    15
+                ],
+                "input_dtype": 1,
+                "input_acc": [
+                    5,
+                    10,
+                    15
+                ],
+                "output_dtype": 1,
+                "output_acc": [
+                    5,
+                    10,
+                    15
+                ]
+            },
+            "sv": 1
+        }
+    ]
+}

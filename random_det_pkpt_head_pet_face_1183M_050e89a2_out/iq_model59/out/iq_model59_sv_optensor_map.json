@@ -1,0 +1,11 @@
+{
+    "layers": [
+        {
+            "op_name": "copy_in_2Fmodel2Fbackbone2Fstage22Fstage22E12Fmain_conv2Factivate2FRelu_output_0",
+            "hwlayer_names": [
+                "DummySlice.layer.DmaIn.layer.copy_in_2Fmodel2Fbackbone2Fstage22Fstage22E12Fmain_conv2Factivate2FRelu_output_0.slice.input.0"
+            ],
+            "tops": null
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "name": "graph_aic",
+    "input_tensor": [
+        "2Fmodel2Fneck2Ftop_down_blocks2E12Fcv12Fcna2Factivate2FRelu_output_0"
+    ],
+    "input_shape": [
+        {
+            "dim": [
+                1,
+                64,
+                52,
+                52
+            ],
+            "dtype": "f16",
+            "pack": 0
+        }
+    ],
+    "output_tensor": [
+        "2Fmodel2Fneck2Ftop_down_blocks2E12FSlice_1_output_0"
+    ],
+    "output_shape": [
+        {
+            "dim": [
+                1,
+                32,
+                52,
+                52
+            ],
+            "dtype": "f16",
+            "pack": 0
+        }
+    ],
+    "layer": [
+        {
+            "inst_name": "/model/neck/top_down_blocks.1/Slice_1",
+            "type_name": "Slice2",
+            "bottom": [
+                "2Fmodel2Fneck2Ftop_down_blocks2E12Fcv12Fcna2Factivate2FRelu_output_0"
+            ],
+            "top": [
+                "2Fmodel2Fneck2Ftop_down_blocks2E12FSlice_1_output_0"
+            ],
+            "hw": 1,
+            "hw_acc": [
+                5,
+                10,
+                15
+            ],
+            "param": {
+                "dim": 1,
+                "start_index": 32,
+                "output_size": 32
+            },
+            "sv": 1,
+            "data": {
+                "input_dtype": 1,
+                "output_dtype": 1,
+                "input_acc": [
+                    5,
+                    10,
+                    15
+                ],
+                "output_acc": [
+                    5,
+                    10,
+                    15
+                ]
+            }
+        }
+    ]
+}

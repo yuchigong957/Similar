@@ -1,0 +1,442 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_13",
+            "idx": 0,
+            "mem_used_rate": 0.025390625,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 106496
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_13",
+                    "addr": 0,
+                    "size": 106496
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "DmaIn.layer.copy_in_2Fmodel2Fbackbone2Fstage42Fstage42E12Fblocks2E02FAdd_output_0",
+            "idx": 1,
+            "mem_used_rate": 0.0380859375,
+            "malloc": [
+                {
+                    "addr": 106496,
+                    "ori_size": 0,
+                    "size": 53248
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_13",
+                    "addr": 0,
+                    "size": 106496
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fbackbone2Fstage42Fstage42E12Fblocks2E02FAdd_output_0",
+                    "addr": 106496,
+                    "size": 53248
+                }
+            ],
+            "free": []
+        },
+        "kernel[2]": {
+            "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.split.co.0.fetch_param_data.layer",
+            "idx": 2,
+            "mem_used_rate": 0.0616455078125,
+            "malloc": [
+                {
+                    "addr": 159744,
+                    "ori_size": 0,
+                    "size": 98816
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_13",
+                    "addr": 0,
+                    "size": 106496
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fbackbone2Fstage42Fstage42E12Fblocks2E02FAdd_output_0",
+                    "addr": 106496,
+                    "size": 53248
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.split.co.0.fetch_param_data.layer",
+                    "addr": 159744,
+                    "size": 98816
+                }
+            ],
+            "free": []
+        },
+        "kernel[3]": {
+            "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.split.co.1.fetch_param_data.layer",
+            "idx": 3,
+            "mem_used_rate": 0.085205078125,
+            "malloc": [
+                {
+                    "addr": 258560,
+                    "ori_size": 0,
+                    "size": 98816
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_13",
+                    "addr": 0,
+                    "size": 106496
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fbackbone2Fstage42Fstage42E12Fblocks2E02FAdd_output_0",
+                    "addr": 106496,
+                    "size": 53248
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.split.co.0.fetch_param_data.layer",
+                    "addr": 159744,
+                    "size": 98816
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.split.co.1.fetch_param_data.layer",
+                    "addr": 258560,
+                    "size": 98816
+                }
+            ],
+            "free": []
+        },
+        "kernel[4]": {
+            "name": "DummyConcat.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.0",
+            "idx": 4,
+            "mem_used_rate": 0.110595703125,
+            "malloc": [
+                {
+                    "addr": 357376,
+                    "ori_size": 0,
+                    "size": 106496
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_13",
+                    "addr": 0,
+                    "size": 106496
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fbackbone2Fstage42Fstage42E12Fblocks2E02FAdd_output_0",
+                    "addr": 106496,
+                    "size": 53248
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.split.co.0.fetch_param_data.layer",
+                    "addr": 159744,
+                    "size": 98816
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.split.co.1.fetch_param_data.layer",
+                    "addr": 258560,
+                    "size": 98816
+                },
+                {
+                    "name": "DummyConcat.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.0",
+                    "addr": 357376,
+                    "size": 106496
+                }
+            ],
+            "free": []
+        },
+        "kernel[5]": {
+            "name": "ConvFusion.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.split.co.0",
+            "idx": 5,
+            "mem_used_rate": 0.110595703125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_13",
+                    "addr": 0,
+                    "size": 106496
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fbackbone2Fstage42Fstage42E12Fblocks2E02FAdd_output_0",
+                    "addr": 106496,
+                    "size": 53248
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.split.co.0.fetch_param_data.layer",
+                    "addr": 159744,
+                    "size": 98816
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.split.co.1.fetch_param_data.layer",
+                    "addr": 258560,
+                    "size": 98816
+                },
+                {
+                    "name": "DummyConcat.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.0",
+                    "addr": 357376,
+                    "size": 106496
+                }
+            ],
+            "free": [
+                {
+                    "name": "ConvFusion.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.split.co.0",
+                    "addr": 159744,
+                    "size": 98816
+                }
+            ]
+        },
+        "kernel[6]": {
+            "name": "ConvFusion.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.split.co.1",
+            "idx": 6,
+            "mem_used_rate": 0.0489501953125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in__im_PropagateOutputNames_added_name_13",
+                    "addr": 0,
+                    "size": 106496
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_2Fmodel2Fbackbone2Fstage42Fstage42E12Fblocks2E02FAdd_output_0",
+                    "addr": 106496,
+                    "size": 53248
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.split.co.1.fetch_param_data.layer",
+                    "addr": 258560,
+                    "size": 98816
+                },
+                {
+                    "name": "DummyConcat.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.0",
+                    "addr": 357376,
+                    "size": 106496
+                }
+            ],
+            "free": [
+                {
+                    "name": "ConvFusion.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.split.co.1",
+                    "addr": 0,
+                    "size": 106496
+                },
+                {
+                    "name": "ConvFusion.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.split.co.1",
+                    "addr": 106496,
+                    "size": 53248
+                },
+                {
+                    "name": "ConvFusion.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.split.co.1",
+                    "addr": 258560,
+                    "size": 98816
+                }
+            ]
+        },
+        "kernel[7]": {
+            "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.split.co.0.fetch_param_data.layer",
+            "idx": 7,
+            "mem_used_rate": 0.03326416015625,
+            "malloc": [
+                {
+                    "addr": 463872,
+                    "ori_size": 0,
+                    "size": 33024
+                }
+            ],
+            "used": [
+                {
+                    "name": "DummyConcat.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.0",
+                    "addr": 357376,
+                    "size": 106496
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.split.co.0.fetch_param_data.layer",
+                    "addr": 463872,
+                    "size": 33024
+                }
+            ],
+            "free": []
+        },
+        "kernel[8]": {
+            "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.split.co.1.fetch_param_data.layer",
+            "idx": 8,
+            "mem_used_rate": 0.0411376953125,
+            "malloc": [
+                {
+                    "addr": 496896,
+                    "ori_size": 0,
+                    "size": 33024
+                }
+            ],
+            "used": [
+                {
+                    "name": "DummyConcat.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.0",
+                    "addr": 357376,
+                    "size": 106496
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.split.co.0.fetch_param_data.layer",
+                    "addr": 463872,
+                    "size": 33024
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.split.co.1.fetch_param_data.layer",
+                    "addr": 496896,
+                    "size": 33024
+                }
+            ],
+            "free": []
+        },
+        "kernel[9]": {
+            "name": "DummyConcat.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.0",
+            "idx": 9,
+            "mem_used_rate": 0.0538330078125,
+            "malloc": [
+                {
+                    "addr": 529920,
+                    "ori_size": 0,
+                    "size": 53248
+                }
+            ],
+            "used": [
+                {
+                    "name": "DummyConcat.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.0",
+                    "addr": 357376,
+                    "size": 106496
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.split.co.0.fetch_param_data.layer",
+                    "addr": 463872,
+                    "size": 33024
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.split.co.1.fetch_param_data.layer",
+                    "addr": 496896,
+                    "size": 33024
+                },
+                {
+                    "name": "DummyConcat.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.0",
+                    "addr": 529920,
+                    "size": 53248
+                }
+            ],
+            "free": []
+        },
+        "kernel[10]": {
+            "name": "ConvFusion.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.split.co.0",
+            "idx": 10,
+            "mem_used_rate": 0.0538330078125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DummyConcat.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.0",
+                    "addr": 357376,
+                    "size": 106496
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.split.co.0.fetch_param_data.layer",
+                    "addr": 463872,
+                    "size": 33024
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.split.co.1.fetch_param_data.layer",
+                    "addr": 496896,
+                    "size": 33024
+                },
+                {
+                    "name": "DummyConcat.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.0",
+                    "addr": 529920,
+                    "size": 53248
+                }
+            ],
+            "free": [
+                {
+                    "name": "ConvFusion.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.split.co.0",
+                    "addr": 463872,
+                    "size": 33024
+                }
+            ]
+        },
+        "kernel[11]": {
+            "name": "ConvFusion.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.split.co.1",
+            "idx": 11,
+            "mem_used_rate": 0.02056884765625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DummyConcat.layer./model/backbone/stage4/stage4.1/final_conv/conv/Conv_im_0.fused./model/backbone/stage4/stage4.1/final_conv/activate/Relu.0",
+                    "addr": 357376,
+                    "size": 106496
+                },
+                {
+                    "name": "FetchParam.layer.ConvFusion.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.split.co.1.fetch_param_data.layer",
+                    "addr": 496896,
+                    "size": 33024
+                },
+                {
+                    "name": "DummyConcat.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.0",
+                    "addr": 529920,
+                    "size": 53248
+                }
+            ],
+            "free": [
+                {
+                    "name": "ConvFusion.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.split.co.1",
+                    "addr": 357376,
+                    "size": 53248
+                },
+                {
+                    "name": "ConvFusion.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.split.co.1",
+                    "addr": 410624,
+                    "size": 53248
+                },
+                {
+                    "name": "ConvFusion.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.split.co.1",
+                    "addr": 496896,
+                    "size": 33024
+                }
+            ]
+        },
+        "kernel[12]": {
+            "name": "DmaOut.layer.copy_out_2Fmodel2Fbackbone2Fstage42Fstage42E22Fconv12Factivate2FRelu_output_0",
+            "idx": 12,
+            "mem_used_rate": 0.00634765625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DummyConcat.layer./model/backbone/stage4/stage4.2/conv1/conv/Conv_im_0.fused./model/backbone/stage4/stage4.2/conv1/activate/Relu.0",
+                    "addr": 529920,
+                    "size": 53248
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_2Fmodel2Fbackbone2Fstage42Fstage42E22Fconv12Factivate2FRelu_output_0",
+                    "addr": 529920,
+                    "size": 26624
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_2Fmodel2Fbackbone2Fstage42Fstage42E22Fconv12Factivate2FRelu_output_0",
+                    "addr": 556544,
+                    "size": 26624
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 357376
+        }
+    ]
+}

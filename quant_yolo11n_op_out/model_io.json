@@ -1,0 +1,38 @@
+{
+    "input_tensors": [
+        {
+            "tensor_name": "images",
+            "tensor_layout_type": "NCHW",
+            "tensor_shape": [
+                1,
+                3,
+                640,
+                640
+            ],
+            "tensor_dtype": "Fp16",
+            "tensor_stride": [
+                1,
+                3,
+                640,
+                640
+            ]
+        }
+    ],
+    "output_tensors": [
+        {
+            "tensor_name": "output0",
+            "tensor_layout_type": "NCHW",
+            "tensor_shape": [
+                1,
+                84,
+                8400
+            ],
+            "tensor_dtype": "Fp16",
+            "tensor_stride": [
+                1,
+                84,
+                8400
+            ]
+        }
+    ]
+}

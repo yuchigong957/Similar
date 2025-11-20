@@ -1,0 +1,20 @@
+{
+    "layers": [
+        {
+            "op_name": "Conv_87_im_0",
+            "hwlayer_names": [
+                "Conv2d.layer.Conv_87_im_0.split.co.0",
+                "Conv2d.layer.Conv_87_im_0.split.co.1",
+                "DummyConcat.layer.Conv_87_im_0.0"
+            ],
+            "tops": [
+                {
+                    "top_name": "267",
+                    "in_hwlayer_id": 5,
+                    "out_hwlayer_id": 0,
+                    "out_hwlayer_dummy": true
+                }
+            ]
+        }
+    ]
+}

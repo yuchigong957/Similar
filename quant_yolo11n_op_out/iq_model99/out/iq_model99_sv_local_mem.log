@@ -1,0 +1,113 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_447",
+            "idx": 0,
+            "mem_used_rate": 0.0390625,
+            "malloc": [
+                {
+                    "addr": 4030464,
+                    "ori_size": 0,
+                    "size": 163840
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_447",
+                    "addr": 4030464,
+                    "size": 163840
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "DmaIn.layer.copy_in_448",
+            "idx": 1,
+            "mem_used_rate": 0.078125,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 163840
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_447",
+                    "addr": 4030464,
+                    "size": 163840
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_448",
+                    "addr": 0,
+                    "size": 163840
+                }
+            ],
+            "free": []
+        },
+        "kernel[2]": {
+            "name": "Eltwise.layer.Mul_234",
+            "idx": 2,
+            "mem_used_rate": 0.078125,
+            "malloc": [
+                {
+                    "addr": 4030464,
+                    "ori_size": 0,
+                    "size": 163840
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_447",
+                    "addr": 4030464,
+                    "size": 163840
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_448",
+                    "addr": 0,
+                    "size": 163840
+                }
+            ],
+            "free": [
+                {
+                    "name": "Eltwise.layer.Mul_234",
+                    "addr": 0,
+                    "size": 163840
+                }
+            ]
+        },
+        "kernel[3]": {
+            "name": "DmaOut.layer.copy_out_449",
+            "idx": 3,
+            "mem_used_rate": 0.0390625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_447",
+                    "addr": 4030464,
+                    "size": 163840
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_449",
+                    "addr": 4030464,
+                    "size": 163840
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 327680
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "layers": [
+        {
+            "op_name": "PPQ_Operation_131",
+            "hwlayer_names": [
+                "Activation.layer.PPQ_Operation_131"
+            ],
+            "tops": [
+                {
+                    "top_name": "PPQ_Variable_144",
+                    "in_hwlayer_id": 3,
+                    "out_hwlayer_id": 2,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        }
+    ]
+}

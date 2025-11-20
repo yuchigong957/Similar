@@ -1,0 +1,319 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_325_im_9",
+            "idx": 0,
+            "mem_used_rate": 0.006103515625,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 25600
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_325_im_9",
+                    "addr": 0,
+                    "size": 25600
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "Permute.layer.MatMul_127_im_12.permute_0",
+            "idx": 1,
+            "mem_used_rate": 0.01220703125,
+            "malloc": [
+                {
+                    "addr": 25600,
+                    "ori_size": 0,
+                    "size": 25600
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_325_im_9",
+                    "addr": 0,
+                    "size": 25600
+                },
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_0",
+                    "addr": 25600,
+                    "size": 25600
+                }
+            ],
+            "free": [
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_0",
+                    "addr": 0,
+                    "size": 25600
+                }
+            ]
+        },
+        "kernel[2]": {
+            "name": "Permute.layer.MatMul_127_im_12.permute_1",
+            "idx": 2,
+            "mem_used_rate": 0.01220703125,
+            "malloc": [
+                {
+                    "addr": 51200,
+                    "ori_size": 0,
+                    "size": 25600
+                }
+            ],
+            "used": [
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_0",
+                    "addr": 25600,
+                    "size": 25600
+                },
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_1",
+                    "addr": 51200,
+                    "size": 25600
+                }
+            ],
+            "free": [
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_1",
+                    "addr": 25600,
+                    "size": 25600
+                }
+            ]
+        },
+        "kernel[3]": {
+            "name": "DmaIn.layer.copy_in_325_im_11",
+            "idx": 3,
+            "mem_used_rate": 0.01220703125,
+            "malloc": [
+                {
+                    "addr": 76800,
+                    "ori_size": 0,
+                    "size": 25600
+                }
+            ],
+            "used": [
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_1",
+                    "addr": 51200,
+                    "size": 25600
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_325_im_11",
+                    "addr": 76800,
+                    "size": 25600
+                }
+            ],
+            "free": []
+        },
+        "kernel[4]": {
+            "name": "Permute.layer.MatMul_127_im_12.permute_2",
+            "idx": 4,
+            "mem_used_rate": 0.018310546875,
+            "malloc": [
+                {
+                    "addr": 102400,
+                    "ori_size": 0,
+                    "size": 25600
+                }
+            ],
+            "used": [
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_1",
+                    "addr": 51200,
+                    "size": 25600
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_325_im_11",
+                    "addr": 76800,
+                    "size": 25600
+                },
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_2",
+                    "addr": 102400,
+                    "size": 25600
+                }
+            ],
+            "free": [
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_2",
+                    "addr": 76800,
+                    "size": 25600
+                }
+            ]
+        },
+        "kernel[5]": {
+            "name": "Permute.layer.MatMul_127_im_12.permute_3",
+            "idx": 5,
+            "mem_used_rate": 0.018310546875,
+            "malloc": [
+                {
+                    "addr": 128000,
+                    "ori_size": 0,
+                    "size": 25600
+                }
+            ],
+            "used": [
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_1",
+                    "addr": 51200,
+                    "size": 25600
+                },
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_2",
+                    "addr": 102400,
+                    "size": 25600
+                },
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_3",
+                    "addr": 128000,
+                    "size": 25600
+                }
+            ],
+            "free": [
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_3",
+                    "addr": 102400,
+                    "size": 25600
+                }
+            ]
+        },
+        "kernel[6]": {
+            "name": "Matmul.layer.MatMul_127_im_12.matmul",
+            "idx": 6,
+            "mem_used_rate": 0.0823974609375,
+            "malloc": [
+                {
+                    "addr": 153600,
+                    "ori_size": 0,
+                    "size": 320000
+                }
+            ],
+            "used": [
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_1",
+                    "addr": 51200,
+                    "size": 25600
+                },
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_3",
+                    "addr": 128000,
+                    "size": 25600
+                },
+                {
+                    "name": "Matmul.layer.MatMul_127_im_12.matmul",
+                    "addr": 153600,
+                    "size": 320000
+                }
+            ],
+            "free": [
+                {
+                    "name": "Matmul.layer.MatMul_127_im_12.matmul",
+                    "addr": 51200,
+                    "size": 25600
+                },
+                {
+                    "name": "Matmul.layer.MatMul_127_im_12.matmul",
+                    "addr": 128000,
+                    "size": 25600
+                }
+            ]
+        },
+        "kernel[7]": {
+            "name": "Permute.layer.MatMul_127_im_12.permute_4",
+            "idx": 7,
+            "mem_used_rate": 0.152587890625,
+            "malloc": [
+                {
+                    "addr": 473600,
+                    "ori_size": 0,
+                    "size": 320000
+                }
+            ],
+            "used": [
+                {
+                    "name": "Matmul.layer.MatMul_127_im_12.matmul",
+                    "addr": 153600,
+                    "size": 320000
+                },
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_4",
+                    "addr": 473600,
+                    "size": 320000
+                }
+            ],
+            "free": [
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_4",
+                    "addr": 153600,
+                    "size": 320000
+                }
+            ]
+        },
+        "kernel[8]": {
+            "name": "Permute.layer.MatMul_127_im_12.permute_5",
+            "idx": 8,
+            "mem_used_rate": 0.152587890625,
+            "malloc": [
+                {
+                    "addr": 793600,
+                    "ori_size": 0,
+                    "size": 320000
+                }
+            ],
+            "used": [
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_4",
+                    "addr": 473600,
+                    "size": 320000
+                },
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_5",
+                    "addr": 793600,
+                    "size": 320000
+                }
+            ],
+            "free": [
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_5",
+                    "addr": 473600,
+                    "size": 320000
+                }
+            ]
+        },
+        "kernel[9]": {
+            "name": "DmaOut.layer.copy_out_325_im_12",
+            "idx": 9,
+            "mem_used_rate": 0.0762939453125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "Permute.layer.MatMul_127_im_12.permute_5",
+                    "addr": 793600,
+                    "size": 320000
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_325_im_12",
+                    "addr": 793600,
+                    "size": 320000
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 320000
+        }
+    ]
+}

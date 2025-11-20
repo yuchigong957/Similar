@@ -1,0 +1,64 @@
+{
+    "layers": [
+        {
+            "op_name": "Conv_267_im_0",
+            "hwlayer_names": [
+                "DummySlice.layer.Conv_267_im_0.0",
+                "Conv2d.layer.Conv_267_im_0.0",
+                "DummySlice.layer.Conv_267_im_0.1",
+                "Conv2d.layer.Conv_267_im_0.1",
+                "DummyConcat.layer.Conv_267_im_0.0",
+                "DummySlice.layer.Conv_267_im_0.2",
+                "Conv2d.layer.Conv_267_im_0.2",
+                "DummySlice.layer.Conv_267_im_0.3",
+                "Conv2d.layer.Conv_267_im_0.3",
+                "DummyConcat.layer.Conv_267_im_0.1",
+                "DummyConcat.layer.Conv_267_im_0.8",
+                "DummySlice.layer.Conv_267_im_0.4",
+                "Conv2d.layer.Conv_267_im_0.4",
+                "DummySlice.layer.Conv_267_im_0.5",
+                "Conv2d.layer.Conv_267_im_0.5",
+                "DummyConcat.layer.Conv_267_im_0.2",
+                "DummySlice.layer.Conv_267_im_0.6",
+                "Conv2d.layer.Conv_267_im_0.6",
+                "DummySlice.layer.Conv_267_im_0.7",
+                "Conv2d.layer.Conv_267_im_0.7",
+                "DummyConcat.layer.Conv_267_im_0.3",
+                "DummyConcat.layer.Conv_267_im_0.9",
+                "DummyConcat.layer.Conv_267_im_0.12",
+                "DummySlice.layer.Conv_267_im_0.8",
+                "Conv2d.layer.Conv_267_im_0.8",
+                "DummySlice.layer.Conv_267_im_0.9",
+                "Conv2d.layer.Conv_267_im_0.9",
+                "DummyConcat.layer.Conv_267_im_0.4",
+                "DummySlice.layer.Conv_267_im_0.10",
+                "Conv2d.layer.Conv_267_im_0.10",
+                "DummySlice.layer.Conv_267_im_0.11",
+                "Conv2d.layer.Conv_267_im_0.11",
+                "DummyConcat.layer.Conv_267_im_0.5",
+                "DummyConcat.layer.Conv_267_im_0.10",
+                "DummySlice.layer.Conv_267_im_0.12",
+                "Conv2d.layer.Conv_267_im_0.12",
+                "DummySlice.layer.Conv_267_im_0.13",
+                "Conv2d.layer.Conv_267_im_0.13",
+                "DummyConcat.layer.Conv_267_im_0.6",
+                "DummySlice.layer.Conv_267_im_0.14",
+                "Conv2d.layer.Conv_267_im_0.14",
+                "DummySlice.layer.Conv_267_im_0.15",
+                "Conv2d.layer.Conv_267_im_0.15",
+                "DummyConcat.layer.Conv_267_im_0.7",
+                "DummyConcat.layer.Conv_267_im_0.11",
+                "DummyConcat.layer.Conv_267_im_0.13",
+                "DummyConcat.layer.Conv_267_im_0.14"
+            ],
+            "tops": [
+                {
+                    "top_name": "482",
+                    "in_hwlayer_id": 33,
+                    "out_hwlayer_id": 0,
+                    "out_hwlayer_dummy": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,227 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_493",
+            "idx": 0,
+            "mem_used_rate": 0.0732421875,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 307200
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_493",
+                    "addr": 0,
+                    "size": 307200
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "FetchParam.layer.Activation.layer.PPQ_Operation_188.c.0.fetch_param_data.layer",
+            "idx": 1,
+            "mem_used_rate": 0.07330322265625,
+            "malloc": [
+                {
+                    "addr": 307200,
+                    "ori_size": 0,
+                    "size": 256
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_493",
+                    "addr": 0,
+                    "size": 307200
+                },
+                {
+                    "name": "FetchParam.layer.Activation.layer.PPQ_Operation_188.c.0.fetch_param_data.layer",
+                    "addr": 307200,
+                    "size": 256
+                }
+            ],
+            "free": []
+        },
+        "kernel[2]": {
+            "name": "FetchParam.layer.Activation.layer.PPQ_Operation_188.c.1.fetch_param_data.layer",
+            "idx": 2,
+            "mem_used_rate": 0.0733642578125,
+            "malloc": [
+                {
+                    "addr": 307456,
+                    "ori_size": 0,
+                    "size": 256
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_493",
+                    "addr": 0,
+                    "size": 307200
+                },
+                {
+                    "name": "FetchParam.layer.Activation.layer.PPQ_Operation_188.c.0.fetch_param_data.layer",
+                    "addr": 307200,
+                    "size": 256
+                },
+                {
+                    "name": "FetchParam.layer.Activation.layer.PPQ_Operation_188.c.1.fetch_param_data.layer",
+                    "addr": 307456,
+                    "size": 256
+                }
+            ],
+            "free": []
+        },
+        "kernel[3]": {
+            "name": "DummyConcat.layer.PPQ_Operation_188.0",
+            "idx": 3,
+            "mem_used_rate": 0.1221923828125,
+            "malloc": [
+                {
+                    "addr": 307712,
+                    "ori_size": 0,
+                    "size": 204800
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_493",
+                    "addr": 0,
+                    "size": 307200
+                },
+                {
+                    "name": "FetchParam.layer.Activation.layer.PPQ_Operation_188.c.0.fetch_param_data.layer",
+                    "addr": 307200,
+                    "size": 256
+                },
+                {
+                    "name": "FetchParam.layer.Activation.layer.PPQ_Operation_188.c.1.fetch_param_data.layer",
+                    "addr": 307456,
+                    "size": 256
+                },
+                {
+                    "name": "DummyConcat.layer.PPQ_Operation_188.0",
+                    "addr": 307712,
+                    "size": 204800
+                }
+            ],
+            "free": []
+        },
+        "kernel[4]": {
+            "name": "Activation.layer.PPQ_Operation_188.c.0",
+            "idx": 4,
+            "mem_used_rate": 0.0855712890625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_493",
+                    "addr": 0,
+                    "size": 307200
+                },
+                {
+                    "name": "FetchParam.layer.Activation.layer.PPQ_Operation_188.c.0.fetch_param_data.layer",
+                    "addr": 307200,
+                    "size": 256
+                },
+                {
+                    "name": "FetchParam.layer.Activation.layer.PPQ_Operation_188.c.1.fetch_param_data.layer",
+                    "addr": 307456,
+                    "size": 256
+                },
+                {
+                    "name": "DummyConcat.layer.PPQ_Operation_188.0",
+                    "addr": 307712,
+                    "size": 204800
+                }
+            ],
+            "free": [
+                {
+                    "name": "Activation.layer.PPQ_Operation_188.c.0",
+                    "addr": 0,
+                    "size": 153600
+                },
+                {
+                    "name": "Activation.layer.PPQ_Operation_188.c.0",
+                    "addr": 307200,
+                    "size": 256
+                }
+            ]
+        },
+        "kernel[5]": {
+            "name": "Activation.layer.PPQ_Operation_188.c.1",
+            "idx": 5,
+            "mem_used_rate": 0.04888916015625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_493",
+                    "addr": 153600,
+                    "size": 153600
+                },
+                {
+                    "name": "FetchParam.layer.Activation.layer.PPQ_Operation_188.c.1.fetch_param_data.layer",
+                    "addr": 307456,
+                    "size": 256
+                },
+                {
+                    "name": "DummyConcat.layer.PPQ_Operation_188.0",
+                    "addr": 307712,
+                    "size": 204800
+                }
+            ],
+            "free": [
+                {
+                    "name": "Activation.layer.PPQ_Operation_188.c.1",
+                    "addr": 153600,
+                    "size": 153600
+                },
+                {
+                    "name": "Activation.layer.PPQ_Operation_188.c.1",
+                    "addr": 307456,
+                    "size": 256
+                }
+            ]
+        },
+        "kernel[6]": {
+            "name": "DmaOut.layer.copy_out_PPQ_Variable_201",
+            "idx": 6,
+            "mem_used_rate": 0.0244140625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DummyConcat.layer.PPQ_Operation_188.0",
+                    "addr": 307712,
+                    "size": 204800
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_PPQ_Variable_201",
+                    "addr": 307712,
+                    "size": 102400
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_PPQ_Variable_201",
+                    "addr": 410112,
+                    "size": 102400
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 307712
+        }
+    ]
+}

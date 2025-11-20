@@ -1,0 +1,305 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.DmaIn.layer.copy_in_195.0",
+            "idx": 0,
+            "mem_used_rate": 0.263671875,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 1105920
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_195.0",
+                    "addr": 0,
+                    "size": 1105920
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "DmaIn.layer.DmaIn.layer.copy_in_196.0",
+            "idx": 1,
+            "mem_used_rate": 0.52734375,
+            "malloc": [
+                {
+                    "addr": 1105920,
+                    "ori_size": 0,
+                    "size": 1105920
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_195.0",
+                    "addr": 0,
+                    "size": 1105920
+                },
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_196.0",
+                    "addr": 1105920,
+                    "size": 1105920
+                }
+            ],
+            "free": []
+        },
+        "kernel[2]": {
+            "name": "Eltwise.layer.Mul_20.h.0",
+            "idx": 2,
+            "mem_used_rate": 0.52734375,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 1105920
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_195.0",
+                    "addr": 0,
+                    "size": 1105920
+                },
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_196.0",
+                    "addr": 1105920,
+                    "size": 1105920
+                }
+            ],
+            "free": [
+                {
+                    "name": "Eltwise.layer.Mul_20.h.0",
+                    "addr": 1105920,
+                    "size": 1105920
+                }
+            ]
+        },
+        "kernel[3]": {
+            "name": "DmaOut.layer.Mul_20.0",
+            "idx": 3,
+            "mem_used_rate": 0.263671875,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_195.0",
+                    "addr": 0,
+                    "size": 1105920
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.Mul_20.0",
+                    "addr": 0,
+                    "size": 1105920
+                }
+            ]
+        },
+        "kernel[4]": {
+            "name": "DmaIn.layer.DmaIn.layer.copy_in_195.1",
+            "idx": 4,
+            "mem_used_rate": 0.2587890625,
+            "malloc": [
+                {
+                    "addr": 2211840,
+                    "ori_size": 0,
+                    "size": 1085440
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_195.1",
+                    "addr": 2211840,
+                    "size": 1085440
+                }
+            ],
+            "free": []
+        },
+        "kernel[5]": {
+            "name": "DmaIn.layer.DmaIn.layer.copy_in_196.1",
+            "idx": 5,
+            "mem_used_rate": 0.517578125,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 1085440
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_195.1",
+                    "addr": 2211840,
+                    "size": 1085440
+                },
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_196.1",
+                    "addr": 0,
+                    "size": 1085440
+                }
+            ],
+            "free": []
+        },
+        "kernel[6]": {
+            "name": "Eltwise.layer.Mul_20.h.1",
+            "idx": 6,
+            "mem_used_rate": 0.517578125,
+            "malloc": [
+                {
+                    "addr": 2211840,
+                    "ori_size": 0,
+                    "size": 1085440
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_195.1",
+                    "addr": 2211840,
+                    "size": 1085440
+                },
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_196.1",
+                    "addr": 0,
+                    "size": 1085440
+                }
+            ],
+            "free": [
+                {
+                    "name": "Eltwise.layer.Mul_20.h.1",
+                    "addr": 0,
+                    "size": 1085440
+                }
+            ]
+        },
+        "kernel[7]": {
+            "name": "DmaOut.layer.Mul_20.1",
+            "idx": 7,
+            "mem_used_rate": 0.2587890625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_195.1",
+                    "addr": 2211840,
+                    "size": 1085440
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.Mul_20.1",
+                    "addr": 2211840,
+                    "size": 1085440
+                }
+            ]
+        },
+        "kernel[8]": {
+            "name": "DmaIn.layer.DmaIn.layer.copy_in_195.2",
+            "idx": 8,
+            "mem_used_rate": 0.2587890625,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 1085440
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_195.2",
+                    "addr": 0,
+                    "size": 1085440
+                }
+            ],
+            "free": []
+        },
+        "kernel[9]": {
+            "name": "DmaIn.layer.DmaIn.layer.copy_in_196.2",
+            "idx": 9,
+            "mem_used_rate": 0.517578125,
+            "malloc": [
+                {
+                    "addr": 1085440,
+                    "ori_size": 0,
+                    "size": 1085440
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_195.2",
+                    "addr": 0,
+                    "size": 1085440
+                },
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_196.2",
+                    "addr": 1085440,
+                    "size": 1085440
+                }
+            ],
+            "free": []
+        },
+        "kernel[10]": {
+            "name": "Eltwise.layer.Mul_20.h.2",
+            "idx": 10,
+            "mem_used_rate": 0.517578125,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 1085440
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_195.2",
+                    "addr": 0,
+                    "size": 1085440
+                },
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_196.2",
+                    "addr": 1085440,
+                    "size": 1085440
+                }
+            ],
+            "free": [
+                {
+                    "name": "Eltwise.layer.Mul_20.h.2",
+                    "addr": 1085440,
+                    "size": 1085440
+                }
+            ]
+        },
+        "kernel[11]": {
+            "name": "DmaOut.layer.Mul_20.2",
+            "idx": 11,
+            "mem_used_rate": 0.2587890625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_195.2",
+                    "addr": 0,
+                    "size": 1085440
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.Mul_20.2",
+                    "addr": 0,
+                    "size": 1085440
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 2211840
+        }
+    ]
+}

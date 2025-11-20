@@ -1,0 +1,88 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_320",
+            "idx": 0,
+            "mem_used_rate": 0.0244140625,
+            "malloc": [
+                {
+                    "addr": 4091904,
+                    "ori_size": 0,
+                    "size": 102400
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_320",
+                    "addr": 4091904,
+                    "size": 102400
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "Slice.layer.MatMul_132_im_6",
+            "idx": 1,
+            "mem_used_rate": 0.03662109375,
+            "malloc": [
+                {
+                    "addr": 4040704,
+                    "ori_size": 0,
+                    "size": 51200
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_320",
+                    "addr": 4091904,
+                    "size": 102400
+                },
+                {
+                    "name": "Slice.layer.MatMul_132_im_6",
+                    "addr": 4040704,
+                    "size": 51200
+                }
+            ],
+            "free": [
+                {
+                    "name": "Slice.layer.MatMul_132_im_6",
+                    "addr": 4091904,
+                    "size": 102400
+                }
+            ]
+        },
+        "kernel[2]": {
+            "name": "DmaOut.layer.copy_out_362_im_7",
+            "idx": 2,
+            "mem_used_rate": 0.01220703125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "Slice.layer.MatMul_132_im_6",
+                    "addr": 4040704,
+                    "size": 51200
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_362_im_7",
+                    "addr": 4040704,
+                    "size": 51200
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 102400
+        }
+    ]
+}

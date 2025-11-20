@@ -1,0 +1,17 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["259","260"],
+    "input_shape": [{"dim": [1,128,20,20],"dtype": "f16","pack": 0},
+        {"dim": [1,128,20,20],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["285"],
+    "output_shape": [{"dim": [1,256,20,20],"dtype": "f16","pack": 0}
+],
+    "layer": [{"inst_name": "Concat_105","type_name": "Concat2",            "bottom": ["259","260"],
+            "top": ["285"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {"dim": 1}
+        }
+]
+}

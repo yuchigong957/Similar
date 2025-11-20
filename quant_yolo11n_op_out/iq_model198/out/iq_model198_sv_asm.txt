@@ -1,0 +1,1298 @@
+--------->   group: 0   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch0.DmaIn.layer.copy_in_325_im_10
+---------------------------------------------
+set depends: null
+clr depends:
+  0. npu_dma_out.DmaOut.layer.MatMul_127_im_9.npufmt2nchw
+---------------------------------------------
+[0xf4c0000008000000] MODULE_SYNC_NPU_DMA_IN_CH0: [0x3d3] sync_set[] sync_clr[npu_dma_out] sync_id[0]
+[0b 11110100 11000000 00000000 00000000 00001000 00000000 00000000 00000000]  [63-54][opcode][11 11010011] [53-38][sync_set][0] [37-22][sync_clr][100000] [21-6][sync_id][0] [5-0][reserve][0]
+
+[0xf8c0018040000000] MODULE_HEADER_NPU_DMA_IN_CH0: [0x3e3] cmd_num[6] hardlayer_num[1] cmd_id[0] dummy_en[disable] dummy_indi[0] dummy_id[0]
+[0b 11111000 11000000 00000001 10000000 01000000 00000000 00000000 00000000]  [63-54][opcode][11 11100011] [53-38][cmd_num][110] [37-30][hardlayer_num][1] [29-6][cmd_id][0] [5-5][dummy_en][0] [4-4][dummy_indi][0] [3-1][dummy_id][0] [0-0][reserve][0]
+
+[0x0002000019000019] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[16bit] src_line_size[25] src_line_stride[25]
+[0b 00000000 00000010 00000000 00000000 00011001 00000000 00000000 00011001]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][10] [47-24][src_line_size][11001] [23-0][src_line_stride][11001]
+
+[0x0040001900000320] DMA_IN_INFO_1: [0x01] src_patch_size[800] src_patch_stride[800]
+[0b 00000000 01000000 00000000 00011001 00000000 00000000 00000011 00100000]  [63-54][opcode][1] [53-27][src_patch_size][11 00100000] [26-0][src_patch_stride][11 00100000]
+
+[0x0080000000000000] DMA_IN_INFO_2: [0x02] src_offset_addr[0] dst_addr[0]
+[0b 00000000 10000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10] [53-27][src_offset_addr][0] [26-0][dst_addr][0]
+
+[0x00c007c063c0000b] DMA_IN_INFO_3: [0x03] src_hsize[31] src_wsize[399] src_ch[0] src_layout[nchw] dst_layout[npufmt]
+[0b 00000000 11000000 00000111 11000000 01100011 11000000 00000000 00001011]  [63-54][opcode][11] [53-38][src_hsize][11111] [37-22][src_wsize][1 10001111] [21-6][src_ch][0] [5-3][src_layout][1] [3-0][dst_layout][11]
+
+[0x0110000000000000] DMA_IN_INFO_4: [0x04] data_type[feature_map] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[0] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00010000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100] [53-52][data_type][1] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][0] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0x0152400000000000] DMA_IN_INFO_5: [0x05] dst_bit_width[16bit] src_dtype[fp] dst_dtype[fp] decomp_wgt_mode[sec] wgt_gptq_zeros_cfg_en[disable] wgt_gptq_zeros_cfg[0] wgt_gptq_scales_cfg_en[disable] wgt_gptq_scales_cfg[0]
+[0b 00000001 01010010 01000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][101] [53-51][dst_bit_width][10] [50-48][src_dtype][10] [47-45][dst_dtype][10] [44-44][decomp_wgt_mode][0] [43-43][wgt_gptq_zeros_cfg_en][0] [42-39][wgt_gptq_zeros_cfg][0] [38-38][wgt_gptq_scales_cfg_en][0] [37-22][wgt_gptq_scales_cfg][0] [21-0][reserve][0]
+
+[0xfcee591327600000] MODULE_TAIL_NPU_DMA_IN_CH0: [0x3f3] check_sum[3110358173] Preemption_indi[1]
+[0b 11111100 11101110 01011001 00010011 00100111 01100000 00000000 00000000]  [63-54][opcode][11 11110011] [53-22][check_sum][ 10111001 01100100 01001100 10011101] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 1   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_out.DmaOut.layer.MatMul_127_im_9.npufmt2nchw
+---------------------------------------------
+set depends:
+  0. npu_dma_in_ch0.DmaIn.layer.copy_in_325_im_10
+clr depends:
+  0. mte.Slice.layer.MatMul_127_im_9.0
+---------------------------------------------
+[0xf540020001000000] MODULE_SYNC_NPU_DMA_OUT: [0x3d5] sync_set[npu_dma_in_ch0] sync_clr[mte] sync_id[0]
+[0b 11110101 01000000 00000010 00000000 00000001 00000000 00000000 00000000]  [63-54][opcode][11 11010101] [53-38][sync_set][1000] [37-22][sync_clr][100] [21-6][sync_id][0] [5-0][reserve][0]
+
+[0xf940018040000000] MODULE_HEADER_NPU_DMA_OUT: [0x3e5] cmd_num[6] hardlayer_num[1] cmd_id[0] dummy_en[disable] dummy_indi[0] dummy_id[0]
+[0b 11111001 01000000 00000001 10000000 01000000 00000000 00000000 00000000]  [63-54][opcode][11 11100101] [53-38][cmd_num][110] [37-30][hardlayer_num][1] [29-6][cmd_id][0] [5-5][dummy_en][0] [4-4][dummy_indi][0] [3-1][dummy_id][0] [0-0][reserve][0]
+
+[0x0012000019000019] DMA_OUT_INFO_0: [0x00] mode[non_cascade] data_to[l1] src_bit_width[16bit] src_line_size[25] src_line_stride[25]
+[0b 00000000 00010010 00000000 00000000 00011001 00000000 00000000 00011001]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_to][10] [50-48][src_bit_width][10] [47-24][src_line_size][11001] [23-0][src_line_stride][11001]
+
+[0x0040001900000320] DMA_OUT_INFO_1: [0x01] src_patch_size[800] src_patch_stride[800]
+[0b 00000000 01000000 00000000 00011001 00000000 00000000 00000011 00100000]  [63-54][opcode][1] [53-27][src_patch_size][11 00100000] [26-0][src_patch_stride][11 00100000]
+
+[0x008000000001fce0] DMA_OUT_INFO_2: [0x02] src_addr[0] dst_offset_addr[130272]
+[0b 00000000 10000000 00000000 00000000 00000000 00000001 11111100 11100000]  [63-54][opcode][10] [53-27][src_addr][0] [26-0][dst_offset_addr][1 11111100 11100000]
+
+[0x00c0000000000000] DMA_OUT_INFO_3: [0x03] dst_line_stride[0] dst_patch_stride[0]
+[0b 00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11] [53-30][dst_line_stride][0] [29-3][dst_patch_stride][0] [2-0][reserve][0]
+
+[0x010007c063c00019] DMA_OUT_INFO_4: [0x04] src_hsize[31] src_wsize[399] src_ch[0] src_layout[npufmt] dst_layout[nchw]
+[0b 00000001 00000000 00000111 11000000 01100011 11000000 00000000 00011001]  [63-54][opcode][100] [53-38][src_hsize][11111] [37-22][src_wsize][1 10001111] [21-6][src_ch][0] [5-3][src_layout][11] [3-0][dst_layout][1]
+
+[0x0160000000009200] DMA_OUT_INFO_5: [0x05] data_type[mid_layer] compress_en[disable] depad_en[disable] depad_hsize[0] depad_wsize[0] dst_base_id[0] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable] dst_bit_width[16bit] src_dtype[fp] dst_dtype[fp]
+[0b 00000001 01100000 00000000 00000000 00000000 00000000 10010010 00000000]  [63-54][opcode][101] [53-52][data_type][10] [51-51][compress_en][0] [50-50][depad_en][0] [49-42][depad_hsize][0] [41-34][depad_wsize][0] [33-31][dst_base_id][0] [30-28][reserve][0] [27-27][src_reuse_en][0] [26-23][src_reuse_id][0] [22-22][dst_reuse_en][0] [21-18][dst_reuse_id][0] [17-17][astype_en][0] [16-14][dst_bit_width][10] [13-11][src_dtype][10] [10-8][dst_dtype][10] [7-0][reserve][0]
+
+[0xfd6e7d26e2e00000] MODULE_TAIL_NPU_DMA_OUT: [0x3f5] check_sum[3119815563] Preemption_indi[1]
+[0b 11111101 01101110 01111101 00100110 11100010 11100000 00000000 00000000]  [63-54][opcode][11 11110101] [53-22][check_sum][ 10111001 11110100 10011011 10001011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 2   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.0
+---------------------------------------------
+set depends:
+  0. npu_dma_out.DmaOut.layer.MatMul_127_im_9.npufmt2nchw
+clr depends: null
+---------------------------------------------
+[0xf480080000000000] MODULE_SYNC_MTE: [0x3d2] sync_set[npu_dma_out] sync_clr[] sync_id[0]
+[0b 11110100 10000000 00001000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11 11010010] [53-38][sync_set][100000] [37-22][sync_clr][0] [21-6][sync_id][0] [5-0][reserve][0]
+
+[0xf880020040000000] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[0]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000000 00000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][0] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1800000000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[0] store_1_begin[0]
+[0b 00011000 00000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][0] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x1000190000000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[800] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00011001 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][11 00100000] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86b64b94e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[450440787] Preemption_indi[1]
+[0b 11111100 10000110 10110110 01001011 10010100 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11011001 00101110 01010011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 3   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.1
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000040] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[1]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000000 01000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][1] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1801900000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[400] store_1_begin[0]
+[0b 00011000 00000001 10010000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][1 10010000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x100019c800000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[825] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00011001 11001000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][11 00111001] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86b6afd6e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[450543451] Preemption_indi[1]
+[0b 11111100 10000110 10110110 10101111 11010110 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11011010 10111111 01011011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 4   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.2
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000080] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[2]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000000 10000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][10] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1803200000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[800] store_1_begin[0]
+[0b 00011000 00000011 00100000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][11 00100000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x10001a9000000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[850] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00011010 10010000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][11 01010010] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86b71418e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[450646115] Preemption_indi[1]
+[0b 11111100 10000110 10110111 00010100 00011000 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11011100 01010000 01100011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 5   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.3
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf8800200400000c0] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[3]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000000 11000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][11] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1804b00000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[1200] store_1_begin[0]
+[0b 00011000 00000100 10110000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][100 10110000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x10001b5800000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[875] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00011011 01011000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][11 01101011] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86b7785ae00000] MODULE_TAIL_MTE: [0x3f2] check_sum[450748779] Preemption_indi[1]
+[0b 11111100 10000110 10110111 01111000 01011010 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11011101 11100001 01101011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 6   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.4
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000100] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[4]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000001 00000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][100] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1806400000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[1600] store_1_begin[0]
+[0b 00011000 00000110 01000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][110 01000000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x10001c2000000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[900] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00011100 00100000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][11 10000100] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86b7dc9ce00000] MODULE_TAIL_MTE: [0x3f2] check_sum[450851443] Preemption_indi[1]
+[0b 11111100 10000110 10110111 11011100 10011100 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11011111 01110010 01110011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 7   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.5
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000140] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[5]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000001 01000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][101] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1807d00000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[2000] store_1_begin[0]
+[0b 00011000 00000111 11010000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][111 11010000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x10001ce800000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[925] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00011100 11101000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][11 10011101] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86b840dee00000] MODULE_TAIL_MTE: [0x3f2] check_sum[450954107] Preemption_indi[1]
+[0b 11111100 10000110 10111000 01000000 11011110 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11100001 00000011 01111011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 8   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.6
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000180] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[6]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000001 10000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][110] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1809600000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[2400] store_1_begin[0]
+[0b 00011000 00001001 01100000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][1001 01100000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x10001db000000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[950] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00011101 10110000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][11 10110110] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86b8a520e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[451056771] Preemption_indi[1]
+[0b 11111100 10000110 10111000 10100101 00100000 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11100010 10010100 10000011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 9   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.7
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf8800200400001c0] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[7]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000001 11000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][111] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x180af00000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[2800] store_1_begin[0]
+[0b 00011000 00001010 11110000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][1010 11110000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x10001e7800000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[975] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00011110 01111000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][11 11001111] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86b90962e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[451159435] Preemption_indi[1]
+[0b 11111100 10000110 10111001 00001001 01100010 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11100100 00100101 10001011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 10   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.8
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000200] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[8]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000010 00000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][1000] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x180c800000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[3200] store_1_begin[0]
+[0b 00011000 00001100 10000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][1100 10000000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x10001f4000000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1000] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00011111 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][11 11101000] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86b96da4e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[451262099] Preemption_indi[1]
+[0b 11111100 10000110 10111001 01101101 10100100 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11100101 10110110 10010011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 11   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.9
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000240] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[9]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000010 01000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][1001] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x180e100000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[3600] store_1_begin[0]
+[0b 00011000 00001110 00010000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][1110 00010000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x1000200800000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1025] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00100000 00001000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][100 00000001] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86b9d1e6e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[451364763] Preemption_indi[1]
+[0b 11111100 10000110 10111001 11010001 11100110 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11100111 01000111 10011011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 12   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.10
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000280] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[10]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000010 10000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][1010] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x180fa00000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[4000] store_1_begin[0]
+[0b 00011000 00001111 10100000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][1111 10100000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x100020d000000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1050] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00100000 11010000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][100 00011010] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86ba3628e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[451467427] Preemption_indi[1]
+[0b 11111100 10000110 10111010 00110110 00101000 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11101000 11011000 10100011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 13   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.11
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf8800200400002c0] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[11]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000010 11000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][1011] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1811300000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[4400] store_1_begin[0]
+[0b 00011000 00010001 00110000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][10001 00110000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x1000219800000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1075] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00100001 10011000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][100 00110011] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86ba9a6ae00000] MODULE_TAIL_MTE: [0x3f2] check_sum[451570091] Preemption_indi[1]
+[0b 11111100 10000110 10111010 10011010 01101010 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11101010 01101001 10101011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 14   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.12
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000300] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[12]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000011 00000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][1100] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1812c00000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[4800] store_1_begin[0]
+[0b 00011000 00010010 11000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][10010 11000000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x1000226000000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1100] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00100010 01100000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][100 01001100] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86bafeace00000] MODULE_TAIL_MTE: [0x3f2] check_sum[451672755] Preemption_indi[1]
+[0b 11111100 10000110 10111010 11111110 10101100 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11101011 11111010 10110011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 15   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.13
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000340] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[13]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000011 01000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][1101] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1814500000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[5200] store_1_begin[0]
+[0b 00011000 00010100 01010000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][10100 01010000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x1000232800000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1125] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00100011 00101000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][100 01100101] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86bb62eee00000] MODULE_TAIL_MTE: [0x3f2] check_sum[451775419] Preemption_indi[1]
+[0b 11111100 10000110 10111011 01100010 11101110 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11101101 10001011 10111011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 16   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.14
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000380] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[14]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000011 10000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][1110] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1815e00000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[5600] store_1_begin[0]
+[0b 00011000 00010101 11100000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][10101 11100000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x100023f000000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1150] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00100011 11110000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][100 01111110] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86bbc730e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[451878083] Preemption_indi[1]
+[0b 11111100 10000110 10111011 11000111 00110000 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11101111 00011100 11000011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 17   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.15
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf8800200400003c0] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[15]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000011 11000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][1111] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1817700000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[6000] store_1_begin[0]
+[0b 00011000 00010111 01110000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][10111 01110000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x100024b800000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1175] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00100100 10111000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][100 10010111] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86bc2b72e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[451980747] Preemption_indi[1]
+[0b 11111100 10000110 10111100 00101011 01110010 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11110000 10101101 11001011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 18   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.16
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000400] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[16]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000100 00000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][10000] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1819000000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[6400] store_1_begin[0]
+[0b 00011000 00011001 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][11001 00000000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x1000258000000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1200] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00100101 10000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][100 10110000] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86bc8fb4e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[452083411] Preemption_indi[1]
+[0b 11111100 10000110 10111100 10001111 10110100 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11110010 00111110 11010011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 19   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.17
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000440] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[17]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000100 01000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][10001] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x181a900000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[6800] store_1_begin[0]
+[0b 00011000 00011010 10010000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][11010 10010000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x1000264800000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1225] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00100110 01001000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][100 11001001] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86bcf3f6e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[452186075] Preemption_indi[1]
+[0b 11111100 10000110 10111100 11110011 11110110 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11110011 11001111 11011011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 20   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.18
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000480] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[18]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000100 10000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][10010] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x181c200000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[7200] store_1_begin[0]
+[0b 00011000 00011100 00100000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][11100 00100000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x1000271000000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1250] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00100111 00010000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][100 11100010] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86bd5838e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[452288739] Preemption_indi[1]
+[0b 11111100 10000110 10111101 01011000 00111000 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11110101 01100000 11100011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 21   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.19
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf8800200400004c0] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[19]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000100 11000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][10011] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x181db00000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[7600] store_1_begin[0]
+[0b 00011000 00011101 10110000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][11101 10110000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x100027d800000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1275] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00100111 11011000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][100 11111011] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86bdbc7ae00000] MODULE_TAIL_MTE: [0x3f2] check_sum[452391403] Preemption_indi[1]
+[0b 11111100 10000110 10111101 10111100 01111010 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11110110 11110001 11101011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 22   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.20
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000500] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[20]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000101 00000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][10100] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x181f400000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[8000] store_1_begin[0]
+[0b 00011000 00011111 01000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][11111 01000000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x100028a000000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1300] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00101000 10100000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][101 00010100] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86be20bce00000] MODULE_TAIL_MTE: [0x3f2] check_sum[452494067] Preemption_indi[1]
+[0b 11111100 10000110 10111110 00100000 10111100 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11111000 10000010 11110011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 23   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.21
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000540] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[21]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000101 01000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][10101] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1820d00000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[8400] store_1_begin[0]
+[0b 00011000 00100000 11010000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][100000 11010000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x1000296800000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1325] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00101001 01101000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][101 00101101] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86be84fee00000] MODULE_TAIL_MTE: [0x3f2] check_sum[452596731] Preemption_indi[1]
+[0b 11111100 10000110 10111110 10000100 11111110 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11111010 00010011 11111011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 24   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.22
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000580] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[22]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000101 10000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][10110] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1822600000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[8800] store_1_begin[0]
+[0b 00011000 00100010 01100000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][100010 01100000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x10002a3000000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1350] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00101010 00110000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][101 01000110] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86bee940e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[452699395] Preemption_indi[1]
+[0b 11111100 10000110 10111110 11101001 01000000 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11111011 10100101 00000011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 25   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.23
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf8800200400005c0] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[23]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000101 11000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][10111] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1823f00000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[9200] store_1_begin[0]
+[0b 00011000 00100011 11110000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][100011 11110000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x10002af800000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1375] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00101010 11111000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][101 01011111] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86bf4d82e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[452802059] Preemption_indi[1]
+[0b 11111100 10000110 10111111 01001101 10000010 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11111101 00110110 00001011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 26   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.24
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000600] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[24]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000110 00000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][11000] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1825800000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[9600] store_1_begin[0]
+[0b 00011000 00100101 10000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][100101 10000000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x10002bc000000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1400] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00101011 11000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][101 01111000] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86bfb1c4e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[452904723] Preemption_indi[1]
+[0b 11111100 10000110 10111111 10110001 11000100 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11010 11111110 11000111 00010011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 27   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.25
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000640] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[25]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000110 01000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][11001] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1827100000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[10000] store_1_begin[0]
+[0b 00011000 00100111 00010000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][100111 00010000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x10002c8800000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1425] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00101100 10001000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][101 10010001] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86c01606e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[453007387] Preemption_indi[1]
+[0b 11111100 10000110 11000000 00010110 00000110 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11011 00000000 01011000 00011011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 28   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.26
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000680] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[26]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000110 10000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][11010] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1828a00000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[10400] store_1_begin[0]
+[0b 00011000 00101000 10100000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][101000 10100000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x10002d5000000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1450] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00101101 01010000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][101 10101010] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86c07a48e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[453110051] Preemption_indi[1]
+[0b 11111100 10000110 11000000 01111010 01001000 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11011 00000001 11101001 00100011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 29   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.27
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf8800200400006c0] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[27]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000110 11000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][11011] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x182a300000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[10800] store_1_begin[0]
+[0b 00011000 00101010 00110000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][101010 00110000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x10002e1800000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1475] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00101110 00011000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][101 11000011] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86c0de8ae00000] MODULE_TAIL_MTE: [0x3f2] check_sum[453212715] Preemption_indi[1]
+[0b 11111100 10000110 11000000 11011110 10001010 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11011 00000011 01111010 00101011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 30   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.28
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000700] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[28]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000111 00000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][11100] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x182bc00000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[11200] store_1_begin[0]
+[0b 00011000 00101011 11000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][101011 11000000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x10002ee000000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1500] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00101110 11100000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][101 11011100] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86c142cce00000] MODULE_TAIL_MTE: [0x3f2] check_sum[453315379] Preemption_indi[1]
+[0b 11111100 10000110 11000001 01000010 11001100 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11011 00000101 00001011 00110011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 31   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.29
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000740] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[29]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000111 01000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][11101] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x182d500000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[11600] store_1_begin[0]
+[0b 00011000 00101101 01010000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][101101 01010000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x10002fa800000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1525] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00101111 10101000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][101 11110101] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86c1a70ee00000] MODULE_TAIL_MTE: [0x3f2] check_sum[453418043] Preemption_indi[1]
+[0b 11111100 10000110 11000001 10100111 00001110 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11011 00000110 10011100 00111011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 32   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.30
+---------------------------------------------
+set depends: null
+clr depends: null
+---------------------------------------------
+[0xf880020040000780] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[30]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000111 10000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][11110] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x182ee00000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[12000] store_1_begin[0]
+[0b 00011000 00101110 11100000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][101110 11100000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x1000307000000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1550] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00110000 01110000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][110 00001110] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86c20b50e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[453520707] Preemption_indi[1]
+[0b 11111100 10000110 11000010 00001011 01010000 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11011 00001000 00101101 01000011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 33   <---------
+---------------------------------------------
+hwlayer_name: mte.Slice.layer.MatMul_127_im_9.31
+---------------------------------------------
+set depends: null
+clr depends:
+  0. npu_dma_out.DmaOut.layer.copy_out_325_im_11
+---------------------------------------------
+[0xf480000008000040] MODULE_SYNC_MTE: [0x3d2] sync_set[] sync_clr[npu_dma_out] sync_id[1]
+[0b 11110100 10000000 00000000 00000000 00001000 00000000 00000000 01000000]  [63-54][opcode][11 11010010] [53-38][sync_set][0] [37-22][sync_clr][100000] [21-6][sync_id][1] [5-0][reserve][0]
+
+[0xf8800200400007c0] MODULE_HEADER_MTE: [0x3e2] cmd_num[8] hardlayer_num[1] cmd_id[31]
+[0b 11111000 10000000 00000010 00000000 01000000 00000000 00000111 11000000]  [63-54][opcode][11 11100010] [53-38][cmd_num][1000] [37-30][hardlayer_num][1] [29-6][cmd_id][11111] [5-0][reserve][0]
+
+[0x00000031ff000600] MTE_LOAD_INFO_LOAD_0_FORMAT: [0x00] mode[non_cascade] hsize[0] wsize[12799] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00000000 00000000 00000000 00110001 11111111 00000000 00000110 00000000]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][110001 11111111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0040190003200000] MTE_LOAD_INFO_LOAD_0_STRIDE: [0x01] line_stride[800] chx_stride[800] res_ch_line_stride[0]
+[0b 00000000 01000000 00011001 00000000 00000011 00100000 00000000 00000000]  [63-54][opcode][1] [53-35][line_stride][11 00100000] [34-16][chx_stride][11 00100000] [15-0][res_ch_line_stride][0]
+
+[0x040fe70000000000] MTE_LOAD_BUF_LOAD_0_1: [0x10] address_0[130272] address_1[0] load0_reuse_en[disable] load0_reuse_id[0] load1_reuse_en[disable] load1_reuse_id[0]
+[0b 00000100 00001111 11100111 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10000] [53-35][address_0][1 11111100 11100000] [34-16][address_1][0] [15-15][load0_reuse_en][0] [14-11][load0_reuse_id][0] [10-10][load1_reuse_en][0] [9-6][load1_reuse_id][0] [5-0][reserve][0]
+
+[0x1490064000000000] MTE_CALCULATE_INFO_SLICE: [0x52] relu_en[disable] slice_mode[w_slice] store_region_num[store0] store_1_size[400] store_2_size[0] store_3_size[0]
+[0b 00010100 10010000 00000110 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1010010] [53-53][relu_en][0] [52-51][slice_mode][10] [50-48][store_region_num][0] [47-34][store_1_size][1 10010000] [33-20][store_2_size][0] [19-6][store_3_size][0] [5-0][reserve][0]
+
+[0x1830700000000000] MTE_CALCULATE_CFG_SLICE_0: [0x60] store_0_begin[12400] store_1_begin[0]
+[0b 00011000 00110000 01110000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1100000] [53-40][store_0_begin][110000 01110000] [39-26][store_1_begin][0] [25-0][reserve][0]
+
+[0x080000018f000600] MTE_STORE_INFO_STORE_0_FORMAT: [0x20] mode[non_cascade] hsize[0] wsize[399] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001000 00000000 00000000 00000001 10001111 00000000 00000110 00000000]  [63-54][opcode][100000] [53-52][mode][0] [51-38][hsize][0] [37-24][wsize][1 10001111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x084000c800190019] MTE_STORE_INFO_STORE_0_STRIDE: [0x21] line_stride[25] chx_stride[25] res_ch_line_stride[25]
+[0b 00001000 01000000 00000000 11001000 00000000 00011001 00000000 00011001]  [63-54][opcode][100001] [53-35][line_stride][11001] [34-16][chx_stride][11001] [15-0][res_ch_line_stride][11001]
+
+[0x1000313800000000] MTE_STORE_BUF_STORE_0_1_ADDRESS: [0x40] address_0[1575] address_1[0] store0_reuse_en[disable] store0_reuse_id[0] store1_reuse_en[disable] store1_reuse_id[0]
+[0b 00010000 00000000 00110001 00111000 00000000 00000000 00000000 00000000]  [63-54][opcode][1000000] [53-35][address_0][110 00100111] [34-16][address_1][0] [15-15][store0_reuse_en][0] [14-11][store0_reuse_id][0] [10-10][store1_reuse_en][0] [9-6][store1_reuse_id][0] [5-0][reserve][0]
+
+[0xfc86c26f92e00000] MODULE_TAIL_MTE: [0x3f2] check_sum[453623371] Preemption_indi[1]
+[0b 11111100 10000110 11000010 01101111 10010010 11100000 00000000 00000000]  [63-54][opcode][11 11110010] [53-22][check_sum][11011 00001001 10111110 01001011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 34   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_out.DmaOut.layer.copy_out_325_im_11
+---------------------------------------------
+set depends:
+  0. mte.Slice.layer.MatMul_127_im_9.31
+clr depends: null
+---------------------------------------------
+[0xf540010000000040] MODULE_SYNC_NPU_DMA_OUT: [0x3d5] sync_set[mte] sync_clr[] sync_id[1]
+[0b 11110101 01000000 00000001 00000000 00000000 00000000 00000000 01000000]  [63-54][opcode][11 11010101] [53-38][sync_set][100] [37-22][sync_clr][0] [21-6][sync_id][1] [5-0][reserve][0]
+
+[0xf940018040000040] MODULE_HEADER_NPU_DMA_OUT: [0x3e5] cmd_num[6] hardlayer_num[1] cmd_id[1] dummy_en[disable] dummy_indi[0] dummy_id[0]
+[0b 11111001 01000000 00000001 10000000 01000000 00000000 00000000 01000000]  [63-54][opcode][11 11100101] [53-38][cmd_num][110] [37-30][hardlayer_num][1] [29-6][cmd_id][1] [5-5][dummy_en][0] [4-4][dummy_indi][0] [3-1][dummy_id][0] [0-0][reserve][0]
+
+[0x0002000019000019] DMA_OUT_INFO_0: [0x00] mode[non_cascade] data_to[ddr] src_bit_width[16bit] src_line_size[25] src_line_stride[25]
+[0b 00000000 00000010 00000000 00000000 00011001 00000000 00000000 00011001]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_to][0] [50-48][src_bit_width][10] [47-24][src_line_size][11001] [23-0][src_line_stride][11001]
+
+[0x0040001900000320] DMA_OUT_INFO_1: [0x01] src_patch_size[800] src_patch_stride[800]
+[0b 00000000 01000000 00000000 00011001 00000000 00000000 00000011 00100000]  [63-54][opcode][1] [53-27][src_patch_size][11 00100000] [26-0][src_patch_stride][11 00100000]
+
+[0x0080001900000000] DMA_OUT_INFO_2: [0x02] src_addr[800] dst_offset_addr[0]
+[0b 00000000 10000000 00000000 00011001 00000000 00000000 00000000 00000000]  [63-54][opcode][10] [53-27][src_addr][11 00100000] [26-0][dst_offset_addr][0]
+
+[0x00c0000640001900] DMA_OUT_INFO_3: [0x03] dst_line_stride[25] dst_patch_stride[800]
+[0b 00000000 11000000 00000000 00000110 01000000 00000000 00011001 00000000]  [63-54][opcode][11] [53-30][dst_line_stride][11001] [29-3][dst_patch_stride][11 00100000] [2-0][reserve][0]
+
+[0x010007c063c00019] DMA_OUT_INFO_4: [0x04] src_hsize[31] src_wsize[399] src_ch[0] src_layout[npufmt] dst_layout[nchw]
+[0b 00000001 00000000 00000111 11000000 01100011 11000000 00000000 00011001]  [63-54][opcode][100] [53-38][src_hsize][11111] [37-22][src_wsize][1 10001111] [21-6][src_ch][0] [5-3][src_layout][11] [3-0][dst_layout][1]
+
+[0x0150000000009200] DMA_OUT_INFO_5: [0x05] data_type[feature_map] compress_en[disable] depad_en[disable] depad_hsize[0] depad_wsize[0] dst_base_id[0] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable] dst_bit_width[16bit] src_dtype[fp] dst_dtype[fp]
+[0b 00000001 01010000 00000000 00000000 00000000 00000000 10010010 00000000]  [63-54][opcode][101] [53-52][data_type][1] [51-51][compress_en][0] [50-50][depad_en][0] [49-42][depad_hsize][0] [41-34][depad_wsize][0] [33-31][dst_base_id][0] [30-28][reserve][0] [27-27][src_reuse_en][0] [26-23][src_reuse_id][0] [22-22][dst_reuse_en][0] [21-18][dst_reuse_id][0] [17-17][astype_en][0] [16-14][dst_bit_width][10] [13-11][src_dtype][10] [10-8][dst_dtype][10] [7-0][reserve][0]
+
+[0xfd7e74ae02a00000] MODULE_TAIL_NPU_DMA_OUT: [0x3f5] check_sum[4191336458] Preemption_indi[1]
+[0b 11111101 01111110 01110100 10101110 00000010 10100000 00000000 00000000]  [63-54][opcode][11 11110101] [53-22][check_sum][ 11111001 11010010 10111000 00001010] [52-21][Preemption_indi][1] [20-0][reserve][0]
+

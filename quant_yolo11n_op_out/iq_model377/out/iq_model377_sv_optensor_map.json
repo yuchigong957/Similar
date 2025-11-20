@@ -1,0 +1,18 @@
+{
+    "layers": [
+        {
+            "op_name": "MatMul_132_im_6",
+            "hwlayer_names": [
+                "Slice.layer.MatMul_132_im_6"
+            ],
+            "tops": [
+                {
+                    "top_name": "362_im_7",
+                    "in_hwlayer_id": 2,
+                    "out_hwlayer_id": 1,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "graph_aic",
+  "input_tensor": [
+    "325"
+  ],
+  "input_shape": [
+    {
+      "dim": [1,2,400,400],
+      "dtype": "f16",
+      "pack": 0
+    }
+  ],
+  "output_tensor": [
+    "326"
+  ],
+  "output_shape": [
+    {
+      "dim": [1,2,400,400],
+      "dtype": "f16",
+      "pack": 0
+    }
+  ],
+  "layer": [
+    {
+      "inst_name": "Transpose_131",
+      "type_name": "Permute2",
+      "bottom": [
+        "325"
+      ],
+      "top": [
+        "326"
+      ],
+      "hw": 1,
+      "hw_acc": [5,10,15],
+      "param": {
+        "mode": 1,
+        "input_dtype": 1,
+        "Input_acc": [5,10,15]
+      }
+    }
+  ]
+}

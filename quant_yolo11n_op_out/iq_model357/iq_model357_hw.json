@@ -1,0 +1,17 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["352"],
+    "input_shape": [{"dim": [1,256,20,20],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["357"],
+    "output_shape": [{"dim": [1,256,40,40],"dtype": "f16","pack": 0}
+],
+    "layer": [{"inst_name": "Resize_149","type_name": "Interp3",            "bottom": ["352"],
+            "top": ["357"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {"interp": "NEAREST","unpack_en": 1,"pack_en": 1},
+            "data": {"input_dtype": 1,"input_acc": [5,10,15],"output_dtype": 1,"output_acc": [5,10,15]}
+        }
+]
+}

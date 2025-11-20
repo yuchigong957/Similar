@@ -1,0 +1,18 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["326"],
+    "input_shape": [{"dim": [1,2,400,400],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["362_im_9"],
+    "output_shape": [{"dim": [1,1,400,400],"dtype": "f16","pack": 0}
+],
+    "layer": [{"inst_name": "MatMul_132_im_8","type_name": "Slice2",            "bottom": ["326"],
+            "top": ["362_im_9"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {"dim": 1,"start_index": 1,"output_size": 1},
+            "sv": 1,
+            "data": {"input_dtype": 1,"output_dtype": 1,"input_acc": [5,10,15],"output_acc": [5,10,15]}
+        }
+]
+}

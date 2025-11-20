@@ -1,0 +1,57 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.DmaIn.layer.copy_in_403.0",
+            "idx": 0,
+            "mem_used_rate": 0.05859375,
+            "malloc": [
+                {
+                    "addr": 3948544,
+                    "ori_size": 0,
+                    "size": 245760
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_403.0",
+                    "addr": 3948544,
+                    "size": 245760
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "DmaOut.layer.copy_out_405",
+            "idx": 1,
+            "mem_used_rate": 0.05859375,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_403.0",
+                    "addr": 3948544,
+                    "size": 245760
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_405",
+                    "addr": 3948544,
+                    "size": 245760
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 245760
+        }
+    ]
+}

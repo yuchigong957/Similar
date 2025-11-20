@@ -1,0 +1,222 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_PPQ_Variable_225",
+            "idx": 0,
+            "mem_used_rate": 0.0390625,
+            "malloc": [
+                {
+                    "addr": 4030464,
+                    "ori_size": 0,
+                    "size": 163840
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_PPQ_Variable_225",
+                    "addr": 4030464,
+                    "size": 163840
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "FetchParam.layer.Conv2d.layer.Conv_291_im_0.split.co.0.fetch_param_data.layer",
+            "idx": 1,
+            "mem_used_rate": 0.04156494140625,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 10496
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_PPQ_Variable_225",
+                    "addr": 4030464,
+                    "size": 163840
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer.Conv_291_im_0.split.co.0.fetch_param_data.layer",
+                    "addr": 0,
+                    "size": 10496
+                }
+            ],
+            "free": []
+        },
+        "kernel[2]": {
+            "name": "FetchParam.layer.Conv2d.layer.Conv_291_im_0.split.co.1.fetch_param_data.layer",
+            "idx": 2,
+            "mem_used_rate": 0.0440673828125,
+            "malloc": [
+                {
+                    "addr": 10496,
+                    "ori_size": 0,
+                    "size": 10496
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_PPQ_Variable_225",
+                    "addr": 4030464,
+                    "size": 163840
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer.Conv_291_im_0.split.co.0.fetch_param_data.layer",
+                    "addr": 0,
+                    "size": 10496
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer.Conv_291_im_0.split.co.1.fetch_param_data.layer",
+                    "addr": 10496,
+                    "size": 10496
+                }
+            ],
+            "free": []
+        },
+        "kernel[3]": {
+            "name": "DummyConcat.layer.Conv_291_im_0.0",
+            "idx": 3,
+            "mem_used_rate": 0.0684814453125,
+            "malloc": [
+                {
+                    "addr": 20992,
+                    "ori_size": 0,
+                    "size": 102400
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_PPQ_Variable_225",
+                    "addr": 4030464,
+                    "size": 163840
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer.Conv_291_im_0.split.co.0.fetch_param_data.layer",
+                    "addr": 0,
+                    "size": 10496
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer.Conv_291_im_0.split.co.1.fetch_param_data.layer",
+                    "addr": 10496,
+                    "size": 10496
+                },
+                {
+                    "name": "DummyConcat.layer.Conv_291_im_0.0",
+                    "addr": 20992,
+                    "size": 102400
+                }
+            ],
+            "free": []
+        },
+        "kernel[4]": {
+            "name": "Conv2d.layer.Conv_291_im_0.split.co.0",
+            "idx": 4,
+            "mem_used_rate": 0.0684814453125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_PPQ_Variable_225",
+                    "addr": 4030464,
+                    "size": 163840
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer.Conv_291_im_0.split.co.0.fetch_param_data.layer",
+                    "addr": 0,
+                    "size": 10496
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer.Conv_291_im_0.split.co.1.fetch_param_data.layer",
+                    "addr": 10496,
+                    "size": 10496
+                },
+                {
+                    "name": "DummyConcat.layer.Conv_291_im_0.0",
+                    "addr": 20992,
+                    "size": 102400
+                }
+            ],
+            "free": [
+                {
+                    "name": "Conv2d.layer.Conv_291_im_0.split.co.0",
+                    "addr": 0,
+                    "size": 10496
+                }
+            ]
+        },
+        "kernel[5]": {
+            "name": "Conv2d.layer.Conv_291_im_0.split.co.1",
+            "idx": 5,
+            "mem_used_rate": 0.02691650390625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_PPQ_Variable_225",
+                    "addr": 4030464,
+                    "size": 163840
+                },
+                {
+                    "name": "FetchParam.layer.Conv2d.layer.Conv_291_im_0.split.co.1.fetch_param_data.layer",
+                    "addr": 10496,
+                    "size": 10496
+                },
+                {
+                    "name": "DummyConcat.layer.Conv_291_im_0.0",
+                    "addr": 20992,
+                    "size": 102400
+                }
+            ],
+            "free": [
+                {
+                    "name": "Conv2d.layer.Conv_291_im_0.split.co.1",
+                    "addr": 4030464,
+                    "size": 163840
+                },
+                {
+                    "name": "Conv2d.layer.Conv_291_im_0.split.co.1",
+                    "addr": 10496,
+                    "size": 10496
+                }
+            ]
+        },
+        "kernel[6]": {
+            "name": "DmaOut.layer.copy_out_506",
+            "idx": 6,
+            "mem_used_rate": 0.01220703125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DummyConcat.layer.Conv_291_im_0.0",
+                    "addr": 20992,
+                    "size": 102400
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_506",
+                    "addr": 20992,
+                    "size": 51200
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_506",
+                    "addr": 72192,
+                    "size": 51200
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 184832
+        }
+    ]
+}

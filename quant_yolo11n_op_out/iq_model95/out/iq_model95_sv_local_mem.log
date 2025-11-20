@@ -1,0 +1,107 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_539",
+            "idx": 0,
+            "mem_used_rate": 0.00762939453125,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 16000
+                },
+                {
+                    "addr": 16128,
+                    "ori_size": 0,
+                    "size": 16000
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_539",
+                    "addr": 0,
+                    "size": 16000
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_539",
+                    "addr": 0,
+                    "size": 16000
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_539",
+                    "addr": 16128,
+                    "size": 16000
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "DmaIn.layer.copy_in_538",
+            "idx": 1,
+            "mem_used_rate": 0.0080108642578125,
+            "malloc": [
+                {
+                    "addr": 32256,
+                    "ori_size": 0,
+                    "size": 800
+                },
+                {
+                    "addr": 33280,
+                    "ori_size": 0,
+                    "size": 800
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_539",
+                    "addr": 0,
+                    "size": 16000
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_539",
+                    "addr": 16128,
+                    "size": 16000
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_538",
+                    "addr": 32256,
+                    "size": 800
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_539",
+                    "addr": 0,
+                    "size": 16000
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_539",
+                    "addr": 16128,
+                    "size": 16000
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_538",
+                    "addr": 32256,
+                    "size": 800
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_538",
+                    "addr": 33280,
+                    "size": 800
+                }
+            ],
+            "free": []
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 33600
+        }
+    ]
+}

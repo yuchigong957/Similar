@@ -1,0 +1,18 @@
+{
+    "layers": [
+        {
+            "op_name": "Sub_328",
+            "hwlayer_names": [
+                "Scale.layer.Sub_328"
+            ],
+            "tops": [
+                {
+                    "top_name": "_im_PropagateOutputNames_added_name_1",
+                    "in_hwlayer_id": 2,
+                    "out_hwlayer_id": 1,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        }
+    ]
+}

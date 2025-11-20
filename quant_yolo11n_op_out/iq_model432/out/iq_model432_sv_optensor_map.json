@@ -1,0 +1,18 @@
+{
+    "layers": [
+        {
+            "op_name": "Div_332",
+            "hwlayer_names": [
+                "Scale.layer.Div_332"
+            ],
+            "tops": [
+                {
+                    "top_name": "583",
+                    "in_hwlayer_id": 2,
+                    "out_hwlayer_id": 1,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        }
+    ]
+}

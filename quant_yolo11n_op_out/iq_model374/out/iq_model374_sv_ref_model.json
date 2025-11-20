@@ -1,0 +1,74 @@
+{
+    "name": "graph_aic",
+    "input_tensor": [
+        "362_im_2"
+    ],
+    "input_shape": [
+        {
+            "dim": [
+                1,
+                1,
+                400,
+                400
+            ],
+            "dtype": "f16",
+            "pack": 0
+        }
+    ],
+    "output_tensor": [
+        "362_im_3"
+    ],
+    "output_shape": [
+        {
+            "dim": [
+                1,
+                1,
+                400,
+                400
+            ],
+            "dtype": "f16",
+            "pack": 0
+        }
+    ],
+    "layer": [
+        {
+            "inst_name": "MatMul_132_im_2",
+            "type_name": "Reshape3",
+            "bottom": [
+                "362_im_2"
+            ],
+            "top": [
+                "362_im_3"
+            ],
+            "hw": 1,
+            "hw_acc": [
+                5,
+                10,
+                15
+            ],
+            "param": {
+                "mode": 2,
+                "shape": [
+                    1,
+                    400,
+                    400
+                ]
+            },
+            "sv": 1,
+            "data": {
+                "input_dtype": 1,
+                "output_dtype": 1,
+                "input_acc": [
+                    5,
+                    10,
+                    15
+                ],
+                "output_acc": [
+                    5,
+                    10,
+                    15
+                ]
+            }
+        }
+    ]
+}

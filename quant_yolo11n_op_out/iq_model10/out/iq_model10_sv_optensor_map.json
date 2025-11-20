@@ -1,0 +1,172 @@
+{
+    "layers": [
+        {
+            "op_name": "Transpose_310.reduce_max",
+            "hwlayer_names": [
+                "DummySlice.layer.Transpose_310.reduce_max.left.0",
+                "DummySlice.layer.Transpose_310.reduce_max.right.0",
+                "Eltwise.layer.Transpose_310.reduce_max.add_tree.0",
+                "DummySlice.layer.Transpose_310.reduce_max.left.1",
+                "DummySlice.layer.Transpose_310.reduce_max.right.1",
+                "Eltwise.layer.Transpose_310.reduce_max.add_tree.1",
+                "DummySlice.layer.Transpose_310.reduce_max.left.2",
+                "DummySlice.layer.Transpose_310.reduce_max.right.2",
+                "Eltwise.layer.Transpose_310.reduce_max.add_tree.2",
+                "DummySlice.layer.Transpose_310.reduce_max.left.3",
+                "DummySlice.layer.Transpose_310.reduce_max.right.3",
+                "Eltwise.layer.Transpose_310.reduce_max.add_tree.3"
+            ],
+            "tops": [
+                {
+                    "top_name": "Transpose_310.max.out",
+                    "in_hwlayer_id": 6,
+                    "out_hwlayer_id": 5,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        },
+        {
+            "op_name": "Transpose_310.x_sub_max",
+            "hwlayer_names": [
+                "Eltwise.layer.Transpose_310.x_sub_max"
+            ],
+            "tops": [
+                {
+                    "top_name": "Transpose_310.x_sub_max.out",
+                    "in_hwlayer_id": 0,
+                    "out_hwlayer_id": 6,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        },
+        {
+            "op_name": "Transpose_310.exp",
+            "hwlayer_names": [
+                "DummySlice.layer.Transpose_310.exp.slice.input.0",
+                "Activation.layer.Transpose_310.exp.c.0",
+                "DummySlice.layer.Transpose_310.exp.slice.input.1",
+                "Activation.layer.Transpose_310.exp.c.1",
+                "DummyConcat.layer.Transpose_310.exp.0"
+            ],
+            "tops": [
+                {
+                    "top_name": "Transpose_310.exp.out",
+                    "in_hwlayer_id": 11,
+                    "out_hwlayer_id": 0,
+                    "out_hwlayer_dummy": true
+                }
+            ]
+        },
+        {
+            "op_name": "Transpose_310.reduce_sum",
+            "hwlayer_names": [
+                "DummySlice.layer.Transpose_310.reduce_sum.left.0",
+                "DummySlice.layer.Transpose_310.reduce_sum.right.0",
+                "Eltwise.layer.Transpose_310.reduce_sum.add_tree.0",
+                "DummySlice.layer.Transpose_310.reduce_sum.left.1",
+                "DummySlice.layer.Transpose_310.reduce_sum.right.1",
+                "Eltwise.layer.Transpose_310.reduce_sum.add_tree.1",
+                "DummySlice.layer.Transpose_310.reduce_sum.left.2",
+                "DummySlice.layer.Transpose_310.reduce_sum.right.2",
+                "Eltwise.layer.Transpose_310.reduce_sum.add_tree.2",
+                "DummySlice.layer.Transpose_310.reduce_sum.left.3",
+                "DummySlice.layer.Transpose_310.reduce_sum.right.3",
+                "Eltwise.layer.Transpose_310.reduce_sum.add_tree.3"
+            ],
+            "tops": [
+                {
+                    "top_name": "Transpose_310.sum.out",
+                    "in_hwlayer_id": 17,
+                    "out_hwlayer_id": 15,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        },
+        {
+            "op_name": "Transpose_310.inv_sqrt",
+            "hwlayer_names": [
+                "Activation.layer.Transpose_310.inv_sqrt.h.0",
+                "Activation.layer.Transpose_310.inv_sqrt.h.1",
+                "DummyConcat.layer.Transpose_310.inv_sqrt.0"
+            ],
+            "tops": [
+                {
+                    "top_name": "Transpose_310.inv_sqrt.yi",
+                    "in_hwlayer_id": 19,
+                    "out_hwlayer_id": 0,
+                    "out_hwlayer_dummy": true
+                }
+            ]
+        },
+        {
+            "op_name": "Transpose_310.inv.mul0",
+            "hwlayer_names": [
+                "Eltwise.layer.Transpose_310.inv.mul0"
+            ],
+            "tops": [
+                {
+                    "top_name": "Transpose_310.inv_sqrt.result1",
+                    "in_hwlayer_id": 22,
+                    "out_hwlayer_id": 19,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        },
+        {
+            "op_name": "Transpose_310.inv.mul1",
+            "hwlayer_names": [
+                "Eltwise.layer.Transpose_310.inv.mul1"
+            ],
+            "tops": [
+                {
+                    "top_name": "Transpose_310.inv_sqrt.result2",
+                    "in_hwlayer_id": 21,
+                    "out_hwlayer_id": 20,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        },
+        {
+            "op_name": "Transpose_310.inv.mul2",
+            "hwlayer_names": [
+                "Eltwise.layer.Transpose_310.inv.mul2"
+            ],
+            "tops": [
+                {
+                    "top_name": "Transpose_310.inv_sqrt.result3",
+                    "in_hwlayer_id": 22,
+                    "out_hwlayer_id": 21,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        },
+        {
+            "op_name": "Transpose_310.inv.sub0",
+            "hwlayer_names": [
+                "Eltwise.layer.Transpose_310.inv.sub0"
+            ],
+            "tops": [
+                {
+                    "top_name": "Transpose_310.inv_sqrt.result4",
+                    "in_hwlayer_id": 23,
+                    "out_hwlayer_id": 22,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        },
+        {
+            "op_name": "Transpose_310.softmax.out",
+            "hwlayer_names": [
+                "Eltwise.layer.Transpose_310.softmax.out"
+            ],
+            "tops": [
+                {
+                    "top_name": "554",
+                    "in_hwlayer_id": 24,
+                    "out_hwlayer_id": 23,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        }
+    ]
+}

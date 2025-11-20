@@ -1,0 +1,42 @@
+{
+  "name": "graph_aic",
+  "input_tensor": [
+    "PPQ_Variable_23"
+  ],
+  "input_shape": [
+    {
+      "dim": [1,1,144,8400],
+      "dtype": "f16",
+      "pack": 0
+    }
+  ],
+  "output_tensor": [
+    "541"
+  ],
+  "output_shape": [
+    {
+      "dim": [1,1,80,8400],
+      "dtype": "f16",
+      "pack": 0
+    }
+  ],
+  "layer": [
+    {
+      "inst_name": "Split_306_im_0",
+      "type_name": "Slice2",
+      "bottom": [
+        "PPQ_Variable_23"
+      ],
+      "top": [
+        "541"
+      ],
+      "hw": 1,
+      "hw_acc": [5,10,15],
+      "param": {
+        "dim": 3,
+        "start_index": 64,
+        "output_size": 80
+      }
+    }
+  ]
+}

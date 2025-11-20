@@ -1,0 +1,21 @@
+{
+    "layers": [
+        {
+            "op_name": "Mul_20",
+            "hwlayer_names": [
+                "DummySlice.layer.DmaIn.layer.copy_in_195.slice.input.0",
+                "DummySlice.layer.DmaIn.layer.copy_in_196.slice.input.0",
+                "Eltwise.layer.Mul_20.h.0",
+                "DummySlice.layer.DmaIn.layer.copy_in_195.slice.input.1",
+                "DummySlice.layer.DmaIn.layer.copy_in_196.slice.input.1",
+                "Eltwise.layer.Mul_20.h.1",
+                "DummyConcat.layer.Mul_20.0",
+                "DummySlice.layer.DmaIn.layer.copy_in_195.slice.input.2",
+                "DummySlice.layer.DmaIn.layer.copy_in_196.slice.input.2",
+                "Eltwise.layer.Mul_20.h.2",
+                "DummyConcat.layer.Mul_20.1"
+            ],
+            "tops": null
+        }
+    ]
+}

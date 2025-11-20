@@ -1,0 +1,143 @@
+{
+    "name": "graph_aic",
+    "input_tensor": [
+        "362_im_8",
+        "362_im_10"
+    ],
+    "input_shape": [
+        {
+            "dim": [
+                1,
+                1,
+                64,
+                400
+            ],
+            "dtype": "f16",
+            "pack": 0
+        },
+        {
+            "dim": [
+                1,
+                1,
+                400,
+                400
+            ],
+            "dtype": "f16",
+            "pack": 0
+        }
+    ],
+    "output_tensor": [
+        "362_im_11"
+    ],
+    "output_shape": [
+        {
+            "dim": [
+                1,
+                1,
+                64,
+                400
+            ],
+            "dtype": "f16",
+            "pack": 0
+        }
+    ],
+    "layer": [
+        {
+            "inst_name": "MatMul_132_im_12",
+            "type_name": "Matmul",
+            "bottom": [
+                "362_im_8",
+                "362_im_10"
+            ],
+            "top": [
+                "362_im_11"
+            ],
+            "hw": 1,
+            "hw_acc": [
+                5,
+                10,
+                15
+            ],
+            "param": {
+                "num_channel": 1,
+                "partial_sum_num": 50,
+                "partial_sum_order": [
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8
+                ],
+                "unpack_en": 1,
+                "pack_en": 1,
+                "mode": 0
+            },
+            "data": {
+                "input0_dtype": 1,
+                "input0_acc": [
+                    5,
+                    10,
+                    15
+                ],
+                "input1_dtype": 1,
+                "input1_acc": [
+                    5,
+                    10,
+                    15
+                ],
+                "output_dtype": 1,
+                "output_acc": [
+                    5,
+                    10,
+                    15
+                ]
+            },
+            "sv": 1
+        }
+    ]
+}

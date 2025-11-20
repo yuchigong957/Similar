@@ -1,0 +1,11 @@
+{
+    "layers": [
+        {
+            "op_name": "copy_in_383",
+            "hwlayer_names": [
+                "DummySlice.layer.DmaIn.layer.copy_in_383.slice.input.0"
+            ],
+            "tops": null
+        }
+    ]
+}

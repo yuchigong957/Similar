@@ -1,0 +1,62 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DummyConcat.layer.Concat_168.2",
+            "idx": 0,
+            "mem_used_rate": 0.78125,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 3276800
+                }
+            ],
+            "used": [
+                {
+                    "name": "DummyConcat.layer.Concat_168.2",
+                    "addr": 0,
+                    "size": 3276800
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "DmaOut.layer.copy_out_380",
+            "idx": 1,
+            "mem_used_rate": 0.390625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DummyConcat.layer.Concat_168.2",
+                    "addr": 0,
+                    "size": 3276800
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_380",
+                    "addr": 0,
+                    "size": 1638400
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_380",
+                    "addr": 1638400,
+                    "size": 1638400
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 3276800
+        }
+    ]
+}

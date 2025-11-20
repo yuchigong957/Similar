@@ -1,0 +1,22 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["_im_PropagateOutputNames_added_name_0"],
+    "input_shape": [{"dim": [1,16,4,8400],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["554"],
+    "output_shape": [{"dim": [1,16,4,8400],"dtype": "f16","pack": 0}
+],
+    "layer": [{"inst_name": "Transpose_310","type_name": "Softmax2",            "bottom": ["_im_PropagateOutputNames_added_name_0"],
+            "top": ["554"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {"num_channel": 16,"mode": 0,"axis": 1},
+            "data": {
+                "input_scale": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+                "input_zero_point": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                "output_scale": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+                "output_zero_point": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+            }
+        }
+]
+}

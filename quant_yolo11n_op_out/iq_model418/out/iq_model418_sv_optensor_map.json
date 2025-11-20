@@ -1,0 +1,18 @@
+{
+    "layers": [
+        {
+            "op_name": "Concat_168",
+            "hwlayer_names": [
+                "DummyConcat.layer.Concat_168.2"
+            ],
+            "tops": [
+                {
+                    "top_name": "380",
+                    "in_hwlayer_id": 2,
+                    "out_hwlayer_id": 0,
+                    "out_hwlayer_dummy": true
+                }
+            ]
+        }
+    ]
+}

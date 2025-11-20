@@ -1,0 +1,28 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["322"],
+    "input_shape": [{"dim": [1,2,400,400],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["324"],
+    "output_shape": [{"dim": [1,2,400,400],"dtype": "f16","pack": 0}
+],
+    "layer": [{"param": {"num_channel": 2},"data": {"coef": [],"bias": [],                "coef_scale": [1,1],
+                "coef_zero_point": [0,0],
+                "bias_scale": [1,1],
+                "bias_zero_point": [0,0],
+                "input_scale": [1,1],
+                "input_zero_point": [0,0],
+                "output_scale": [1,1],
+                "output_zero_point": [0,0],
+                "input_dtype": 1,
+                "input_acc": [5,10,15]
+            },
+            "inst_name": "Mul_129",
+            "type_name": "Bn",
+            "bottom": ["322"],
+            "top": ["324"],
+            "hw": 1,
+            "hw_acc": [5,10,15]
+        }
+]
+}

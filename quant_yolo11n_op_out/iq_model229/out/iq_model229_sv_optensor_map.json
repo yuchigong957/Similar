@@ -1,0 +1,20 @@
+{
+    "layers": [
+        {
+            "op_name": "Sigmoid_11",
+            "hwlayer_names": [
+                "Activation.layer.Sigmoid_11.h.0",
+                "Activation.layer.Sigmoid_11.h.1",
+                "DummyConcat.layer.Sigmoid_11.0"
+            ],
+            "tops": [
+                {
+                    "top_name": "188",
+                    "in_hwlayer_id": 4,
+                    "out_hwlayer_id": 0,
+                    "out_hwlayer_dummy": true
+                }
+            ]
+        }
+    ]
+}

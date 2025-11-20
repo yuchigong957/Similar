@@ -1,0 +1,123 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_481",
+            "idx": 0,
+            "mem_used_rate": 0.05859375,
+            "malloc": [
+                {
+                    "addr": 3948544,
+                    "ori_size": 0,
+                    "size": 245760
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_481",
+                    "addr": 3948544,
+                    "size": 245760
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "DmaIn.layer.copy_in_494",
+            "idx": 1,
+            "mem_used_rate": 0.1318359375,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 307200
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_481",
+                    "addr": 3948544,
+                    "size": 245760
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_494",
+                    "addr": 0,
+                    "size": 307200
+                }
+            ],
+            "free": []
+        },
+        "kernel[2]": {
+            "name": "Concat.layer.Concat_280",
+            "idx": 2,
+            "mem_used_rate": 0.205078125,
+            "malloc": [
+                {
+                    "addr": 307200,
+                    "ori_size": 0,
+                    "size": 552960
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_481",
+                    "addr": 3948544,
+                    "size": 245760
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_494",
+                    "addr": 0,
+                    "size": 307200
+                },
+                {
+                    "name": "Concat.layer.Concat_280",
+                    "addr": 307200,
+                    "size": 552960
+                }
+            ],
+            "free": [
+                {
+                    "name": "Concat.layer.Concat_280",
+                    "addr": 3948544,
+                    "size": 245760
+                },
+                {
+                    "name": "Concat.layer.Concat_280",
+                    "addr": 0,
+                    "size": 307200
+                }
+            ]
+        },
+        "kernel[3]": {
+            "name": "DmaOut.layer.copy_out_495",
+            "idx": 3,
+            "mem_used_rate": 0.1318359375,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "Concat.layer.Concat_280",
+                    "addr": 307200,
+                    "size": 552960
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_495",
+                    "addr": 307200,
+                    "size": 552960
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 552960
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "layers": [
+        {
+            "op_name": "PPQ_Operation_149",
+            "hwlayer_names": [
+                "DummySlice.layer.PPQ_Operation_149.slice.input.0",
+                "Activation.layer.PPQ_Operation_149.c.0",
+                "DummySlice.layer.PPQ_Operation_149.slice.input.1",
+                "Activation.layer.PPQ_Operation_149.c.1",
+                "DummyConcat.layer.PPQ_Operation_149.0"
+            ],
+            "tops": [
+                {
+                    "top_name": "PPQ_Variable_162",
+                    "in_hwlayer_id": 5,
+                    "out_hwlayer_id": 0,
+                    "out_hwlayer_dummy": true
+                }
+            ]
+        }
+    ]
+}

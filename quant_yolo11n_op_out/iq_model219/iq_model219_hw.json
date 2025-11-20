@@ -1,0 +1,25 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["187","188"],
+    "input_shape": [{"dim": [1,8,160,160],"dtype": "f16","pack": 0},
+        {"dim": [1,8,160,160],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["189"],
+    "output_shape": [{"dim": [1,8,160,160],"dtype": "f16","pack": 0}
+],
+    "layer": [{"param": {"operation": 2,"num_channel": 8,"src_mode": "ONLINE","brc_mode": "CHW"},"data": {"input0_dtype": 1,                "input0_acc": [5,10,15],
+                "input1_dtype": 1,
+                "input1_acc": [5,10,15],
+                "output_dtype": 1,
+                "output_acc": [5,10,15],
+                "coef": []
+            },
+            "inst_name": "Mul_12",
+            "type_name": "Eltwise3",
+            "bottom": ["187","188"],
+            "top": ["189"],
+            "hw": 1,
+            "hw_acc": [5,10,15]
+        }
+]
+}

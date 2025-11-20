@@ -1,0 +1,17 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["366"],
+    "input_shape": [{"dim": [1,32,40,40],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["PPQ_Variable_138"],
+    "output_shape": [{"dim": [1,32,40,40],"dtype": "f8","hw_acc": [4,3,7],"pack": 0}
+],
+    "layer": [{"inst_name": "PPQ_Operation_125","type_name": "Activation4",            "bottom": ["366"],
+            "top": ["PPQ_Variable_138"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {"function": "PReLU","coeff": 1,"coeff2": 1,"num_input": 32,"num_output": 32},
+            "data": {"input_dtype": 1,"input_acc": [5,10,15],"output_dtype": 3,"output_acc": [4,3,7]}
+        }
+]
+}

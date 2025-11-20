@@ -1,0 +1,102 @@
+{
+    "layers": [
+        {
+            "op_name": "MatMul_127_im_5.permute_0",
+            "hwlayer_names": [
+                "Permute.layer.MatMul_127_im_5.permute_0"
+            ],
+            "tops": [
+                {
+                    "top_name": "MatMul_127_im_5.permute_0.out",
+                    "in_hwlayer_id": 2,
+                    "out_hwlayer_id": 1,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        },
+        {
+            "op_name": "MatMul_127_im_5.permute_1",
+            "hwlayer_names": [
+                "Permute.layer.MatMul_127_im_5.permute_1"
+            ],
+            "tops": [
+                {
+                    "top_name": "MatMul_127_im_5.permute_1.out",
+                    "in_hwlayer_id": 6,
+                    "out_hwlayer_id": 2,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        },
+        {
+            "op_name": "MatMul_127_im_5.permute_2",
+            "hwlayer_names": [
+                "Permute.layer.MatMul_127_im_5.permute_2"
+            ],
+            "tops": [
+                {
+                    "top_name": "MatMul_127_im_5.permute_2.out",
+                    "in_hwlayer_id": 5,
+                    "out_hwlayer_id": 4,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        },
+        {
+            "op_name": "MatMul_127_im_5.permute_3",
+            "hwlayer_names": [
+                "Permute.layer.MatMul_127_im_5.permute_3"
+            ],
+            "tops": [
+                {
+                    "top_name": "MatMul_127_im_5.permute_3.out",
+                    "in_hwlayer_id": 6,
+                    "out_hwlayer_id": 5,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        },
+        {
+            "op_name": "MatMul_127_im_5.matmul",
+            "hwlayer_names": [
+                "Matmul.layer.MatMul_127_im_5.matmul"
+            ],
+            "tops": [
+                {
+                    "top_name": "MatMul_127_im_5.matmul.out",
+                    "in_hwlayer_id": 7,
+                    "out_hwlayer_id": 6,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        },
+        {
+            "op_name": "MatMul_127_im_5.permute_4",
+            "hwlayer_names": [
+                "Permute.layer.MatMul_127_im_5.permute_4"
+            ],
+            "tops": [
+                {
+                    "top_name": "MatMul_127_im_5.permute_4.out",
+                    "in_hwlayer_id": 8,
+                    "out_hwlayer_id": 7,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        },
+        {
+            "op_name": "MatMul_127_im_5.permute_5",
+            "hwlayer_names": [
+                "Permute.layer.MatMul_127_im_5.permute_5"
+            ],
+            "tops": [
+                {
+                    "top_name": "325_im_5",
+                    "in_hwlayer_id": 9,
+                    "out_hwlayer_id": 8,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        }
+    ]
+}

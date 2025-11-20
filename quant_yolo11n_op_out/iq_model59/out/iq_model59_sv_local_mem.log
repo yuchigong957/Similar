@@ -1,0 +1,218 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_495",
+            "idx": 0,
+            "mem_used_rate": 0.1318359375,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 552960
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_495",
+                    "addr": 0,
+                    "size": 552960
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "DmaOut.layer.Reshape_303.npufmt2nchw",
+            "idx": 1,
+            "mem_used_rate": 0.24169921875,
+            "malloc": [
+                {
+                    "addr": 3733504,
+                    "ori_size": 0,
+                    "size": 460800
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_495",
+                    "addr": 0,
+                    "size": 552960
+                },
+                {
+                    "name": "DmaOut.layer.Reshape_303.npufmt2nchw",
+                    "addr": 3733504,
+                    "size": 460800
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.Reshape_303.npufmt2nchw",
+                    "addr": 0,
+                    "size": 552960
+                }
+            ]
+        },
+        "kernel[2]": {
+            "name": "DummyConcat.layer.Reshape_303.reshape_dc.142",
+            "idx": 2,
+            "mem_used_rate": 0.2197265625,
+            "malloc": [
+                {
+                    "addr": 552960,
+                    "ori_size": 0,
+                    "size": 460800
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaOut.layer.Reshape_303.npufmt2nchw",
+                    "addr": 3733504,
+                    "size": 460800
+                },
+                {
+                    "name": "DummyConcat.layer.Reshape_303.reshape_dc.142",
+                    "addr": 552960,
+                    "size": 460800
+                }
+            ],
+            "free": []
+        },
+        "kernel[3]": {
+            "name": "Slice.layer.Reshape_303.143",
+            "idx": 3,
+            "mem_used_rate": 0.2197265625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaOut.layer.Reshape_303.npufmt2nchw",
+                    "addr": 3733504,
+                    "size": 460800
+                },
+                {
+                    "name": "DummyConcat.layer.Reshape_303.reshape_dc.142",
+                    "addr": 552960,
+                    "size": 460800
+                }
+            ],
+            "free": [
+                {
+                    "name": "Slice.layer.Reshape_303.143",
+                    "addr": 3733504,
+                    "size": 460800
+                }
+            ]
+        },
+        "kernel[4]": {
+            "name": "DmaOut.layer.copy_out_531",
+            "idx": 4,
+            "mem_used_rate": 0.000762939453125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DummyConcat.layer.Reshape_303.reshape_dc.142",
+                    "addr": 552960,
+                    "size": 460800
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_531",
+                    "addr": 552960,
+                    "size": 409600
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_531",
+                    "addr": 962560,
+                    "size": 3200
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_531",
+                    "addr": 965760,
+                    "size": 3200
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_531",
+                    "addr": 968960,
+                    "size": 3200
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_531",
+                    "addr": 972160,
+                    "size": 3200
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_531",
+                    "addr": 975360,
+                    "size": 3200
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_531",
+                    "addr": 978560,
+                    "size": 3200
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_531",
+                    "addr": 981760,
+                    "size": 3200
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_531",
+                    "addr": 984960,
+                    "size": 3200
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_531",
+                    "addr": 988160,
+                    "size": 3200
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_531",
+                    "addr": 991360,
+                    "size": 3200
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_531",
+                    "addr": 994560,
+                    "size": 3200
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_531",
+                    "addr": 997760,
+                    "size": 3200
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_531",
+                    "addr": 1000960,
+                    "size": 3200
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_531",
+                    "addr": 1004160,
+                    "size": 3200
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_531",
+                    "addr": 1007360,
+                    "size": 3200
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_531",
+                    "addr": 1010560,
+                    "size": 3200
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 921600
+        }
+    ]
+}

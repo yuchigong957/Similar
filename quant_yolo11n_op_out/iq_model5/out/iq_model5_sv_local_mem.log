@@ -1,0 +1,77 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_572",
+            "idx": 0,
+            "mem_used_rate": 0.0080108642578125,
+            "malloc": [
+                {
+                    "addr": 4160704,
+                    "ori_size": 0,
+                    "size": 33600
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_572",
+                    "addr": 4160704,
+                    "size": 33600
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "Scale.layer.Sub_328",
+            "idx": 1,
+            "mem_used_rate": 0.0080108642578125,
+            "malloc": [
+                {
+                    "addr": 4160704,
+                    "ori_size": 0,
+                    "size": 33600
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_572",
+                    "addr": 4160704,
+                    "size": 33600
+                }
+            ],
+            "free": []
+        },
+        "kernel[2]": {
+            "name": "DmaOut.layer.copy_out__im_PropagateOutputNames_added_name_1",
+            "idx": 2,
+            "mem_used_rate": 0.0080108642578125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_572",
+                    "addr": 4160704,
+                    "size": 33600
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out__im_PropagateOutputNames_added_name_1",
+                    "addr": 4160704,
+                    "size": 33600
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 33600
+        }
+    ]
+}

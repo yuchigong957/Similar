@@ -1,0 +1,81 @@
+{
+    "user_info": {
+        "build_time": "2025-11-20 16:18:16",
+        "host_name": "jinzhao"
+    },
+    "cmd_args": {
+        "cmd_arg": "ts_aic /mnt/user_home/jinzhao/work/model_to_sm/quant_yolo11n_op_out/iq_model315/iq_model315_sv.json --in-pattern=nchw --out-pattern=npu_fmt --mem-opt=parallel --enable_fused_op_opt=true --enable_concat_op_eliminate=true --life-cycle-thres 0.6 --mem-align 256 --vpu-split-mode=auto --bi-interp-split-mode=split_h --bi-interp-split-opt=split_h --enable-inplace-opt=true --enable-param-replace=true --enable-dmain-ch1 --mfnr_loadnum_perf_optimize --op-order-sort=depth --param-data-fetch-mode=dyna --enable-conv-concat-opt=true --conv-split-opt=split_h_co --param-data-fetch-mode=dyna "
+    },
+    "model_header": {
+        "cmd_length": 16,
+        "group_num": 6,
+        "hardlayer_num": 6,
+        "idle_num": 0,
+        "machine_id": 3735928495,
+        "name": "graph_aic",
+        "sync_num": 6,
+        "version": 0
+    },
+    "param_info": {
+        "addr": 0,
+        "file_name": "iq_model315_sv_wgt.bin",
+        "input_tensor_num": 1,
+        "input_total_size": 819200,
+        "io_mode": "dma",
+        "io_reuse_en": false,
+        "mem_type": "GlobalMem",
+        "mid_layer_size": 0,
+        "npu_rdma_num": 0,
+        "npu_wdma_num": 0,
+        "output_tensor_num": 1,
+        "output_total_size": 491520,
+        "param_data_info": {
+            "base_id": 7,
+            "cascade_base_id": -1,
+            "size": 512
+        },
+        "input_tensor": [
+            {
+                "base_id": 0,
+                "cascade_base_id": -1,
+                "cluster_dma_loc": 0,
+                "dims": [
+                    1,
+                    64,
+                    80,
+                    80
+                ],
+                "dtype": "Fp16",
+                "index": 0,
+                "layout_type": "NCHW",
+                "name": "200",
+                "pack": 0,
+                "pingpong_num": 0,
+                "size": 819200,
+                "start_addr": 0
+            }
+        ],
+        "output_tensor": [
+            {
+                "base_id": 0,
+                "cascade_base_id": -1,
+                "cluster_dma_loc": 0,
+                "dims": [
+                    1,
+                    64,
+                    80,
+                    80
+                ],
+                "dtype": "Fp8",
+                "index": 0,
+                "layout_type": "NpuFmt",
+                "name": "PPQ_Variable_42",
+                "pack": 0,
+                "pingpong_num": 0,
+                "size": 491520,
+                "start_addr": 0
+            }
+        ]
+    },
+    "eda_info": null
+}

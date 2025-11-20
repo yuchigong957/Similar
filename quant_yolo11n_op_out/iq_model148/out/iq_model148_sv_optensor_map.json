@@ -1,0 +1,18 @@
+{
+    "layers": [
+        {
+            "op_name": "Add_62",
+            "hwlayer_names": [
+                "Eltwise.layer.Add_62"
+            ],
+            "tops": [
+                {
+                    "top_name": "241",
+                    "in_hwlayer_id": 3,
+                    "out_hwlayer_id": 2,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        }
+    ]
+}

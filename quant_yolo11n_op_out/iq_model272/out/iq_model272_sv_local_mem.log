@@ -1,0 +1,57 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.DmaIn.layer.copy_in_PPQ_Variable_23.0",
+            "idx": 0,
+            "mem_used_rate": 0.3204345703125,
+            "malloc": [
+                {
+                    "addr": 2850304,
+                    "ori_size": 0,
+                    "size": 1344000
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_PPQ_Variable_23.0",
+                    "addr": 2850304,
+                    "size": 1344000
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "DmaOut.layer.copy_out_541",
+            "idx": 1,
+            "mem_used_rate": 0.3204345703125,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.DmaIn.layer.copy_in_PPQ_Variable_23.0",
+                    "addr": 2850304,
+                    "size": 1344000
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_541",
+                    "addr": 2850304,
+                    "size": 1344000
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 1344000
+        }
+    ]
+}

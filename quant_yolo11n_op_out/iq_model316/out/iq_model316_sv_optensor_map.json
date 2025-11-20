@@ -1,0 +1,18 @@
+{
+    "layers": [
+        {
+            "op_name": "Transpose_126",
+            "hwlayer_names": [
+                "Permute.layer.Transpose_126"
+            ],
+            "tops": [
+                {
+                    "top_name": "321",
+                    "in_hwlayer_id": 2,
+                    "out_hwlayer_id": 1,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        }
+    ]
+}

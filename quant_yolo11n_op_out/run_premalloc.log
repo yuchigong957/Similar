@@ -1,0 +1,27 @@
+Running main() from /home/jenkins/argos_v3/im/testing/gtest/googletest/src/gtest_main.cpp
+Note: Google Test filter = ortwrapper_test.ort_test_rtm_premalloc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ortwrapper_test
+[ RUN      ] ortwrapper_test.ort_test_rtm_premalloc
+change sv_gtest into fifo:50
+SetUp:147	: model_file: /data/tmp/quant_yolo11n.bin
+SetUp:154	: load npubin ok! iterations=10
+PrepareIoTensors:262	: input tensor_name: images, filename: /data/tmp/input/images.bin, bytesize: 2457600
+PrepareIoTensors:265	: input_tensor_shape: 1, 3, 640, 640
+PrepareIoTensors:268	: input_tensor_stride: 1, 3, 640, 640
+PrepareIoTensors:291	: output tensor_name: output0, bytesize: 1411200
+PrepareIoTensors:293	: output_tensor_shape: 1, 1, 84, 8400
+PrepareIoTensors:296	: output_tensor_stride: 1, 1, 84, 8400
+PrintTimingStats:52	: [1;33m[ort_test_rtm_premalloc] Iterations=10[0m
+PrintTimingStats:53	: [1;32mPerformance: Average: 309446.40 us, Min: 293856 us, Max: 337383 us[0m
+GetOutputTensors:319	: output tensor_name: output0, bytesize: 1411200
+GetOutputTensors:330	: save /data/tmp/board_out/output0.bin done
+TestBody:835	: IM Model Inference ok!
+TearDown:166	: release model ok!
+[       OK ] ortwrapper_test.ort_test_rtm_premalloc (4681 ms)
+[----------] 1 test from ortwrapper_test (4681 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (4681 ms total)
+[  PASSED  ] 1 test.

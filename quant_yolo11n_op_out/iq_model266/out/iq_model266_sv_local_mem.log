@@ -1,0 +1,107 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_524",
+            "idx": 0,
+            "mem_used_rate": 0.006103515625,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 12800
+                },
+                {
+                    "addr": 12800,
+                    "ori_size": 0,
+                    "size": 12800
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_524",
+                    "addr": 0,
+                    "size": 12800
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_524",
+                    "addr": 0,
+                    "size": 12800
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_524",
+                    "addr": 12800,
+                    "size": 12800
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "DmaIn.layer.copy_in_531",
+            "idx": 1,
+            "mem_used_rate": 0.00762939453125,
+            "malloc": [
+                {
+                    "addr": 25600,
+                    "ori_size": 0,
+                    "size": 3200
+                },
+                {
+                    "addr": 28928,
+                    "ori_size": 0,
+                    "size": 3200
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_524",
+                    "addr": 0,
+                    "size": 12800
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_524",
+                    "addr": 12800,
+                    "size": 12800
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_531",
+                    "addr": 25600,
+                    "size": 3200
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_524",
+                    "addr": 0,
+                    "size": 12800
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_524",
+                    "addr": 12800,
+                    "size": 12800
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_531",
+                    "addr": 25600,
+                    "size": 3200
+                },
+                {
+                    "name": "DmaIn.layer.copy_in_531",
+                    "addr": 28928,
+                    "size": 3200
+                }
+            ],
+            "free": []
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 32000
+        }
+    ]
+}

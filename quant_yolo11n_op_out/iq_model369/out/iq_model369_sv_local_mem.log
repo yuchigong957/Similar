@@ -1,0 +1,113 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_322",
+            "idx": 0,
+            "mem_used_rate": 0.152587890625,
+            "malloc": [
+                {
+                    "addr": 3554304,
+                    "ori_size": 0,
+                    "size": 640000
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_322",
+                    "addr": 3554304,
+                    "size": 640000
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "FetchParam.layer.Mul_129.fetch_param_data.kernel",
+            "idx": 1,
+            "mem_used_rate": 0.15264892578125,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 256
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_322",
+                    "addr": 3554304,
+                    "size": 640000
+                },
+                {
+                    "name": "FetchParam.layer.Mul_129.fetch_param_data.kernel",
+                    "addr": 0,
+                    "size": 256
+                }
+            ],
+            "free": []
+        },
+        "kernel[2]": {
+            "name": "BatchNorm.layer.Mul_129",
+            "idx": 2,
+            "mem_used_rate": 0.15264892578125,
+            "malloc": [
+                {
+                    "addr": 3554304,
+                    "ori_size": 0,
+                    "size": 640000
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_322",
+                    "addr": 3554304,
+                    "size": 640000
+                },
+                {
+                    "name": "FetchParam.layer.Mul_129.fetch_param_data.kernel",
+                    "addr": 0,
+                    "size": 256
+                }
+            ],
+            "free": [
+                {
+                    "name": "BatchNorm.layer.Mul_129",
+                    "addr": 0,
+                    "size": 256
+                }
+            ]
+        },
+        "kernel[3]": {
+            "name": "DmaOut.layer.copy_out_324",
+            "idx": 3,
+            "mem_used_rate": 0.152587890625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_322",
+                    "addr": 3554304,
+                    "size": 640000
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_324",
+                    "addr": 3554304,
+                    "size": 640000
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 640256
+        }
+    ]
+}

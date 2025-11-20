@@ -1,0 +1,88 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_325",
+            "idx": 0,
+            "mem_used_rate": 0.152587890625,
+            "malloc": [
+                {
+                    "addr": 3554304,
+                    "ori_size": 0,
+                    "size": 640000
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_325",
+                    "addr": 3554304,
+                    "size": 640000
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "Permute.layer.Transpose_131",
+            "idx": 1,
+            "mem_used_rate": 0.30517578125,
+            "malloc": [
+                {
+                    "addr": 2914304,
+                    "ori_size": 0,
+                    "size": 640000
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_325",
+                    "addr": 3554304,
+                    "size": 640000
+                },
+                {
+                    "name": "Permute.layer.Transpose_131",
+                    "addr": 2914304,
+                    "size": 640000
+                }
+            ],
+            "free": [
+                {
+                    "name": "Permute.layer.Transpose_131",
+                    "addr": 3554304,
+                    "size": 640000
+                }
+            ]
+        },
+        "kernel[2]": {
+            "name": "DmaOut.layer.copy_out_326",
+            "idx": 2,
+            "mem_used_rate": 0.152587890625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "Permute.layer.Transpose_131",
+                    "addr": 2914304,
+                    "size": 640000
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_326",
+                    "addr": 2914304,
+                    "size": 640000
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 640000
+        }
+    ]
+}

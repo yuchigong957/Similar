@@ -1,0 +1,18 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["561"],
+    "input_shape": [{"dim": [1,1,4,8400],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["572"],
+    "output_shape": [{"dim": [1,1,2,8400],"dtype": "f16","pack": 0}
+],
+    "layer": [{"inst_name": "Slice_323","type_name": "Slice2",            "bottom": ["561"],
+            "top": ["572"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {"dim": 3,"start_index": 0,"output_size": 2},
+            "sv": 1,
+            "data": {"input_dtype": 1,"output_dtype": 1,"input_acc": [5,10,15],"output_acc": [5,10,15]}
+        }
+]
+}

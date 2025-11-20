@@ -1,0 +1,18 @@
+{
+    "layers": [
+        {
+            "op_name": "Mul_44",
+            "hwlayer_names": [
+                "Eltwise.layer.Mul_44"
+            ],
+            "tops": [
+                {
+                    "top_name": "222",
+                    "in_hwlayer_id": 3,
+                    "out_hwlayer_id": 2,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "name": "graph_aic",
+    "input_tensor": [
+        "301"
+    ],
+    "input_shape": [
+        {
+            "dim": [
+                1,
+                256,
+                20,
+                20
+            ],
+            "dtype": "f16",
+            "pack": 0
+        }
+    ],
+    "output_tensor": [
+        "302"
+    ],
+    "output_shape": [
+        {
+            "dim": [
+                1,
+                128,
+                20,
+                20
+            ],
+            "dtype": "f16",
+            "pack": 0
+        }
+    ],
+    "layer": [
+        {
+            "inst_name": "Split_122",
+            "type_name": "Slice2",
+            "bottom": [
+                "301"
+            ],
+            "top": [
+                "302"
+            ],
+            "hw": 1,
+            "hw_acc": [
+                5,
+                10,
+                15
+            ],
+            "param": {
+                "dim": 1,
+                "start_index": 0,
+                "output_size": 128
+            },
+            "sv": 1,
+            "data": {
+                "input_dtype": 1,
+                "output_dtype": 1,
+                "input_acc": [
+                    5,
+                    10,
+                    15
+                ],
+                "output_acc": [
+                    5,
+                    10,
+                    15
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["325_im_8"],
+    "input_shape": [{"dim": [1,1,400,32],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["325_im_9"],
+    "output_shape": [{"dim": [1,1,400,32],"dtype": "f16","pack": 0}
+],
+    "layer": [{"inst_name": "MatMul_127_im_7","type_name": "Reshape3",            "bottom": ["325_im_8"],
+            "top": ["325_im_9"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {"mode": 2,"shape": [1,400,32]}
+        }
+]
+}

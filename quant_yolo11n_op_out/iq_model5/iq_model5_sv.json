@@ -1,0 +1,36 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["572"],
+    "input_shape": [{"dim": [1,1,2,8400],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["_im_PropagateOutputNames_added_name_1"],
+    "output_shape": [{"dim": [1,1,2,8400],"dtype": "f16","pack": 0}
+],
+    "layer": [{"param": {"num_channel": 1,"share_channel": 0,"bias_term": 1},"data": {                "coef": [48128],
+                "bias": [0],
+                "coef_scale": [1],
+                "coef_zero_point": [0],
+                "bias_scale": [1],
+                "bias_zero_point": [0],
+                "input_scale": [1],
+                "input_zero_point": [0],
+                "output_scale": [1],
+                "output_zero_point": [0],
+                "input_dtype": 1,
+                "input_acc": [5,10,15],
+                "output_dtype": 1,
+                "bias_neg_mode": 0,
+                "coef_dtype": 1,
+                "output_acc": [5,10,15],
+                "coef_acc": [5,10,15]
+            },
+            "inst_name": "Sub_328",
+            "type_name": "Bn",
+            "bottom": ["572"],
+            "top": ["_im_PropagateOutputNames_added_name_1"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "sv": 1
+        }
+]
+}

@@ -1,0 +1,18 @@
+{
+    "layers": [
+        {
+            "op_name": "MaxPool_112",
+            "hwlayer_names": [
+                "Pool2d.layer.MaxPool_112"
+            ],
+            "tops": [
+                {
+                    "top_name": "292",
+                    "in_hwlayer_id": 2,
+                    "out_hwlayer_id": 1,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        }
+    ]
+}

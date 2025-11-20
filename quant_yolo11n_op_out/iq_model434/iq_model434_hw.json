@@ -1,0 +1,17 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["295","293"],
+    "input_shape": [{"dim": [1,256,20,20],"dtype": "f16","pack": 0},
+        {"dim": [1,128,20,20],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["PPQ_Variable_17"],
+    "output_shape": [{"dim": [1,384,20,20],"dtype": "f16","pack": 0}
+],
+    "layer": [{"inst_name": "PPQ_Operation_4","type_name": "Concat2",            "bottom": ["295","293"],
+            "top": ["PPQ_Variable_17"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {"dim": 1}
+        }
+]
+}

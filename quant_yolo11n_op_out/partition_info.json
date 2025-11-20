@@ -1,0 +1,3061 @@
+{
+  "partition_0": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_11"
+    ]
+  },
+  "partition_1": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_0_im_0"
+    ]
+  },
+  "partition_2": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_1"
+    ]
+  },
+  "partition_3": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_2"
+    ]
+  },
+  "partition_4": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_14"
+    ]
+  },
+  "partition_5": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_3_im_0"
+    ]
+  },
+  "partition_6": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_4"
+    ]
+  },
+  "partition_7": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_5"
+    ]
+  },
+  "partition_8": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_17"
+    ]
+  },
+  "partition_9": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_6_im_0"
+    ]
+  },
+  "partition_10": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_7"
+    ]
+  },
+  "partition_11": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_8"
+    ]
+  },
+  "partition_12": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_9"
+    ]
+  },
+  "partition_13": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_9_im_0"
+    ]
+  },
+  "partition_14": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_17"
+    ]
+  },
+  "partition_15": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_20"
+    ]
+  },
+  "partition_16": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_10_im_0"
+    ]
+  },
+  "partition_17": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_11"
+    ]
+  },
+  "partition_18": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_12"
+    ]
+  },
+  "partition_19": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_13_im_0"
+    ]
+  },
+  "partition_20": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_14"
+    ]
+  },
+  "partition_21": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_15"
+    ]
+  },
+  "partition_22": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Add_16"
+    ]
+  },
+  "partition_23": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_0"
+    ]
+  },
+  "partition_24": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_23"
+    ]
+  },
+  "partition_25": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_18_im_0"
+    ]
+  },
+  "partition_26": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_19"
+    ]
+  },
+  "partition_27": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_20"
+    ]
+  },
+  "partition_28": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_26"
+    ]
+  },
+  "partition_29": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_21_im_0"
+    ]
+  },
+  "partition_30": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_22"
+    ]
+  },
+  "partition_31": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_23"
+    ]
+  },
+  "partition_32": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_29"
+    ]
+  },
+  "partition_33": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_24_im_0"
+    ]
+  },
+  "partition_34": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_25"
+    ]
+  },
+  "partition_35": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_26"
+    ]
+  },
+  "partition_36": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_27"
+    ]
+  },
+  "partition_37": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_27_im_0"
+    ]
+  },
+  "partition_38": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_35"
+    ]
+  },
+  "partition_39": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_32"
+    ]
+  },
+  "partition_40": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_28_im_0"
+    ]
+  },
+  "partition_41": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_29"
+    ]
+  },
+  "partition_42": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_30"
+    ]
+  },
+  "partition_43": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_35"
+    ]
+  },
+  "partition_44": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_31_im_0"
+    ]
+  },
+  "partition_45": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_32"
+    ]
+  },
+  "partition_46": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_33"
+    ]
+  },
+  "partition_47": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Add_34"
+    ]
+  },
+  "partition_48": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_1"
+    ]
+  },
+  "partition_49": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_38"
+    ]
+  },
+  "partition_50": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_36_im_0"
+    ]
+  },
+  "partition_51": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_37"
+    ]
+  },
+  "partition_52": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_38"
+    ]
+  },
+  "partition_53": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_41"
+    ]
+  },
+  "partition_54": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_39_im_0"
+    ]
+  },
+  "partition_55": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_40"
+    ]
+  },
+  "partition_56": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_41"
+    ]
+  },
+  "partition_57": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_44"
+    ]
+  },
+  "partition_58": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_42_im_0"
+    ]
+  },
+  "partition_59": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_43"
+    ]
+  },
+  "partition_60": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_44"
+    ]
+  },
+  "partition_61": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_45"
+    ]
+  },
+  "partition_62": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_45_im_0"
+    ]
+  },
+  "partition_63": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_70"
+    ]
+  },
+  "partition_64": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_47"
+    ]
+  },
+  "partition_65": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_46_im_0"
+    ]
+  },
+  "partition_66": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_47"
+    ]
+  },
+  "partition_67": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_48"
+    ]
+  },
+  "partition_68": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_50"
+    ]
+  },
+  "partition_69": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_49_im_0"
+    ]
+  },
+  "partition_70": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_50"
+    ]
+  },
+  "partition_71": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_51"
+    ]
+  },
+  "partition_72": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_53"
+    ]
+  },
+  "partition_73": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_52_im_0"
+    ]
+  },
+  "partition_74": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_53"
+    ]
+  },
+  "partition_75": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_54"
+    ]
+  },
+  "partition_76": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Add_55"
+    ]
+  },
+  "partition_77": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_56"
+    ]
+  },
+  "partition_78": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_56_im_0"
+    ]
+  },
+  "partition_79": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_57"
+    ]
+  },
+  "partition_80": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_58"
+    ]
+  },
+  "partition_81": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_59"
+    ]
+  },
+  "partition_82": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_59_im_0"
+    ]
+  },
+  "partition_83": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_60"
+    ]
+  },
+  "partition_84": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_61"
+    ]
+  },
+  "partition_85": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Add_62"
+    ]
+  },
+  "partition_86": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_63_im_0"
+    ]
+  },
+  "partition_87": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_64"
+    ]
+  },
+  "partition_88": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_65"
+    ]
+  },
+  "partition_89": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_66"
+    ]
+  },
+  "partition_90": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_67_im_0"
+    ]
+  },
+  "partition_91": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_68"
+    ]
+  },
+  "partition_92": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_69"
+    ]
+  },
+  "partition_93": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_2"
+    ]
+  },
+  "partition_94": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_62"
+    ]
+  },
+  "partition_95": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_71_im_0"
+    ]
+  },
+  "partition_96": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_72"
+    ]
+  },
+  "partition_97": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_73"
+    ]
+  },
+  "partition_98": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_65"
+    ]
+  },
+  "partition_99": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_74_im_0"
+    ]
+  },
+  "partition_100": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_75"
+    ]
+  },
+  "partition_101": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_76"
+    ]
+  },
+  "partition_102": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_68"
+    ]
+  },
+  "partition_103": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_77_im_0"
+    ]
+  },
+  "partition_104": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_78"
+    ]
+  },
+  "partition_105": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_79"
+    ]
+  },
+  "partition_106": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_80"
+    ]
+  },
+  "partition_107": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_80_im_0"
+    ]
+  },
+  "partition_108": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_105"
+    ]
+  },
+  "partition_109": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_71"
+    ]
+  },
+  "partition_110": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_81_im_0"
+    ]
+  },
+  "partition_111": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_82"
+    ]
+  },
+  "partition_112": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_83"
+    ]
+  },
+  "partition_113": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_77"
+    ]
+  },
+  "partition_114": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_84_im_0"
+    ]
+  },
+  "partition_115": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_85"
+    ]
+  },
+  "partition_116": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_86"
+    ]
+  },
+  "partition_117": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_80"
+    ]
+  },
+  "partition_118": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_87_im_0"
+    ]
+  },
+  "partition_119": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_88"
+    ]
+  },
+  "partition_120": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_89"
+    ]
+  },
+  "partition_121": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Add_90"
+    ]
+  },
+  "partition_122": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_83"
+    ]
+  },
+  "partition_123": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_91_im_0"
+    ]
+  },
+  "partition_124": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_92"
+    ]
+  },
+  "partition_125": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_93"
+    ]
+  },
+  "partition_126": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_86"
+    ]
+  },
+  "partition_127": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_94_im_0"
+    ]
+  },
+  "partition_128": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_95"
+    ]
+  },
+  "partition_129": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_96"
+    ]
+  },
+  "partition_130": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Add_97"
+    ]
+  },
+  "partition_131": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_74"
+    ]
+  },
+  "partition_132": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_98_im_0"
+    ]
+  },
+  "partition_133": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_99"
+    ]
+  },
+  "partition_134": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_100"
+    ]
+  },
+  "partition_135": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_101"
+    ]
+  },
+  "partition_136": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_89"
+    ]
+  },
+  "partition_137": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_102_im_0"
+    ]
+  },
+  "partition_138": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_103"
+    ]
+  },
+  "partition_139": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_104"
+    ]
+  },
+  "partition_140": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_3"
+    ]
+  },
+  "partition_141": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_92"
+    ]
+  },
+  "partition_142": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_106_im_0"
+    ]
+  },
+  "partition_143": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_107"
+    ]
+  },
+  "partition_144": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_108"
+    ]
+  },
+  "partition_145": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_95"
+    ]
+  },
+  "partition_146": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_109_im_0"
+    ]
+  },
+  "partition_147": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_110"
+    ]
+  },
+  "partition_148": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_111"
+    ]
+  },
+  "partition_149": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MaxPool_112"
+    ]
+  },
+  "partition_150": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_115"
+    ]
+  },
+  "partition_151": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MaxPool_113"
+    ]
+  },
+  "partition_152": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_4"
+    ]
+  },
+  "partition_153": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MaxPool_114"
+    ]
+  },
+  "partition_154": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_5"
+    ]
+  },
+  "partition_155": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_98"
+    ]
+  },
+  "partition_156": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_116_im_0"
+    ]
+  },
+  "partition_157": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_117"
+    ]
+  },
+  "partition_158": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_118"
+    ]
+  },
+  "partition_159": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_101"
+    ]
+  },
+  "partition_160": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_119_im_0"
+    ]
+  },
+  "partition_161": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_120"
+    ]
+  },
+  "partition_162": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_121"
+    ]
+  },
+  "partition_163": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_122"
+    ]
+  },
+  "partition_164": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_122_im_0"
+    ]
+  },
+  "partition_165": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_104"
+    ]
+  },
+  "partition_166": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_123_im_0"
+    ]
+  },
+  "partition_167": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Reshape_124"
+    ]
+  },
+  "partition_168": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_125"
+    ]
+  },
+  "partition_169": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_125_im_0"
+    ]
+  },
+  "partition_170": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_125_im_1"
+    ]
+  },
+  "partition_171": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_132"
+    ]
+  },
+  "partition_172": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_132_im_0"
+    ]
+  },
+  "partition_173": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Transpose_126"
+    ]
+  },
+  "partition_174": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_127"
+    ]
+  },
+  "partition_175": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_127_im_0"
+    ]
+  },
+  "partition_176": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_127_im_1"
+    ]
+  },
+  "partition_177": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_127_im_2"
+    ]
+  },
+  "partition_178": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_127_im_5"
+    ]
+  },
+  "partition_179": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_127_im_6"
+    ]
+  },
+  "partition_180": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_127_im_7"
+    ]
+  },
+  "partition_181": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_127_im_8"
+    ]
+  },
+  "partition_182": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_127_im_9"
+    ]
+  },
+  "partition_183": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_127_im_12"
+    ]
+  },
+  "partition_184": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_127_im_13"
+    ]
+  },
+  "partition_185": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_129"
+    ]
+  },
+  "partition_186": {
+    "target": "cpu",
+    "op_type": "nn.softmax",
+    "operations": [
+      "Softmax_130"
+    ]
+  },
+  "partition_187": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Transpose_131"
+    ]
+  },
+  "partition_188": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_132_im_1"
+    ]
+  },
+  "partition_189": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_132_im_2"
+    ]
+  },
+  "partition_190": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_132_im_5"
+    ]
+  },
+  "partition_191": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_132_im_6"
+    ]
+  },
+  "partition_192": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_132_im_7"
+    ]
+  },
+  "partition_193": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_132_im_8"
+    ]
+  },
+  "partition_194": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_132_im_9"
+    ]
+  },
+  "partition_195": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_132_im_12"
+    ]
+  },
+  "partition_196": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "MatMul_132_im_13"
+    ]
+  },
+  "partition_197": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Reshape_133"
+    ]
+  },
+  "partition_198": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Reshape_134"
+    ]
+  },
+  "partition_199": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_107"
+    ]
+  },
+  "partition_200": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_135_im_0"
+    ]
+  },
+  "partition_201": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Add_136"
+    ]
+  },
+  "partition_202": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_137_im_0"
+    ]
+  },
+  "partition_203": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Add_138"
+    ]
+  },
+  "partition_204": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_110"
+    ]
+  },
+  "partition_205": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_139_im_0"
+    ]
+  },
+  "partition_206": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_140"
+    ]
+  },
+  "partition_207": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_141"
+    ]
+  },
+  "partition_208": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_113"
+    ]
+  },
+  "partition_209": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_142_im_0"
+    ]
+  },
+  "partition_210": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Add_143"
+    ]
+  },
+  "partition_211": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_144"
+    ]
+  },
+  "partition_212": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_116"
+    ]
+  },
+  "partition_213": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_145_im_0"
+    ]
+  },
+  "partition_214": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_146"
+    ]
+  },
+  "partition_215": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_147"
+    ]
+  },
+  "partition_216": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Resize_149"
+    ]
+  },
+  "partition_217": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_150"
+    ]
+  },
+  "partition_218": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_119"
+    ]
+  },
+  "partition_219": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_151_im_0"
+    ]
+  },
+  "partition_220": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_152"
+    ]
+  },
+  "partition_221": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_153"
+    ]
+  },
+  "partition_222": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_154"
+    ]
+  },
+  "partition_223": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_154_im_0"
+    ]
+  },
+  "partition_224": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_162"
+    ]
+  },
+  "partition_225": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_122"
+    ]
+  },
+  "partition_226": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_155_im_0"
+    ]
+  },
+  "partition_227": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_156"
+    ]
+  },
+  "partition_228": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_157"
+    ]
+  },
+  "partition_229": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_125"
+    ]
+  },
+  "partition_230": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_158_im_0"
+    ]
+  },
+  "partition_231": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_159"
+    ]
+  },
+  "partition_232": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_160"
+    ]
+  },
+  "partition_233": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Add_161"
+    ]
+  },
+  "partition_234": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_6"
+    ]
+  },
+  "partition_235": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_128"
+    ]
+  },
+  "partition_236": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_163_im_0"
+    ]
+  },
+  "partition_237": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_164"
+    ]
+  },
+  "partition_238": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_165"
+    ]
+  },
+  "partition_239": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Resize_167"
+    ]
+  },
+  "partition_240": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_168"
+    ]
+  },
+  "partition_241": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_131"
+    ]
+  },
+  "partition_242": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_169_im_0"
+    ]
+  },
+  "partition_243": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_170"
+    ]
+  },
+  "partition_244": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_171"
+    ]
+  },
+  "partition_245": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_172"
+    ]
+  },
+  "partition_246": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_172_im_0"
+    ]
+  },
+  "partition_247": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_180"
+    ]
+  },
+  "partition_248": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_134"
+    ]
+  },
+  "partition_249": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_173_im_0"
+    ]
+  },
+  "partition_250": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_174"
+    ]
+  },
+  "partition_251": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_175"
+    ]
+  },
+  "partition_252": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_137"
+    ]
+  },
+  "partition_253": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_176_im_0"
+    ]
+  },
+  "partition_254": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_177"
+    ]
+  },
+  "partition_255": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_178"
+    ]
+  },
+  "partition_256": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Add_179"
+    ]
+  },
+  "partition_257": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_7"
+    ]
+  },
+  "partition_258": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_140"
+    ]
+  },
+  "partition_259": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_181_im_0"
+    ]
+  },
+  "partition_260": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_182"
+    ]
+  },
+  "partition_261": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_183"
+    ]
+  },
+  "partition_262": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_239_im_0"
+    ]
+  },
+  "partition_263": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_240"
+    ]
+  },
+  "partition_264": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_241"
+    ]
+  },
+  "partition_265": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_242_im_0"
+    ]
+  },
+  "partition_266": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_243"
+    ]
+  },
+  "partition_267": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_244"
+    ]
+  },
+  "partition_268": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_152"
+    ]
+  },
+  "partition_269": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_245_im_0"
+    ]
+  },
+  "partition_270": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_146"
+    ]
+  },
+  "partition_271": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_246_im_0"
+    ]
+  },
+  "partition_272": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_247"
+    ]
+  },
+  "partition_273": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_248"
+    ]
+  },
+  "partition_274": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_249_im_0"
+    ]
+  },
+  "partition_275": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_250"
+    ]
+  },
+  "partition_276": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_251"
+    ]
+  },
+  "partition_277": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_155"
+    ]
+  },
+  "partition_278": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_252_im_0"
+    ]
+  },
+  "partition_279": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_253"
+    ]
+  },
+  "partition_280": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_254"
+    ]
+  },
+  "partition_281": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_255_im_0"
+    ]
+  },
+  "partition_282": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_256"
+    ]
+  },
+  "partition_283": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_257"
+    ]
+  },
+  "partition_284": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_161"
+    ]
+  },
+  "partition_285": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_258_im_0"
+    ]
+  },
+  "partition_286": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_259"
+    ]
+  },
+  "partition_287": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Reshape_302"
+    ]
+  },
+  "partition_288": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_143"
+    ]
+  },
+  "partition_289": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_184_im_0"
+    ]
+  },
+  "partition_290": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_185"
+    ]
+  },
+  "partition_291": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_186"
+    ]
+  },
+  "partition_292": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_187"
+    ]
+  },
+  "partition_293": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_149"
+    ]
+  },
+  "partition_294": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_188_im_0"
+    ]
+  },
+  "partition_295": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_189"
+    ]
+  },
+  "partition_296": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_190"
+    ]
+  },
+  "partition_297": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_191"
+    ]
+  },
+  "partition_298": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_191_im_0"
+    ]
+  },
+  "partition_299": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_199"
+    ]
+  },
+  "partition_300": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_158"
+    ]
+  },
+  "partition_301": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_192_im_0"
+    ]
+  },
+  "partition_302": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_193"
+    ]
+  },
+  "partition_303": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_194"
+    ]
+  },
+  "partition_304": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_195_im_0"
+    ]
+  },
+  "partition_305": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_196"
+    ]
+  },
+  "partition_306": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_197"
+    ]
+  },
+  "partition_307": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Add_198"
+    ]
+  },
+  "partition_308": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_8"
+    ]
+  },
+  "partition_309": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_200_im_0"
+    ]
+  },
+  "partition_310": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_201"
+    ]
+  },
+  "partition_311": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_202"
+    ]
+  },
+  "partition_312": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_260_im_0"
+    ]
+  },
+  "partition_313": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_261"
+    ]
+  },
+  "partition_314": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_262"
+    ]
+  },
+  "partition_315": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_263_im_0"
+    ]
+  },
+  "partition_316": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_264"
+    ]
+  },
+  "partition_317": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_265"
+    ]
+  },
+  "partition_318": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_173"
+    ]
+  },
+  "partition_319": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_266_im_0"
+    ]
+  },
+  "partition_320": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_167"
+    ]
+  },
+  "partition_321": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_267_im_0"
+    ]
+  },
+  "partition_322": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_268"
+    ]
+  },
+  "partition_323": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_269"
+    ]
+  },
+  "partition_324": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_270_im_0"
+    ]
+  },
+  "partition_325": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_271"
+    ]
+  },
+  "partition_326": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_272"
+    ]
+  },
+  "partition_327": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_176"
+    ]
+  },
+  "partition_328": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_273_im_0"
+    ]
+  },
+  "partition_329": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_274"
+    ]
+  },
+  "partition_330": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_275"
+    ]
+  },
+  "partition_331": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_182"
+    ]
+  },
+  "partition_332": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_276_im_0"
+    ]
+  },
+  "partition_333": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_277"
+    ]
+  },
+  "partition_334": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_278"
+    ]
+  },
+  "partition_335": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_188"
+    ]
+  },
+  "partition_336": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_279_im_0"
+    ]
+  },
+  "partition_337": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_280"
+    ]
+  },
+  "partition_338": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Reshape_303"
+    ]
+  },
+  "partition_339": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_305"
+    ]
+  },
+  "partition_340": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_164"
+    ]
+  },
+  "partition_341": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_203_im_0"
+    ]
+  },
+  "partition_342": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_204"
+    ]
+  },
+  "partition_343": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_205"
+    ]
+  },
+  "partition_344": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_206"
+    ]
+  },
+  "partition_345": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_170"
+    ]
+  },
+  "partition_346": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_207_im_0"
+    ]
+  },
+  "partition_347": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_208"
+    ]
+  },
+  "partition_348": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_209"
+    ]
+  },
+  "partition_349": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_210"
+    ]
+  },
+  "partition_350": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_210_im_0"
+    ]
+  },
+  "partition_351": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_235"
+    ]
+  },
+  "partition_352": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_179"
+    ]
+  },
+  "partition_353": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_211_im_0"
+    ]
+  },
+  "partition_354": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_212"
+    ]
+  },
+  "partition_355": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_213"
+    ]
+  },
+  "partition_356": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_185"
+    ]
+  },
+  "partition_357": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_214_im_0"
+    ]
+  },
+  "partition_358": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_215"
+    ]
+  },
+  "partition_359": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_216"
+    ]
+  },
+  "partition_360": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_191"
+    ]
+  },
+  "partition_361": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_217_im_0"
+    ]
+  },
+  "partition_362": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_218"
+    ]
+  },
+  "partition_363": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_219"
+    ]
+  },
+  "partition_364": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Add_220"
+    ]
+  },
+  "partition_365": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_194"
+    ]
+  },
+  "partition_366": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_221_im_0"
+    ]
+  },
+  "partition_367": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_222"
+    ]
+  },
+  "partition_368": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_223"
+    ]
+  },
+  "partition_369": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_197"
+    ]
+  },
+  "partition_370": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_224_im_0"
+    ]
+  },
+  "partition_371": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_225"
+    ]
+  },
+  "partition_372": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_226"
+    ]
+  },
+  "partition_373": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Add_227"
+    ]
+  },
+  "partition_374": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_228_im_0"
+    ]
+  },
+  "partition_375": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_229"
+    ]
+  },
+  "partition_376": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_230"
+    ]
+  },
+  "partition_377": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_231"
+    ]
+  },
+  "partition_378": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_200"
+    ]
+  },
+  "partition_379": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_232_im_0"
+    ]
+  },
+  "partition_380": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_233"
+    ]
+  },
+  "partition_381": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_234"
+    ]
+  },
+  "partition_382": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_9"
+    ]
+  },
+  "partition_383": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_203"
+    ]
+  },
+  "partition_384": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_236_im_0"
+    ]
+  },
+  "partition_385": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_237"
+    ]
+  },
+  "partition_386": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_238"
+    ]
+  },
+  "partition_387": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_206"
+    ]
+  },
+  "partition_388": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_281_im_0"
+    ]
+  },
+  "partition_389": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_282"
+    ]
+  },
+  "partition_390": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_283"
+    ]
+  },
+  "partition_391": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_284_im_0"
+    ]
+  },
+  "partition_392": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_285"
+    ]
+  },
+  "partition_393": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_286"
+    ]
+  },
+  "partition_394": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_215"
+    ]
+  },
+  "partition_395": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_287_im_0"
+    ]
+  },
+  "partition_396": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_209"
+    ]
+  },
+  "partition_397": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_288_im_0"
+    ]
+  },
+  "partition_398": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_289"
+    ]
+  },
+  "partition_399": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_290"
+    ]
+  },
+  "partition_400": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_212"
+    ]
+  },
+  "partition_401": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_291_im_0"
+    ]
+  },
+  "partition_402": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_292"
+    ]
+  },
+  "partition_403": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_293"
+    ]
+  },
+  "partition_404": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_218"
+    ]
+  },
+  "partition_405": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_294_im_0"
+    ]
+  },
+  "partition_406": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_295"
+    ]
+  },
+  "partition_407": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_296"
+    ]
+  },
+  "partition_408": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_221"
+    ]
+  },
+  "partition_409": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_297_im_0"
+    ]
+  },
+  "partition_410": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_298"
+    ]
+  },
+  "partition_411": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_299"
+    ]
+  },
+  "partition_412": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_224"
+    ]
+  },
+  "partition_413": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_300_im_0"
+    ]
+  },
+  "partition_414": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_301"
+    ]
+  },
+  "partition_415": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Reshape_304"
+    ]
+  },
+  "partition_416": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_10"
+    ]
+  },
+  "partition_417": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_306"
+    ]
+  },
+  "partition_418": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Split_306_im_0"
+    ]
+  },
+  "partition_419": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Reshape_307"
+    ]
+  },
+  "partition_420": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "im_propagate_output_names_generated_span_22"
+    ]
+  },
+  "partition_421": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Transpose_310"
+    ]
+  },
+  "partition_422": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "PPQ_Operation_227"
+    ]
+  },
+  "partition_423": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Conv_311"
+    ]
+  },
+  "partition_424": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Reshape_312"
+    ]
+  },
+  "partition_425": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Slice_323"
+    ]
+  },
+  "partition_426": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sub_328"
+    ]
+  },
+  "partition_427": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sub_328_im_0"
+    ]
+  },
+  "partition_428": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Slice_326"
+    ]
+  },
+  "partition_429": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Add_330"
+    ]
+  },
+  "partition_430": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Add_331"
+    ]
+  },
+  "partition_431": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Div_332"
+    ]
+  },
+  "partition_432": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sub_333"
+    ]
+  },
+  "partition_433": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_334"
+    ]
+  },
+  "partition_434": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Mul_336"
+    ]
+  },
+  "partition_435": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Sigmoid_337"
+    ]
+  },
+  "partition_436": {
+    "target": "npu",
+    "op_type": "NPU",
+    "operations": [
+      "Concat_338"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "layers": [
+        {
+            "op_name": "Sigmoid_40",
+            "hwlayer_names": [
+                "DummySlice.layer.Sigmoid_40.slice.input.0",
+                "Activation.layer.Sigmoid_40.c.0",
+                "DummySlice.layer.Sigmoid_40.slice.input.1",
+                "Activation.layer.Sigmoid_40.c.1",
+                "DummyConcat.layer.Sigmoid_40.0"
+            ],
+            "tops": [
+                {
+                    "top_name": "218",
+                    "in_hwlayer_id": 5,
+                    "out_hwlayer_id": 0,
+                    "out_hwlayer_dummy": true
+                }
+            ]
+        }
+    ]
+}

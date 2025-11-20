@@ -1,0 +1,17 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["406"],
+    "input_shape": [{"dim": [1,32,40,40],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["407"],
+    "output_shape": [{"dim": [1,32,40,40],"dtype": "f16","pack": 0}
+],
+    "layer": [{"inst_name": "Sigmoid_193","type_name": "Activation4",            "bottom": ["406"],
+            "top": ["407"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {"function": "Sigmoid","coeff": 1,"coeff2": 1,"num_input": 32,"num_output": 32},
+            "data": {"input_dtype": 1,"input_acc": [5,10,15],"output_dtype": 1,"output_acc": [5,10,15]}
+        }
+]
+}

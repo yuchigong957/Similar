@@ -1,0 +1,18 @@
+{
+    "layers": [
+        {
+            "op_name": "PPQ_Operation_3",
+            "hwlayer_names": [
+                "Concat.layer.PPQ_Operation_3"
+            ],
+            "tops": [
+                {
+                    "top_name": "PPQ_Variable_16",
+                    "in_hwlayer_id": 3,
+                    "out_hwlayer_id": 2,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        }
+    ]
+}

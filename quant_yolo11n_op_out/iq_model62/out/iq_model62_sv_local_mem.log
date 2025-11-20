@@ -1,0 +1,219 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_491",
+            "idx": 0,
+            "mem_used_rate": 0.0732421875,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 307200
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_491",
+                    "addr": 0,
+                    "size": 307200
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "FetchParam.layer.Activation.layer.Sigmoid_277.c.0.fetch_param_data.layer",
+            "idx": 1,
+            "mem_used_rate": 0.0733642578125,
+            "malloc": [
+                {
+                    "addr": 307200,
+                    "ori_size": 0,
+                    "size": 512
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_491",
+                    "addr": 0,
+                    "size": 307200
+                },
+                {
+                    "name": "FetchParam.layer.Activation.layer.Sigmoid_277.c.0.fetch_param_data.layer",
+                    "addr": 307200,
+                    "size": 512
+                }
+            ],
+            "free": []
+        },
+        "kernel[2]": {
+            "name": "FetchParam.layer.Activation.layer.Sigmoid_277.c.1.fetch_param_data.layer",
+            "idx": 2,
+            "mem_used_rate": 0.073486328125,
+            "malloc": [
+                {
+                    "addr": 307712,
+                    "ori_size": 0,
+                    "size": 512
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_491",
+                    "addr": 0,
+                    "size": 307200
+                },
+                {
+                    "name": "FetchParam.layer.Activation.layer.Sigmoid_277.c.0.fetch_param_data.layer",
+                    "addr": 307200,
+                    "size": 512
+                },
+                {
+                    "name": "FetchParam.layer.Activation.layer.Sigmoid_277.c.1.fetch_param_data.layer",
+                    "addr": 307712,
+                    "size": 512
+                }
+            ],
+            "free": []
+        },
+        "kernel[3]": {
+            "name": "Activation.layer.Sigmoid_277.c.0",
+            "idx": 3,
+            "mem_used_rate": 0.073486328125,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 153600
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_491",
+                    "addr": 0,
+                    "size": 307200
+                },
+                {
+                    "name": "FetchParam.layer.Activation.layer.Sigmoid_277.c.0.fetch_param_data.layer",
+                    "addr": 307200,
+                    "size": 512
+                },
+                {
+                    "name": "FetchParam.layer.Activation.layer.Sigmoid_277.c.1.fetch_param_data.layer",
+                    "addr": 307712,
+                    "size": 512
+                }
+            ],
+            "free": [
+                {
+                    "name": "Activation.layer.Sigmoid_277.c.0",
+                    "addr": 307200,
+                    "size": 512
+                }
+            ]
+        },
+        "kernel[4]": {
+            "name": "Activation.layer.Sigmoid_277.c.1",
+            "idx": 4,
+            "mem_used_rate": 0.0733642578125,
+            "malloc": [
+                {
+                    "addr": 153600,
+                    "ori_size": 0,
+                    "size": 153600
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_491",
+                    "addr": 0,
+                    "size": 307200
+                },
+                {
+                    "name": "FetchParam.layer.Activation.layer.Sigmoid_277.c.0.fetch_param_data.layer",
+                    "addr": 307200,
+                    "size": 512
+                },
+                {
+                    "name": "FetchParam.layer.Activation.layer.Sigmoid_277.c.1.fetch_param_data.layer",
+                    "addr": 307712,
+                    "size": 512
+                }
+            ],
+            "free": [
+                {
+                    "name": "Activation.layer.Sigmoid_277.c.1",
+                    "addr": 307712,
+                    "size": 512
+                }
+            ]
+        },
+        "kernel[5]": {
+            "name": "DummyConcat.layer.Sigmoid_277.0",
+            "idx": 5,
+            "mem_used_rate": 0.073486328125,
+            "malloc": [
+                {
+                    "addr": 0,
+                    "ori_size": 0,
+                    "size": 307200
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_491",
+                    "addr": 0,
+                    "size": 307200
+                },
+                {
+                    "name": "FetchParam.layer.Activation.layer.Sigmoid_277.c.0.fetch_param_data.layer",
+                    "addr": 307200,
+                    "size": 512
+                },
+                {
+                    "name": "FetchParam.layer.Activation.layer.Sigmoid_277.c.1.fetch_param_data.layer",
+                    "addr": 307712,
+                    "size": 512
+                }
+            ],
+            "free": []
+        },
+        "kernel[6]": {
+            "name": "DmaOut.layer.copy_out_492",
+            "idx": 6,
+            "mem_used_rate": 0.03662109375,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_491",
+                    "addr": 0,
+                    "size": 307200
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out_492",
+                    "addr": 0,
+                    "size": 153600
+                },
+                {
+                    "name": "DmaOut.layer.copy_out_492",
+                    "addr": 153600,
+                    "size": 153600
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 308224
+        }
+    ]
+}

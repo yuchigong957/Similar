@@ -1,0 +1,18 @@
+{
+    "name": "graph_aic",
+    "input_tensor": ["327"],
+    "input_shape": [{"dim": [1,2,64,400],"dtype": "f16","pack": 0}
+],
+    "output_tensor": ["333"],
+    "output_shape": [{"dim": [1,128,20,20],"dtype": "f16","pack": 0}
+],
+    "layer": [{"inst_name": "Reshape_133","type_name": "Reshape3",            "bottom": ["327"],
+            "top": ["333"],
+            "hw": 1,
+            "hw_acc": [5,10,15],
+            "param": {"mode": 2,"shape": [128,20,20]},
+            "sv": 1,
+            "data": {"input_dtype": 1,"output_dtype": 1,"input_acc": [5,10,15],"output_acc": [5,10,15]}
+        }
+]
+}

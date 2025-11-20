@@ -1,0 +1,24 @@
+{
+    "layers": [
+        {
+            "op_name": "Reshape_312",
+            "hwlayer_names": [
+                "Slice.layer.Reshape_312.0",
+                "Slice.layer.Reshape_312.1",
+                "DummyConcat.layer.Reshape_312.reshape_dc.0",
+                "Slice.layer.Reshape_312.2",
+                "Slice.layer.Reshape_312.3",
+                "DummyConcat.layer.Reshape_312.reshape_dc.1",
+                "DummyConcat.layer.Reshape_312.reshape_dc.2"
+            ],
+            "tops": [
+                {
+                    "top_name": "561",
+                    "in_hwlayer_id": 6,
+                    "out_hwlayer_id": 0,
+                    "out_hwlayer_dummy": true
+                }
+            ]
+        }
+    ]
+}

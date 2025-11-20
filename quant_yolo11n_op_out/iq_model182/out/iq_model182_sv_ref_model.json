@@ -1,0 +1,102 @@
+{
+    "name": "graph_aic",
+    "input_tensor": [
+        "388"
+    ],
+    "input_shape": [
+        {
+            "dim": [
+                1,
+                16,
+                80,
+                80
+            ],
+            "dtype": "f16",
+            "pack": 0
+        }
+    ],
+    "output_tensor": [
+        "PPQ_Variable_150"
+    ],
+    "output_shape": [
+        {
+            "dim": [
+                1,
+                16,
+                80,
+                80
+            ],
+            "dtype": "f8",
+            "hw_acc": [
+                4,
+                3,
+                7
+            ],
+            "pack": 0
+        }
+    ],
+    "layer": [
+        {
+            "inst_name": "PPQ_Operation_137",
+            "type_name": "Activation4",
+            "bottom": [
+                "388"
+            ],
+            "top": [
+                "PPQ_Variable_150"
+            ],
+            "hw": 1,
+            "hw_acc": [
+                5,
+                10,
+                15
+            ],
+            "param": {
+                "function": "PReLU",
+                "coeff": 1,
+                "coeff2": 1,
+                "num_input": 16,
+                "num_output": 16,
+                "sig_mode": 1,
+                "bin_mode": 2,
+                "cal_mode": 0,
+                "unpack_en": 1,
+                "pack_en": 1
+            },
+            "data": {
+                "input_dtype": 1,
+                "input_acc": [
+                    5,
+                    10,
+                    15
+                ],
+                "output_dtype": 3,
+                "output_acc": [
+                    4,
+                    3,
+                    7
+                ],
+                "lut_x": [
+                    65535,
+                    0,
+                    0,
+                    0
+                ],
+                "lut_y": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "lut_k": [
+                    0,
+                    15360,
+                    0,
+                    15360,
+                    15360
+                ]
+            },
+            "sv": 1
+        }
+    ]
+}

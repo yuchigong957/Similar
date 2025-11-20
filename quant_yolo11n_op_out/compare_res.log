@@ -1,0 +1,12 @@
+{
+    "result": false,
+    "output_similarity": [
+        {
+            "tensor_name": "output0",
+            "similarity": 0.5911118388175964,
+            "psnr(>50.0)": "21.0732",
+            "ref_range": "[0.0, 636.77094]",
+            "board_range": "[0.0, 636.0]"
+        }
+    ]
+}

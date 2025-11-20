@@ -1,0 +1,13 @@
+{
+    "layers": [
+        {
+            "op_name": "Mul_38",
+            "hwlayer_names": [
+                "DummySlice.layer.DmaIn.layer.copy_in_214.slice.input.0",
+                "DummySlice.layer.DmaIn.layer.copy_in_215.slice.input.0",
+                "Eltwise.layer.Mul_38.h.0"
+            ],
+            "tops": null
+        }
+    ]
+}

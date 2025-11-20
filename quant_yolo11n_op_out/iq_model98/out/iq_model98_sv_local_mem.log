@@ -1,0 +1,88 @@
+{
+    "banks": [
+        {
+            "addr": 0,
+            "size": 0
+        }
+    ],
+    "patch_reserve": [],
+    "param_reserve": [],
+    "ops": {
+        "kernel[0]": {
+            "name": "DmaIn.layer.copy_in_551",
+            "idx": 0,
+            "mem_used_rate": 0.25634765625,
+            "malloc": [
+                {
+                    "addr": 3119104,
+                    "ori_size": 0,
+                    "size": 1075200
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_551",
+                    "addr": 3119104,
+                    "size": 1075200
+                }
+            ],
+            "free": []
+        },
+        "kernel[1]": {
+            "name": "Permute.layer.im_propagate_output_names_generated_span_22",
+            "idx": 1,
+            "mem_used_rate": 0.5126953125,
+            "malloc": [
+                {
+                    "addr": 2043904,
+                    "ori_size": 0,
+                    "size": 1075200
+                }
+            ],
+            "used": [
+                {
+                    "name": "DmaIn.layer.copy_in_551",
+                    "addr": 3119104,
+                    "size": 1075200
+                },
+                {
+                    "name": "Permute.layer.im_propagate_output_names_generated_span_22",
+                    "addr": 2043904,
+                    "size": 1075200
+                }
+            ],
+            "free": [
+                {
+                    "name": "Permute.layer.im_propagate_output_names_generated_span_22",
+                    "addr": 3119104,
+                    "size": 1075200
+                }
+            ]
+        },
+        "kernel[2]": {
+            "name": "DmaOut.layer.copy_out__im_PropagateOutputNames_added_name_0",
+            "idx": 2,
+            "mem_used_rate": 0.25634765625,
+            "malloc": [],
+            "used": [
+                {
+                    "name": "Permute.layer.im_propagate_output_names_generated_span_22",
+                    "addr": 2043904,
+                    "size": 1075200
+                }
+            ],
+            "free": [
+                {
+                    "name": "DmaOut.layer.copy_out__im_PropagateOutputNames_added_name_0",
+                    "addr": 2043904,
+                    "size": 1075200
+                }
+            ]
+        }
+    },
+    "max_peak_size": [
+        {
+            "size": 1075200
+        }
+    ]
+}

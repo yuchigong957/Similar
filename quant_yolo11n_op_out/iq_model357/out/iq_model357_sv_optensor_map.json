@@ -1,0 +1,18 @@
+{
+    "layers": [
+        {
+            "op_name": "Resize_149",
+            "hwlayer_names": [
+                "Interp.layer.Resize_149"
+            ],
+            "tops": [
+                {
+                    "top_name": "357",
+                    "in_hwlayer_id": 2,
+                    "out_hwlayer_id": 1,
+                    "out_hwlayer_dummy": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1388 @@
+--------->   group: 0   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch0.DmaIn.layer.copy_in_PPQ_Variable_180
+---------------------------------------------
+set depends: null
+clr depends:
+  0. mpu0.Conv2d.layer.Conv_267_im_0.0
+  1. mpu1.Conv2d.layer.Conv_267_im_0.1
+---------------------------------------------
+[0xf4c0000100400000] MODULE_SYNC_NPU_DMA_IN_CH0: [0x3d3] sync_set[] sync_clr[mpu0,mpu1] sync_id[0]
+[0b 11110100 11000000 00000000 00000001 00000000 01000000 00000000 00000000]  [63-54][opcode][11 11010011] [53-38][sync_set][0] [37-22][sync_clr][100 00000001] [21-6][sync_id][0] [5-0][reserve][0]
+
+[0xf8c0018040000000] MODULE_HEADER_NPU_DMA_IN_CH0: [0x3e3] cmd_num[6] hardlayer_num[1] cmd_id[0] dummy_en[disable] dummy_indi[0] dummy_id[0]
+[0b 11111000 11000000 00000001 10000000 01000000 00000000 00000000 00000000]  [63-54][opcode][11 11100011] [53-38][cmd_num][110] [37-30][hardlayer_num][1] [29-6][cmd_id][0] [5-5][dummy_en][0] [4-4][dummy_indi][0] [3-1][dummy_id][0] [0-0][reserve][0]
+
+[0x0001000010000010] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[8bit] src_line_size[16] src_line_stride[16]
+[0b 00000000 00000001 00000000 00000000 00010000 00000000 00000000 00010000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][1] [47-24][src_line_size][10000] [23-0][src_line_stride][10000]
+
+[0x0040001400000280] DMA_IN_INFO_1: [0x01] src_patch_size[640] src_patch_stride[640]
+[0b 00000000 01000000 00000000 00010100 00000000 00000000 00000010 10000000]  [63-54][opcode][1] [53-27][src_patch_size][10 10000000] [26-0][src_patch_stride][10 10000000]
+
+[0x008000000001d800] DMA_IN_INFO_2: [0x02] src_offset_addr[0] dst_addr[120832]
+[0b 00000000 10000000 00000000 00000000 00000000 00000001 11011000 00000000]  [63-54][opcode][10] [53-27][src_offset_addr][0] [26-0][dst_addr][1 11011000 00000000]
+
+[0x00c009c009c01fdb] DMA_IN_INFO_3: [0x03] src_hsize[39] src_wsize[39] src_ch[127] src_layout[npufmt] dst_layout[npufmt]
+[0b 00000000 11000000 00001001 11000000 00001001 11000000 00011111 11011011]  [63-54][opcode][11] [53-38][src_hsize][100111] [37-22][src_wsize][100111] [21-6][src_ch][1111111] [5-3][src_layout][11] [3-0][dst_layout][11]
+
+[0x0110000000000000] DMA_IN_INFO_4: [0x04] data_type[feature_map] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[0] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00010000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100] [53-52][data_type][1] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][0] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0x014a400000000000] DMA_IN_INFO_5: [0x05] dst_bit_width[8bit] src_dtype[fp] dst_dtype[fp] decomp_wgt_mode[sec] wgt_gptq_zeros_cfg_en[disable] wgt_gptq_zeros_cfg[0] wgt_gptq_scales_cfg_en[disable] wgt_gptq_scales_cfg[0]
+[0b 00000001 01001010 01000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][101] [53-51][dst_bit_width][1] [50-48][src_dtype][10] [47-45][dst_dtype][10] [44-44][decomp_wgt_mode][0] [43-43][wgt_gptq_zeros_cfg_en][0] [42-39][wgt_gptq_zeros_cfg][0] [38-38][wgt_gptq_scales_cfg_en][0] [37-22][wgt_gptq_scales_cfg][0] [21-0][reserve][0]
+
+[0xfcd597516fe00000] MODULE_TAIL_NPU_DMA_IN_CH0: [0x3f3] check_sum[1448953279] Preemption_indi[1]
+[0b 11111100 11010101 10010111 01010001 01101111 11100000 00000000 00000000]  [63-54][opcode][11 11110011] [53-22][check_sum][1010110 01011101 01000101 10111111] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 1   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.0.fetch_param_data.layer
+---------------------------------------------
+set depends: null
+clr depends:
+  0. mpu0.Conv2d.layer.Conv_267_im_0.0
+---------------------------------------------
+[0xf500000000400000] MODULE_SYNC_NPU_DMA_IN_CH1: [0x3d4] sync_set[] sync_clr[mpu0] sync_id[0]
+[0b 11110101 00000000 00000000 00000000 00000000 01000000 00000000 00000000]  [63-54][opcode][11 11010100] [53-38][sync_set][0] [37-22][sync_clr][1] [21-6][sync_id][0] [5-0][reserve][0]
+
+[0xf900014040000000] MODULE_HEADER_NPU_DMA_IN_CH1: [0x3e4] cmd_num[5] hardlayer_num[1] cmd_id[0]
+[0b 11111001 00000000 00000001 01000000 01000000 00000000 00000000 00000000]  [63-54][opcode][11 11100100] [53-38][cmd_num][101] [37-30][hardlayer_num][1] [29-6][cmd_id][0] [5-0][reserve][0]
+
+[0x0002000008000000] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[16bit] src_line_size[8] src_line_stride[0]
+[0b 00000000 00000010 00000000 00000000 00001000 00000000 00000000 00000000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][10] [47-24][src_line_size][1000] [23-0][src_line_stride][0]
+
+[0x0040000000000000] DMA_IN_INFO_1: [0x01] src_patch_size[0] src_patch_stride[0]
+[0b 00000000 01000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1] [53-27][src_patch_size][0] [26-0][src_patch_stride][0]
+
+[0x0080000000000000] DMA_IN_INFO_2: [0x02] src_offset_addr[0] dst_addr[0]
+[0b 00000000 10000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][10] [53-27][src_offset_addr][0] [26-0][dst_addr][0]
+
+[0x00c0000000000000] DMA_IN_INFO_3: [0x03] src_hsize[0] src_wsize[0] src_ch[0] src_layout[stream] dst_layout[stream]
+[0b 00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11] [53-38][src_hsize][0] [37-22][src_wsize][0] [21-6][src_ch][0] [5-3][src_layout][0] [3-0][dst_layout][0]
+
+[0x010000000001c000] DMA_IN_INFO_4: [0x04] data_type[para] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[7] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00000000 00000000 00000000 00000000 00000001 11000000 00000000]  [63-54][opcode][100] [53-52][data_type][0] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][111] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0xfd10e0f050200000] MODULE_TAIL_NPU_DMA_IN_CH1: [0x3f4] check_sum[1132708160] Preemption_indi[1]
+[0b 11111101 00010000 11100000 11110000 01010000 00100000 00000000 00000000]  [63-54][opcode][11 11110100] [53-22][check_sum][1000011 10000011 11000001 01000000] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 2   <---------
+---------------------------------------------
+hwlayer_name: mpu0.Conv2d.layer.Conv_267_im_0.0
+---------------------------------------------
+set depends:
+  0. npu_dma_in_ch0.DmaIn.layer.copy_in_PPQ_Variable_180
+  1. npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.0.fetch_param_data.layer
+clr depends: null
+---------------------------------------------
+[0xf400060000000000] MODULE_SYNC_MPU0: [0x3d0] sync_set[npu_dma_in_ch0,npu_dma_in_ch1] sync_clr[] sync_id[0]
+[0b 11110100 00000000 00000110 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11 11010000] [53-38][sync_set][11000] [37-22][sync_clr][0] [21-6][sync_id][0] [5-0][reserve][0]
+
+[0xf80002c040000000] MODULE_HEADER_MPU0: [0x3e0] cmd_num[11] hardlayer_num[1] cmd_id[0]
+[0b 11111000 00000000 00000010 11000000 01000000 00000000 00000000 00000000]  [63-54][opcode][11 11100000] [53-38][cmd_num][1011] [37-30][hardlayer_num][1] [29-6][cmd_id][0] [5-0][reserve][0]
+
+[0x000009c027000507] MPU_LOAD_INFO_FM_DATA0: [0x00] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp8] dtype_exp[4] dtype_bias[7]
+[0b 00000000 00000000 00001001 11000000 00100111 00000000 00000101 00000111]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][111]
+
+[0x0040008002800512] MPU_LOAD_INFO_FM_DATA1: [0x01] line_stride[16] chx_stride[640] load_num[1] work_mode[mac_core] blk_bubble[18]
+[0b 00000000 01000000 00000000 10000000 00000010 10000000 00000101 00010010]  [63-54][opcode][1] [53-35][line_stride][10000] [34-16][chx_stride][10 10000000] [15-10][load_num][1] [9-8][work_mode][1] [7-0][blk_bubble][10010]
+
+[0x008027009c01c010] MPU_LOAD_INFO_FM_DATA2: [0x02] blk_hsize[39] blk_wsize[39] blk_ch[7] w_blknum[1] split_h_en[disable]
+[0b 00000000 10000000 00100111 00000000 10011100 00000001 11000000 00010000]  [63-54][opcode][10] [53-40][blk_hsize][100111] [39-26][blk_wsize][100111] [25-14][blk_ch][111] [13-4][w_blknum][1] [3-3][split_h_en][0] [2-0][reserve][0]
+
+[0x080ec00000000000] MPU_LOAD_NO_CASCADE_BUF_FM_LOAD_0_1: [0x20] addr0[120832] addr1[0] ch0[0] ch1[0]
+[0b 00001000 00001110 11000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100000] [53-35][addr0][1 11011000 00000000] [34-16][addr1][0] [15-8][ch0][0] [7-0][ch1][0]
+
+[0x00c800040000050b] MPU_LOAD_INFO_PARAM_DATA0: [0x03] param_alive[bias] bias_addr[4] mode[non_cascade] wgt_addr[0] dtype[Fp8] dtype_exp[4] dtype_bias[11]
+[0b 00000000 11001000 00000000 00000100 00000000 00000000 00000101 00001011]  [63-54][opcode][11] [53-51][param_alive][1] [50-32][bias_addr][100] [31-31][mode][0] [30-12][wgt_addr][0] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][1011]
+
+[0x0100000000206008] MPU_LOAD_INFO_PARAM_DATA1: [0x04] weight_ich_stride[0] weight_och_stride[32] mac_out_dtype[Fp16] mac_out_exp[0] mac_out_bias[0] bias_exp[4]
+[0b 00000001 00000000 00000000 00000000 00000000 00100000 01100000 00001000]  [63-54][opcode][100] [53-35][weight_ich_stride][0] [34-16][weight_och_stride][100000] [15-13][mac_out_dtype][11] [12-10][mac_out_exp][0] [9-4][mac_out_bias][0] [3-1][bias_exp][100] [0-0][reserve][0]
+
+[0x0140000000001c00] MPU_LOAD_INFO_PARAM_DATA2: [0x05] factor_addr[0] lut_addr[0] bias_bias[7] factor_scale_indi[0] lut_yk_exp[0] lut_yk_bias[0]
+[0b 00000001 01000000 00000000 00000000 00000000 00000000 00011100 00000000]  [63-54][opcode][101] [53-35][factor_addr][0] [34-16][lut_addr][0] [15-10][bias_bias][111] [9-9][factor_scale_indi][0] [8-6][lut_yk_exp][0] [5-0][lut_yk_bias][0]
+
+[0x14133100002245c9] MPU_CONV: [0x50] os_en[disable] calc_rate[1] kernel_h[3] kernel_w[3] stride_h[disable] stride_w[disable] pad_mode[constant_pad] pad_const[0] padsize_hu[1] padsize_hd[1] padsize_wl[1] padsize_wr[1] group[7] dilation_h[1] dilation_w[1]
+[0b 00010100 00010011 00110001 00000000 00000000 00100010 01000101 11001001]  [63-54][opcode][1010000] [53-53][os_en][0] [52-52][calc_rate][1] [51-48][kernel_h][11] [47-44][kernel_w][11] [43-43][stride_h][0] [42-42][stride_w][0] [41-40][pad_mode][1] [39-24][pad_const][0] [23-21][padsize_hu][1] [20-17][padsize_hd][1] [16-14][padsize_wl][1] [13-10][padsize_wr][1] [9-6][group][111] [5-3][dilation_h][1] [2-0][dilation_w][1]
+
+[0x0c0009c027000600] MPU_STORE_FM_DATA_0: [0x30] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001100 00000000 00001001 11000000 00100111 00000000 00000110 00000000]  [63-54][opcode][110000] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0c4006001e000010] MPU_STORE_FM_DATA_1: [0x31] line_stride[24] chx_stride[960] addr[16]
+[0b 00001100 01000000 00000110 00000000 00011110 00000000 00000000 00010000]  [63-54][opcode][110001] [53-38][line_stride][11000] [37-19][chx_stride][11 11000000] [18-0][addr][10000]
+
+[0x2000000000100000] MPU_SPLIT_H: [0x80] ifm_split_h_size[0] ofm_split_h_size[0] pipe_bubble[64] mac_mode[0] conv1x1_wgt_mode[0]
+[0b 00100000 00000000 00000000 00000000 00000000 00010000 00000000 00000000]  [63-54][opcode][ 10000000] [53-38][ifm_split_h_size][0] [37-22][ofm_split_h_size][0] [21-14][pipe_bubble][1000000] [13-11][mac_mode][0] [10-10][conv1x1_wgt_mode][0] [9-0][reserve][0]
+
+[0xfc26bfb2f6600000] MODULE_TAIL_MPU0: [0x3f0] check_sum[2600389593] Preemption_indi[1]
+[0b 11111100 00100110 10111111 10110010 11110110 01100000 00000000 00000000]  [63-54][opcode][11 11110000] [53-22][check_sum][ 10011010 11111110 11001011 11011001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 3   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.1.fetch_param_data.layer
+---------------------------------------------
+set depends: null
+clr depends:
+  0. mpu1.Conv2d.layer.Conv_267_im_0.1
+---------------------------------------------
+[0xf500000100000040] MODULE_SYNC_NPU_DMA_IN_CH1: [0x3d4] sync_set[] sync_clr[mpu1] sync_id[1]
+[0b 11110101 00000000 00000000 00000001 00000000 00000000 00000000 01000000]  [63-54][opcode][11 11010100] [53-38][sync_set][0] [37-22][sync_clr][100 00000000] [21-6][sync_id][1] [5-0][reserve][0]
+
+[0xf900014040000040] MODULE_HEADER_NPU_DMA_IN_CH1: [0x3e4] cmd_num[5] hardlayer_num[1] cmd_id[1]
+[0b 11111001 00000000 00000001 01000000 01000000 00000000 00000000 01000000]  [63-54][opcode][11 11100100] [53-38][cmd_num][101] [37-30][hardlayer_num][1] [29-6][cmd_id][1] [5-0][reserve][0]
+
+[0x0002000008000000] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[16bit] src_line_size[8] src_line_stride[0]
+[0b 00000000 00000010 00000000 00000000 00001000 00000000 00000000 00000000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][10] [47-24][src_line_size][1000] [23-0][src_line_stride][0]
+
+[0x0040000000000000] DMA_IN_INFO_1: [0x01] src_patch_size[0] src_patch_stride[0]
+[0b 00000000 01000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1] [53-27][src_patch_size][0] [26-0][src_patch_stride][0]
+
+[0x0080000040000008] DMA_IN_INFO_2: [0x02] src_offset_addr[8] dst_addr[8]
+[0b 00000000 10000000 00000000 00000000 01000000 00000000 00000000 00001000]  [63-54][opcode][10] [53-27][src_offset_addr][1000] [26-0][dst_addr][1000]
+
+[0x00c0000000000000] DMA_IN_INFO_3: [0x03] src_hsize[0] src_wsize[0] src_ch[0] src_layout[stream] dst_layout[stream]
+[0b 00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11] [53-38][src_hsize][0] [37-22][src_wsize][0] [21-6][src_ch][0] [5-3][src_layout][0] [3-0][dst_layout][0]
+
+[0x010000000001c000] DMA_IN_INFO_4: [0x04] data_type[para] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[7] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00000000 00000000 00000000 00000000 00000001 11000000 00000000]  [63-54][opcode][100] [53-52][data_type][0] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][111] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0xfd20e0f062200000] MODULE_TAIL_NPU_DMA_IN_CH1: [0x3f4] check_sum[2206450056] Preemption_indi[1]
+[0b 11111101 00100000 11100000 11110000 01100010 00100000 00000000 00000000]  [63-54][opcode][11 11110100] [53-22][check_sum][ 10000011 10000011 11000001 10001000] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 4   <---------
+---------------------------------------------
+hwlayer_name: mpu1.Conv2d.layer.Conv_267_im_0.1
+---------------------------------------------
+set depends:
+  0. npu_dma_in_ch0.DmaIn.layer.copy_in_PPQ_Variable_180
+  1. npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.1.fetch_param_data.layer
+clr depends: null
+---------------------------------------------
+[0xf680060000000000] MODULE_SYNC_MPU1: [0x3da] sync_set[npu_dma_in_ch0,npu_dma_in_ch1] sync_clr[] sync_id[0]
+[0b 11110110 10000000 00000110 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11 11011010] [53-38][sync_set][11000] [37-22][sync_clr][0] [21-6][sync_id][0] [5-0][reserve][0]
+
+[0xfa8002c040000000] MODULE_HEADER_MPU1: [0x3ea] cmd_num[11] hardlayer_num[1] cmd_id[0]
+[0b 11111010 10000000 00000010 11000000 01000000 00000000 00000000 00000000]  [63-54][opcode][11 11101010] [53-38][cmd_num][1011] [37-30][hardlayer_num][1] [29-6][cmd_id][0] [5-0][reserve][0]
+
+[0x000009c027000507] MPU_LOAD_INFO_FM_DATA0: [0x00] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp8] dtype_exp[4] dtype_bias[7]
+[0b 00000000 00000000 00001001 11000000 00100111 00000000 00000101 00000111]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][111]
+
+[0x0040008002800512] MPU_LOAD_INFO_FM_DATA1: [0x01] line_stride[16] chx_stride[640] load_num[1] work_mode[mac_core] blk_bubble[18]
+[0b 00000000 01000000 00000000 10000000 00000010 10000000 00000101 00010010]  [63-54][opcode][1] [53-35][line_stride][10000] [34-16][chx_stride][10 10000000] [15-10][load_num][1] [9-8][work_mode][1] [7-0][blk_bubble][10010]
+
+[0x008027009c01c010] MPU_LOAD_INFO_FM_DATA2: [0x02] blk_hsize[39] blk_wsize[39] blk_ch[7] w_blknum[1] split_h_en[disable]
+[0b 00000000 10000000 00100111 00000000 10011100 00000001 11000000 00010000]  [63-54][opcode][10] [53-40][blk_hsize][100111] [39-26][blk_wsize][100111] [25-14][blk_ch][111] [13-4][w_blknum][1] [3-3][split_h_en][0] [2-0][reserve][0]
+
+[0x080ed40000000000] MPU_LOAD_NO_CASCADE_BUF_FM_LOAD_0_1: [0x20] addr0[121472] addr1[0] ch0[0] ch1[0]
+[0b 00001000 00001110 11010100 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100000] [53-35][addr0][1 11011010 10000000] [34-16][addr1][0] [15-8][ch0][0] [7-0][ch1][0]
+
+[0x00c8000c0000850b] MPU_LOAD_INFO_PARAM_DATA0: [0x03] param_alive[bias] bias_addr[12] mode[non_cascade] wgt_addr[8] dtype[Fp8] dtype_exp[4] dtype_bias[11]
+[0b 00000000 11001000 00000000 00001100 00000000 00000000 10000101 00001011]  [63-54][opcode][11] [53-51][param_alive][1] [50-32][bias_addr][1100] [31-31][mode][0] [30-12][wgt_addr][1000] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][1011]
+
+[0x0100000000206008] MPU_LOAD_INFO_PARAM_DATA1: [0x04] weight_ich_stride[0] weight_och_stride[32] mac_out_dtype[Fp16] mac_out_exp[0] mac_out_bias[0] bias_exp[4]
+[0b 00000001 00000000 00000000 00000000 00000000 00100000 01100000 00001000]  [63-54][opcode][100] [53-35][weight_ich_stride][0] [34-16][weight_och_stride][100000] [15-13][mac_out_dtype][11] [12-10][mac_out_exp][0] [9-4][mac_out_bias][0] [3-1][bias_exp][100] [0-0][reserve][0]
+
+[0x0140000000001c00] MPU_LOAD_INFO_PARAM_DATA2: [0x05] factor_addr[0] lut_addr[0] bias_bias[7] factor_scale_indi[0] lut_yk_exp[0] lut_yk_bias[0]
+[0b 00000001 01000000 00000000 00000000 00000000 00000000 00011100 00000000]  [63-54][opcode][101] [53-35][factor_addr][0] [34-16][lut_addr][0] [15-10][bias_bias][111] [9-9][factor_scale_indi][0] [8-6][lut_yk_exp][0] [5-0][lut_yk_bias][0]
+
+[0x14133100002245c9] MPU_CONV: [0x50] os_en[disable] calc_rate[1] kernel_h[3] kernel_w[3] stride_h[disable] stride_w[disable] pad_mode[constant_pad] pad_const[0] padsize_hu[1] padsize_hd[1] padsize_wl[1] padsize_wr[1] group[7] dilation_h[1] dilation_w[1]
+[0b 00010100 00010011 00110001 00000000 00000000 00100010 01000101 11001001]  [63-54][opcode][1010000] [53-53][os_en][0] [52-52][calc_rate][1] [51-48][kernel_h][11] [47-44][kernel_w][11] [43-43][stride_h][0] [42-42][stride_w][0] [41-40][pad_mode][1] [39-24][pad_const][0] [23-21][padsize_hu][1] [20-17][padsize_hd][1] [16-14][padsize_wl][1] [13-10][padsize_wr][1] [9-6][group][111] [5-3][dilation_h][1] [2-0][dilation_w][1]
+
+[0x0c0009c027000600] MPU_STORE_FM_DATA_0: [0x30] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001100 00000000 00001001 11000000 00100111 00000000 00000110 00000000]  [63-54][opcode][110000] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0c4006001e0003d0] MPU_STORE_FM_DATA_1: [0x31] line_stride[24] chx_stride[960] addr[976]
+[0b 00001100 01000000 00000110 00000000 00011110 00000000 00000011 11010000]  [63-54][opcode][110001] [53-38][line_stride][11000] [37-19][chx_stride][11 11000000] [18-0][addr][11 11010000]
+
+[0x2000000000100000] MPU_SPLIT_H: [0x80] ifm_split_h_size[0] ofm_split_h_size[0] pipe_bubble[64] mac_mode[0] conv1x1_wgt_mode[0]
+[0b 00100000 00000000 00000000 00000000 00000000 00010000 00000000 00000000]  [63-54][opcode][ 10000000] [53-38][ifm_split_h_size][0] [37-22][ofm_split_h_size][0] [21-14][pipe_bubble][1000000] [13-11][mac_mode][0] [10-10][conv1x1_wgt_mode][0] [9-0][reserve][0]
+
+[0xfea75fd8e8600000] MODULE_TAIL_MPU1: [0x3fa] check_sum[2642371489] Preemption_indi[1]
+[0b 11111110 10100111 01011111 11011000 11101000 01100000 00000000 00000000]  [63-54][opcode][11 11111010] [53-22][check_sum][ 10011101 01111111 01100011 10100001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 5   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.2.fetch_param_data.layer
+---------------------------------------------
+set depends: null
+clr depends:
+  0. mpu0.Conv2d.layer.Conv_267_im_0.2
+---------------------------------------------
+[0xf500000000400080] MODULE_SYNC_NPU_DMA_IN_CH1: [0x3d4] sync_set[] sync_clr[mpu0] sync_id[2]
+[0b 11110101 00000000 00000000 00000000 00000000 01000000 00000000 10000000]  [63-54][opcode][11 11010100] [53-38][sync_set][0] [37-22][sync_clr][1] [21-6][sync_id][10] [5-0][reserve][0]
+
+[0xf900014040000080] MODULE_HEADER_NPU_DMA_IN_CH1: [0x3e4] cmd_num[5] hardlayer_num[1] cmd_id[2]
+[0b 11111001 00000000 00000001 01000000 01000000 00000000 00000000 10000000]  [63-54][opcode][11 11100100] [53-38][cmd_num][101] [37-30][hardlayer_num][1] [29-6][cmd_id][10] [5-0][reserve][0]
+
+[0x0002000008000000] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[16bit] src_line_size[8] src_line_stride[0]
+[0b 00000000 00000010 00000000 00000000 00001000 00000000 00000000 00000000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][10] [47-24][src_line_size][1000] [23-0][src_line_stride][0]
+
+[0x0040000000000000] DMA_IN_INFO_1: [0x01] src_patch_size[0] src_patch_stride[0]
+[0b 00000000 01000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1] [53-27][src_patch_size][0] [26-0][src_patch_stride][0]
+
+[0x0080000080003c10] DMA_IN_INFO_2: [0x02] src_offset_addr[16] dst_addr[15376]
+[0b 00000000 10000000 00000000 00000000 10000000 00000000 00111100 00010000]  [63-54][opcode][10] [53-27][src_offset_addr][10000] [26-0][dst_addr][111100 00010000]
+
+[0x00c0000000000000] DMA_IN_INFO_3: [0x03] src_hsize[0] src_wsize[0] src_ch[0] src_layout[stream] dst_layout[stream]
+[0b 00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11] [53-38][src_hsize][0] [37-22][src_wsize][0] [21-6][src_ch][0] [5-3][src_layout][0] [3-0][dst_layout][0]
+
+[0x010000000001c000] DMA_IN_INFO_4: [0x04] data_type[para] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[7] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00000000 00000000 00000000 00000000 00000001 11000000 00000000]  [63-54][opcode][100] [53-52][data_type][0] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][111] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0xfd30e0ff74200000] MODULE_TAIL_NPU_DMA_IN_CH1: [0x3f4] check_sum[3280207312] Preemption_indi[1]
+[0b 11111101 00110000 11100000 11111111 01110100 00100000 00000000 00000000]  [63-54][opcode][11 11110100] [53-22][check_sum][ 11000011 10000011 11111101 11010000] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 6   <---------
+---------------------------------------------
+hwlayer_name: mpu0.Conv2d.layer.Conv_267_im_0.2
+---------------------------------------------
+set depends:
+  0. npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.2.fetch_param_data.layer
+clr depends: null
+---------------------------------------------
+[0xf400040000000040] MODULE_SYNC_MPU0: [0x3d0] sync_set[npu_dma_in_ch1] sync_clr[] sync_id[1]
+[0b 11110100 00000000 00000100 00000000 00000000 00000000 00000000 01000000]  [63-54][opcode][11 11010000] [53-38][sync_set][10000] [37-22][sync_clr][0] [21-6][sync_id][1] [5-0][reserve][0]
+
+[0xf80002c040000040] MODULE_HEADER_MPU0: [0x3e0] cmd_num[11] hardlayer_num[1] cmd_id[1]
+[0b 11111000 00000000 00000010 11000000 01000000 00000000 00000000 01000000]  [63-54][opcode][11 11100000] [53-38][cmd_num][1011] [37-30][hardlayer_num][1] [29-6][cmd_id][1] [5-0][reserve][0]
+
+[0x000009c027000507] MPU_LOAD_INFO_FM_DATA0: [0x00] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp8] dtype_exp[4] dtype_bias[7]
+[0b 00000000 00000000 00001001 11000000 00100111 00000000 00000101 00000111]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][111]
+
+[0x0040008002800512] MPU_LOAD_INFO_FM_DATA1: [0x01] line_stride[16] chx_stride[640] load_num[1] work_mode[mac_core] blk_bubble[18]
+[0b 00000000 01000000 00000000 10000000 00000010 10000000 00000101 00010010]  [63-54][opcode][1] [53-35][line_stride][10000] [34-16][chx_stride][10 10000000] [15-10][load_num][1] [9-8][work_mode][1] [7-0][blk_bubble][10010]
+
+[0x008027009c01c010] MPU_LOAD_INFO_FM_DATA2: [0x02] blk_hsize[39] blk_wsize[39] blk_ch[7] w_blknum[1] split_h_en[disable]
+[0b 00000000 10000000 00100111 00000000 10011100 00000001 11000000 00010000]  [63-54][opcode][10] [53-40][blk_hsize][100111] [39-26][blk_wsize][100111] [25-14][blk_ch][111] [13-4][w_blknum][1] [3-3][split_h_en][0] [2-0][reserve][0]
+
+[0x080ee80000000000] MPU_LOAD_NO_CASCADE_BUF_FM_LOAD_0_1: [0x20] addr0[122112] addr1[0] ch0[0] ch1[0]
+[0b 00001000 00001110 11101000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100000] [53-35][addr0][1 11011101 00000000] [34-16][addr1][0] [15-8][ch0][0] [7-0][ch1][0]
+
+[0x00c83c1403c1050b] MPU_LOAD_INFO_PARAM_DATA0: [0x03] param_alive[bias] bias_addr[15380] mode[non_cascade] wgt_addr[15376] dtype[Fp8] dtype_exp[4] dtype_bias[11]
+[0b 00000000 11001000 00111100 00010100 00000011 11000001 00000101 00001011]  [63-54][opcode][11] [53-51][param_alive][1] [50-32][bias_addr][111100 00010100] [31-31][mode][0] [30-12][wgt_addr][111100 00010000] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][1011]
+
+[0x0100000000206008] MPU_LOAD_INFO_PARAM_DATA1: [0x04] weight_ich_stride[0] weight_och_stride[32] mac_out_dtype[Fp16] mac_out_exp[0] mac_out_bias[0] bias_exp[4]
+[0b 00000001 00000000 00000000 00000000 00000000 00100000 01100000 00001000]  [63-54][opcode][100] [53-35][weight_ich_stride][0] [34-16][weight_och_stride][100000] [15-13][mac_out_dtype][11] [12-10][mac_out_exp][0] [9-4][mac_out_bias][0] [3-1][bias_exp][100] [0-0][reserve][0]
+
+[0x0140000000001c00] MPU_LOAD_INFO_PARAM_DATA2: [0x05] factor_addr[0] lut_addr[0] bias_bias[7] factor_scale_indi[0] lut_yk_exp[0] lut_yk_bias[0]
+[0b 00000001 01000000 00000000 00000000 00000000 00000000 00011100 00000000]  [63-54][opcode][101] [53-35][factor_addr][0] [34-16][lut_addr][0] [15-10][bias_bias][111] [9-9][factor_scale_indi][0] [8-6][lut_yk_exp][0] [5-0][lut_yk_bias][0]
+
+[0x14133100002245c9] MPU_CONV: [0x50] os_en[disable] calc_rate[1] kernel_h[3] kernel_w[3] stride_h[disable] stride_w[disable] pad_mode[constant_pad] pad_const[0] padsize_hu[1] padsize_hd[1] padsize_wl[1] padsize_wr[1] group[7] dilation_h[1] dilation_w[1]
+[0b 00010100 00010011 00110001 00000000 00000000 00100010 01000101 11001001]  [63-54][opcode][1010000] [53-53][os_en][0] [52-52][calc_rate][1] [51-48][kernel_h][11] [47-44][kernel_w][11] [43-43][stride_h][0] [42-42][stride_w][0] [41-40][pad_mode][1] [39-24][pad_const][0] [23-21][padsize_hu][1] [20-17][padsize_hd][1] [16-14][padsize_wl][1] [13-10][padsize_wr][1] [9-6][group][111] [5-3][dilation_h][1] [2-0][dilation_w][1]
+
+[0x0c0009c027000600] MPU_STORE_FM_DATA_0: [0x30] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001100 00000000 00001001 11000000 00100111 00000000 00000110 00000000]  [63-54][opcode][110000] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0c4006001e000790] MPU_STORE_FM_DATA_1: [0x31] line_stride[24] chx_stride[960] addr[1936]
+[0b 00001100 01000000 00000110 00000000 00011110 00000000 00000111 10010000]  [63-54][opcode][110001] [53-38][line_stride][11000] [37-19][chx_stride][11 11000000] [18-0][addr][111 10010000]
+
+[0x2000000000100000] MPU_SPLIT_H: [0x80] ifm_split_h_size[0] ofm_split_h_size[0] pipe_bubble[64] mac_mode[0] conv1x1_wgt_mode[0]
+[0b 00100000 00000000 00000000 00000000 00000000 00010000 00000000 00000000]  [63-54][opcode][ 10000000] [53-38][ifm_split_h_size][0] [37-22][ofm_split_h_size][0] [21-14][pipe_bubble][1000000] [13-11][mac_mode][0] [10-10][conv1x1_wgt_mode][0] [9-0][reserve][0]
+
+[0xfc27b00dea600000] MODULE_TAIL_MPU0: [0x3f0] check_sum[2663397289] Preemption_indi[1]
+[0b 11111100 00100111 10110000 00001101 11101010 01100000 00000000 00000000]  [63-54][opcode][11 11110000] [53-22][check_sum][ 10011110 11000000 00110111 10101001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 7   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.3.fetch_param_data.layer
+---------------------------------------------
+set depends: null
+clr depends:
+  0. mpu1.Conv2d.layer.Conv_267_im_0.3
+---------------------------------------------
+[0xf5000001000000c0] MODULE_SYNC_NPU_DMA_IN_CH1: [0x3d4] sync_set[] sync_clr[mpu1] sync_id[3]
+[0b 11110101 00000000 00000000 00000001 00000000 00000000 00000000 11000000]  [63-54][opcode][11 11010100] [53-38][sync_set][0] [37-22][sync_clr][100 00000000] [21-6][sync_id][11] [5-0][reserve][0]
+
+[0xf9000140400000c0] MODULE_HEADER_NPU_DMA_IN_CH1: [0x3e4] cmd_num[5] hardlayer_num[1] cmd_id[3]
+[0b 11111001 00000000 00000001 01000000 01000000 00000000 00000000 11000000]  [63-54][opcode][11 11100100] [53-38][cmd_num][101] [37-30][hardlayer_num][1] [29-6][cmd_id][11] [5-0][reserve][0]
+
+[0x0002000008000000] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[16bit] src_line_size[8] src_line_stride[0]
+[0b 00000000 00000010 00000000 00000000 00001000 00000000 00000000 00000000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][10] [47-24][src_line_size][1000] [23-0][src_line_stride][0]
+
+[0x0040000000000000] DMA_IN_INFO_1: [0x01] src_patch_size[0] src_patch_stride[0]
+[0b 00000000 01000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1] [53-27][src_patch_size][0] [26-0][src_patch_stride][0]
+
+[0x00800000c0003c18] DMA_IN_INFO_2: [0x02] src_offset_addr[24] dst_addr[15384]
+[0b 00000000 10000000 00000000 00000000 11000000 00000000 00111100 00011000]  [63-54][opcode][10] [53-27][src_offset_addr][11000] [26-0][dst_addr][111100 00011000]
+
+[0x00c0000000000000] DMA_IN_INFO_3: [0x03] src_hsize[0] src_wsize[0] src_ch[0] src_layout[stream] dst_layout[stream]
+[0b 00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11] [53-38][src_hsize][0] [37-22][src_wsize][0] [21-6][src_ch][0] [5-3][src_layout][0] [3-0][dst_layout][0]
+
+[0x010000000001c000] DMA_IN_INFO_4: [0x04] data_type[para] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[7] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00000000 00000000 00000000 00000000 00000001 11000000 00000000]  [63-54][opcode][100] [53-52][data_type][0] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][111] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0xfd00e0ff86200000] MODULE_TAIL_NPU_DMA_IN_CH1: [0x3f4] check_sum[58981912] Preemption_indi[1]
+[0b 11111101 00000000 11100000 11111111 10000110 00100000 00000000 00000000]  [63-54][opcode][11 11110100] [53-22][check_sum][11 10000011 11111110 00011000] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 8   <---------
+---------------------------------------------
+hwlayer_name: mpu1.Conv2d.layer.Conv_267_im_0.3
+---------------------------------------------
+set depends:
+  0. npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.3.fetch_param_data.layer
+clr depends: null
+---------------------------------------------
+[0xf680040000000040] MODULE_SYNC_MPU1: [0x3da] sync_set[npu_dma_in_ch1] sync_clr[] sync_id[1]
+[0b 11110110 10000000 00000100 00000000 00000000 00000000 00000000 01000000]  [63-54][opcode][11 11011010] [53-38][sync_set][10000] [37-22][sync_clr][0] [21-6][sync_id][1] [5-0][reserve][0]
+
+[0xfa8002c040000040] MODULE_HEADER_MPU1: [0x3ea] cmd_num[11] hardlayer_num[1] cmd_id[1]
+[0b 11111010 10000000 00000010 11000000 01000000 00000000 00000000 01000000]  [63-54][opcode][11 11101010] [53-38][cmd_num][1011] [37-30][hardlayer_num][1] [29-6][cmd_id][1] [5-0][reserve][0]
+
+[0x000009c027000507] MPU_LOAD_INFO_FM_DATA0: [0x00] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp8] dtype_exp[4] dtype_bias[7]
+[0b 00000000 00000000 00001001 11000000 00100111 00000000 00000101 00000111]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][111]
+
+[0x0040008002800512] MPU_LOAD_INFO_FM_DATA1: [0x01] line_stride[16] chx_stride[640] load_num[1] work_mode[mac_core] blk_bubble[18]
+[0b 00000000 01000000 00000000 10000000 00000010 10000000 00000101 00010010]  [63-54][opcode][1] [53-35][line_stride][10000] [34-16][chx_stride][10 10000000] [15-10][load_num][1] [9-8][work_mode][1] [7-0][blk_bubble][10010]
+
+[0x008027009c01c010] MPU_LOAD_INFO_FM_DATA2: [0x02] blk_hsize[39] blk_wsize[39] blk_ch[7] w_blknum[1] split_h_en[disable]
+[0b 00000000 10000000 00100111 00000000 10011100 00000001 11000000 00010000]  [63-54][opcode][10] [53-40][blk_hsize][100111] [39-26][blk_wsize][100111] [25-14][blk_ch][111] [13-4][w_blknum][1] [3-3][split_h_en][0] [2-0][reserve][0]
+
+[0x080efc0000000000] MPU_LOAD_NO_CASCADE_BUF_FM_LOAD_0_1: [0x20] addr0[122752] addr1[0] ch0[0] ch1[0]
+[0b 00001000 00001110 11111100 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100000] [53-35][addr0][1 11011111 10000000] [34-16][addr1][0] [15-8][ch0][0] [7-0][ch1][0]
+
+[0x00c83c1c03c1850b] MPU_LOAD_INFO_PARAM_DATA0: [0x03] param_alive[bias] bias_addr[15388] mode[non_cascade] wgt_addr[15384] dtype[Fp8] dtype_exp[4] dtype_bias[11]
+[0b 00000000 11001000 00111100 00011100 00000011 11000001 10000101 00001011]  [63-54][opcode][11] [53-51][param_alive][1] [50-32][bias_addr][111100 00011100] [31-31][mode][0] [30-12][wgt_addr][111100 00011000] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][1011]
+
+[0x0100000000206008] MPU_LOAD_INFO_PARAM_DATA1: [0x04] weight_ich_stride[0] weight_och_stride[32] mac_out_dtype[Fp16] mac_out_exp[0] mac_out_bias[0] bias_exp[4]
+[0b 00000001 00000000 00000000 00000000 00000000 00100000 01100000 00001000]  [63-54][opcode][100] [53-35][weight_ich_stride][0] [34-16][weight_och_stride][100000] [15-13][mac_out_dtype][11] [12-10][mac_out_exp][0] [9-4][mac_out_bias][0] [3-1][bias_exp][100] [0-0][reserve][0]
+
+[0x0140000000001c00] MPU_LOAD_INFO_PARAM_DATA2: [0x05] factor_addr[0] lut_addr[0] bias_bias[7] factor_scale_indi[0] lut_yk_exp[0] lut_yk_bias[0]
+[0b 00000001 01000000 00000000 00000000 00000000 00000000 00011100 00000000]  [63-54][opcode][101] [53-35][factor_addr][0] [34-16][lut_addr][0] [15-10][bias_bias][111] [9-9][factor_scale_indi][0] [8-6][lut_yk_exp][0] [5-0][lut_yk_bias][0]
+
+[0x14133100002245c9] MPU_CONV: [0x50] os_en[disable] calc_rate[1] kernel_h[3] kernel_w[3] stride_h[disable] stride_w[disable] pad_mode[constant_pad] pad_const[0] padsize_hu[1] padsize_hd[1] padsize_wl[1] padsize_wr[1] group[7] dilation_h[1] dilation_w[1]
+[0b 00010100 00010011 00110001 00000000 00000000 00100010 01000101 11001001]  [63-54][opcode][1010000] [53-53][os_en][0] [52-52][calc_rate][1] [51-48][kernel_h][11] [47-44][kernel_w][11] [43-43][stride_h][0] [42-42][stride_w][0] [41-40][pad_mode][1] [39-24][pad_const][0] [23-21][padsize_hu][1] [20-17][padsize_hd][1] [16-14][padsize_wl][1] [13-10][padsize_wr][1] [9-6][group][111] [5-3][dilation_h][1] [2-0][dilation_w][1]
+
+[0x0c0009c027000600] MPU_STORE_FM_DATA_0: [0x30] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001100 00000000 00001001 11000000 00100111 00000000 00000110 00000000]  [63-54][opcode][110000] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0c4006001e000b50] MPU_STORE_FM_DATA_1: [0x31] line_stride[24] chx_stride[960] addr[2896]
+[0b 00001100 01000000 00000110 00000000 00011110 00000000 00001011 01010000]  [63-54][opcode][110001] [53-38][line_stride][11000] [37-19][chx_stride][11 11000000] [18-0][addr][1011 01010000]
+
+[0x2000000000100000] MPU_SPLIT_H: [0x80] ifm_split_h_size[0] ofm_split_h_size[0] pipe_bubble[64] mac_mode[0] conv1x1_wgt_mode[0]
+[0b 00100000 00000000 00000000 00000000 00000000 00010000 00000000 00000000]  [63-54][opcode][ 10000000] [53-38][ifm_split_h_size][0] [37-22][ofm_split_h_size][0] [21-14][pipe_bubble][1000000] [13-11][mac_mode][0] [10-10][conv1x1_wgt_mode][0] [9-0][reserve][0]
+
+[0xfea85033dc600000] MODULE_TAIL_MPU1: [0x3fa] check_sum[2705379185] Preemption_indi[1]
+[0b 11111110 10101000 01010000 00110011 11011100 01100000 00000000 00000000]  [63-54][opcode][11 11111010] [53-22][check_sum][ 10100001 01000000 11001111 01110001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 9   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.4.fetch_param_data.layer
+---------------------------------------------
+set depends: null
+clr depends:
+  0. mpu0.Conv2d.layer.Conv_267_im_0.4
+---------------------------------------------
+[0xf500000000400100] MODULE_SYNC_NPU_DMA_IN_CH1: [0x3d4] sync_set[] sync_clr[mpu0] sync_id[4]
+[0b 11110101 00000000 00000000 00000000 00000000 01000000 00000001 00000000]  [63-54][opcode][11 11010100] [53-38][sync_set][0] [37-22][sync_clr][1] [21-6][sync_id][100] [5-0][reserve][0]
+
+[0xf900014040000100] MODULE_HEADER_NPU_DMA_IN_CH1: [0x3e4] cmd_num[5] hardlayer_num[1] cmd_id[4]
+[0b 11111001 00000000 00000001 01000000 01000000 00000000 00000001 00000000]  [63-54][opcode][11 11100100] [53-38][cmd_num][101] [37-30][hardlayer_num][1] [29-6][cmd_id][100] [5-0][reserve][0]
+
+[0x0002000008000000] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[16bit] src_line_size[8] src_line_stride[0]
+[0b 00000000 00000010 00000000 00000000 00001000 00000000 00000000 00000000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][10] [47-24][src_line_size][1000] [23-0][src_line_stride][0]
+
+[0x0040000000000000] DMA_IN_INFO_1: [0x01] src_patch_size[0] src_patch_stride[0]
+[0b 00000000 01000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1] [53-27][src_patch_size][0] [26-0][src_patch_stride][0]
+
+[0x0080000100003c20] DMA_IN_INFO_2: [0x02] src_offset_addr[32] dst_addr[15392]
+[0b 00000000 10000000 00000000 00000001 00000000 00000000 00111100 00100000]  [63-54][opcode][10] [53-27][src_offset_addr][100000] [26-0][dst_addr][111100 00100000]
+
+[0x00c0000000000000] DMA_IN_INFO_3: [0x03] src_hsize[0] src_wsize[0] src_ch[0] src_layout[stream] dst_layout[stream]
+[0b 00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11] [53-38][src_hsize][0] [37-22][src_wsize][0] [21-6][src_ch][0] [5-3][src_layout][0] [3-0][dst_layout][0]
+
+[0x010000000001c000] DMA_IN_INFO_4: [0x04] data_type[para] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[7] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00000000 00000000 00000000 00000000 00000001 11000000 00000000]  [63-54][opcode][100] [53-52][data_type][0] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][111] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0xfd10e0ff98600000] MODULE_TAIL_NPU_DMA_IN_CH1: [0x3f4] check_sum[1132723809] Preemption_indi[1]
+[0b 11111101 00010000 11100000 11111111 10011000 01100000 00000000 00000000]  [63-54][opcode][11 11110100] [53-22][check_sum][1000011 10000011 11111110 01100001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 10   <---------
+---------------------------------------------
+hwlayer_name: mpu0.Conv2d.layer.Conv_267_im_0.4
+---------------------------------------------
+set depends:
+  0. npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.4.fetch_param_data.layer
+clr depends: null
+---------------------------------------------
+[0xf400040000000080] MODULE_SYNC_MPU0: [0x3d0] sync_set[npu_dma_in_ch1] sync_clr[] sync_id[2]
+[0b 11110100 00000000 00000100 00000000 00000000 00000000 00000000 10000000]  [63-54][opcode][11 11010000] [53-38][sync_set][10000] [37-22][sync_clr][0] [21-6][sync_id][10] [5-0][reserve][0]
+
+[0xf80002c040000080] MODULE_HEADER_MPU0: [0x3e0] cmd_num[11] hardlayer_num[1] cmd_id[2]
+[0b 11111000 00000000 00000010 11000000 01000000 00000000 00000000 10000000]  [63-54][opcode][11 11100000] [53-38][cmd_num][1011] [37-30][hardlayer_num][1] [29-6][cmd_id][10] [5-0][reserve][0]
+
+[0x000009c027000507] MPU_LOAD_INFO_FM_DATA0: [0x00] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp8] dtype_exp[4] dtype_bias[7]
+[0b 00000000 00000000 00001001 11000000 00100111 00000000 00000101 00000111]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][111]
+
+[0x0040008002800512] MPU_LOAD_INFO_FM_DATA1: [0x01] line_stride[16] chx_stride[640] load_num[1] work_mode[mac_core] blk_bubble[18]
+[0b 00000000 01000000 00000000 10000000 00000010 10000000 00000101 00010010]  [63-54][opcode][1] [53-35][line_stride][10000] [34-16][chx_stride][10 10000000] [15-10][load_num][1] [9-8][work_mode][1] [7-0][blk_bubble][10010]
+
+[0x008027009c01c010] MPU_LOAD_INFO_FM_DATA2: [0x02] blk_hsize[39] blk_wsize[39] blk_ch[7] w_blknum[1] split_h_en[disable]
+[0b 00000000 10000000 00100111 00000000 10011100 00000001 11000000 00010000]  [63-54][opcode][10] [53-40][blk_hsize][100111] [39-26][blk_wsize][100111] [25-14][blk_ch][111] [13-4][w_blknum][1] [3-3][split_h_en][0] [2-0][reserve][0]
+
+[0x080f100000000000] MPU_LOAD_NO_CASCADE_BUF_FM_LOAD_0_1: [0x20] addr0[123392] addr1[0] ch0[0] ch1[0]
+[0b 00001000 00001111 00010000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100000] [53-35][addr0][1 11100010 00000000] [34-16][addr1][0] [15-8][ch0][0] [7-0][ch1][0]
+
+[0x00c83c2403c2050b] MPU_LOAD_INFO_PARAM_DATA0: [0x03] param_alive[bias] bias_addr[15396] mode[non_cascade] wgt_addr[15392] dtype[Fp8] dtype_exp[4] dtype_bias[11]
+[0b 00000000 11001000 00111100 00100100 00000011 11000010 00000101 00001011]  [63-54][opcode][11] [53-51][param_alive][1] [50-32][bias_addr][111100 00100100] [31-31][mode][0] [30-12][wgt_addr][111100 00100000] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][1011]
+
+[0x0100000000206008] MPU_LOAD_INFO_PARAM_DATA1: [0x04] weight_ich_stride[0] weight_och_stride[32] mac_out_dtype[Fp16] mac_out_exp[0] mac_out_bias[0] bias_exp[4]
+[0b 00000001 00000000 00000000 00000000 00000000 00100000 01100000 00001000]  [63-54][opcode][100] [53-35][weight_ich_stride][0] [34-16][weight_och_stride][100000] [15-13][mac_out_dtype][11] [12-10][mac_out_exp][0] [9-4][mac_out_bias][0] [3-1][bias_exp][100] [0-0][reserve][0]
+
+[0x0140000000001c00] MPU_LOAD_INFO_PARAM_DATA2: [0x05] factor_addr[0] lut_addr[0] bias_bias[7] factor_scale_indi[0] lut_yk_exp[0] lut_yk_bias[0]
+[0b 00000001 01000000 00000000 00000000 00000000 00000000 00011100 00000000]  [63-54][opcode][101] [53-35][factor_addr][0] [34-16][lut_addr][0] [15-10][bias_bias][111] [9-9][factor_scale_indi][0] [8-6][lut_yk_exp][0] [5-0][lut_yk_bias][0]
+
+[0x14133100002245c9] MPU_CONV: [0x50] os_en[disable] calc_rate[1] kernel_h[3] kernel_w[3] stride_h[disable] stride_w[disable] pad_mode[constant_pad] pad_const[0] padsize_hu[1] padsize_hd[1] padsize_wl[1] padsize_wr[1] group[7] dilation_h[1] dilation_w[1]
+[0b 00010100 00010011 00110001 00000000 00000000 00100010 01000101 11001001]  [63-54][opcode][1010000] [53-53][os_en][0] [52-52][calc_rate][1] [51-48][kernel_h][11] [47-44][kernel_w][11] [43-43][stride_h][0] [42-42][stride_w][0] [41-40][pad_mode][1] [39-24][pad_const][0] [23-21][padsize_hu][1] [20-17][padsize_hd][1] [16-14][padsize_wl][1] [13-10][padsize_wr][1] [9-6][group][111] [5-3][dilation_h][1] [2-0][dilation_w][1]
+
+[0x0c0009c027000600] MPU_STORE_FM_DATA_0: [0x30] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001100 00000000 00001001 11000000 00100111 00000000 00000110 00000000]  [63-54][opcode][110000] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0c4006001e000f10] MPU_STORE_FM_DATA_1: [0x31] line_stride[24] chx_stride[960] addr[3856]
+[0b 00001100 01000000 00000110 00000000 00011110 00000000 00001111 00010000]  [63-54][opcode][110001] [53-38][line_stride][11000] [37-19][chx_stride][11 11000000] [18-0][addr][1111 00010000]
+
+[0x2000000000100000] MPU_SPLIT_H: [0x80] ifm_split_h_size[0] ofm_split_h_size[0] pipe_bubble[64] mac_mode[0] conv1x1_wgt_mode[0]
+[0b 00100000 00000000 00000000 00000000 00000000 00010000 00000000 00000000]  [63-54][opcode][ 10000000] [53-38][ifm_split_h_size][0] [37-22][ofm_split_h_size][0] [21-14][pipe_bubble][1000000] [13-11][mac_mode][0] [10-10][conv1x1_wgt_mode][0] [9-0][reserve][0]
+
+[0xfc27b059de600000] MODULE_TAIL_MPU0: [0x3f0] check_sum[2663475065] Preemption_indi[1]
+[0b 11111100 00100111 10110000 01011001 11011110 01100000 00000000 00000000]  [63-54][opcode][11 11110000] [53-22][check_sum][ 10011110 11000001 01100111 01111001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 11   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.5.fetch_param_data.layer
+---------------------------------------------
+set depends: null
+clr depends:
+  0. mpu1.Conv2d.layer.Conv_267_im_0.5
+---------------------------------------------
+[0xf500000100000140] MODULE_SYNC_NPU_DMA_IN_CH1: [0x3d4] sync_set[] sync_clr[mpu1] sync_id[5]
+[0b 11110101 00000000 00000000 00000001 00000000 00000000 00000001 01000000]  [63-54][opcode][11 11010100] [53-38][sync_set][0] [37-22][sync_clr][100 00000000] [21-6][sync_id][101] [5-0][reserve][0]
+
+[0xf900014040000140] MODULE_HEADER_NPU_DMA_IN_CH1: [0x3e4] cmd_num[5] hardlayer_num[1] cmd_id[5]
+[0b 11111001 00000000 00000001 01000000 01000000 00000000 00000001 01000000]  [63-54][opcode][11 11100100] [53-38][cmd_num][101] [37-30][hardlayer_num][1] [29-6][cmd_id][101] [5-0][reserve][0]
+
+[0x0002000008000000] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[16bit] src_line_size[8] src_line_stride[0]
+[0b 00000000 00000010 00000000 00000000 00001000 00000000 00000000 00000000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][10] [47-24][src_line_size][1000] [23-0][src_line_stride][0]
+
+[0x0040000000000000] DMA_IN_INFO_1: [0x01] src_patch_size[0] src_patch_stride[0]
+[0b 00000000 01000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1] [53-27][src_patch_size][0] [26-0][src_patch_stride][0]
+
+[0x0080000140003c28] DMA_IN_INFO_2: [0x02] src_offset_addr[40] dst_addr[15400]
+[0b 00000000 10000000 00000000 00000001 01000000 00000000 00111100 00101000]  [63-54][opcode][10] [53-27][src_offset_addr][101000] [26-0][dst_addr][111100 00101000]
+
+[0x00c0000000000000] DMA_IN_INFO_3: [0x03] src_hsize[0] src_wsize[0] src_ch[0] src_layout[stream] dst_layout[stream]
+[0b 00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11] [53-38][src_hsize][0] [37-22][src_wsize][0] [21-6][src_ch][0] [5-3][src_layout][0] [3-0][dst_layout][0]
+
+[0x010000000001c000] DMA_IN_INFO_4: [0x04] data_type[para] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[7] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00000000 00000000 00000000 00000000 00000001 11000000 00000000]  [63-54][opcode][100] [53-52][data_type][0] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][111] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0xfd20e0ffaa600000] MODULE_TAIL_NPU_DMA_IN_CH1: [0x3f4] check_sum[2206465705] Preemption_indi[1]
+[0b 11111101 00100000 11100000 11111111 10101010 01100000 00000000 00000000]  [63-54][opcode][11 11110100] [53-22][check_sum][ 10000011 10000011 11111110 10101001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 12   <---------
+---------------------------------------------
+hwlayer_name: mpu1.Conv2d.layer.Conv_267_im_0.5
+---------------------------------------------
+set depends:
+  0. npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.5.fetch_param_data.layer
+clr depends: null
+---------------------------------------------
+[0xf680040000000080] MODULE_SYNC_MPU1: [0x3da] sync_set[npu_dma_in_ch1] sync_clr[] sync_id[2]
+[0b 11110110 10000000 00000100 00000000 00000000 00000000 00000000 10000000]  [63-54][opcode][11 11011010] [53-38][sync_set][10000] [37-22][sync_clr][0] [21-6][sync_id][10] [5-0][reserve][0]
+
+[0xfa8002c040000080] MODULE_HEADER_MPU1: [0x3ea] cmd_num[11] hardlayer_num[1] cmd_id[2]
+[0b 11111010 10000000 00000010 11000000 01000000 00000000 00000000 10000000]  [63-54][opcode][11 11101010] [53-38][cmd_num][1011] [37-30][hardlayer_num][1] [29-6][cmd_id][10] [5-0][reserve][0]
+
+[0x000009c027000507] MPU_LOAD_INFO_FM_DATA0: [0x00] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp8] dtype_exp[4] dtype_bias[7]
+[0b 00000000 00000000 00001001 11000000 00100111 00000000 00000101 00000111]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][111]
+
+[0x0040008002800512] MPU_LOAD_INFO_FM_DATA1: [0x01] line_stride[16] chx_stride[640] load_num[1] work_mode[mac_core] blk_bubble[18]
+[0b 00000000 01000000 00000000 10000000 00000010 10000000 00000101 00010010]  [63-54][opcode][1] [53-35][line_stride][10000] [34-16][chx_stride][10 10000000] [15-10][load_num][1] [9-8][work_mode][1] [7-0][blk_bubble][10010]
+
+[0x008027009c01c010] MPU_LOAD_INFO_FM_DATA2: [0x02] blk_hsize[39] blk_wsize[39] blk_ch[7] w_blknum[1] split_h_en[disable]
+[0b 00000000 10000000 00100111 00000000 10011100 00000001 11000000 00010000]  [63-54][opcode][10] [53-40][blk_hsize][100111] [39-26][blk_wsize][100111] [25-14][blk_ch][111] [13-4][w_blknum][1] [3-3][split_h_en][0] [2-0][reserve][0]
+
+[0x080f240000000000] MPU_LOAD_NO_CASCADE_BUF_FM_LOAD_0_1: [0x20] addr0[124032] addr1[0] ch0[0] ch1[0]
+[0b 00001000 00001111 00100100 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100000] [53-35][addr0][1 11100100 10000000] [34-16][addr1][0] [15-8][ch0][0] [7-0][ch1][0]
+
+[0x00c83c2c03c2850b] MPU_LOAD_INFO_PARAM_DATA0: [0x03] param_alive[bias] bias_addr[15404] mode[non_cascade] wgt_addr[15400] dtype[Fp8] dtype_exp[4] dtype_bias[11]
+[0b 00000000 11001000 00111100 00101100 00000011 11000010 10000101 00001011]  [63-54][opcode][11] [53-51][param_alive][1] [50-32][bias_addr][111100 00101100] [31-31][mode][0] [30-12][wgt_addr][111100 00101000] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][1011]
+
+[0x0100000000206008] MPU_LOAD_INFO_PARAM_DATA1: [0x04] weight_ich_stride[0] weight_och_stride[32] mac_out_dtype[Fp16] mac_out_exp[0] mac_out_bias[0] bias_exp[4]
+[0b 00000001 00000000 00000000 00000000 00000000 00100000 01100000 00001000]  [63-54][opcode][100] [53-35][weight_ich_stride][0] [34-16][weight_och_stride][100000] [15-13][mac_out_dtype][11] [12-10][mac_out_exp][0] [9-4][mac_out_bias][0] [3-1][bias_exp][100] [0-0][reserve][0]
+
+[0x0140000000001c00] MPU_LOAD_INFO_PARAM_DATA2: [0x05] factor_addr[0] lut_addr[0] bias_bias[7] factor_scale_indi[0] lut_yk_exp[0] lut_yk_bias[0]
+[0b 00000001 01000000 00000000 00000000 00000000 00000000 00011100 00000000]  [63-54][opcode][101] [53-35][factor_addr][0] [34-16][lut_addr][0] [15-10][bias_bias][111] [9-9][factor_scale_indi][0] [8-6][lut_yk_exp][0] [5-0][lut_yk_bias][0]
+
+[0x14133100002245c9] MPU_CONV: [0x50] os_en[disable] calc_rate[1] kernel_h[3] kernel_w[3] stride_h[disable] stride_w[disable] pad_mode[constant_pad] pad_const[0] padsize_hu[1] padsize_hd[1] padsize_wl[1] padsize_wr[1] group[7] dilation_h[1] dilation_w[1]
+[0b 00010100 00010011 00110001 00000000 00000000 00100010 01000101 11001001]  [63-54][opcode][1010000] [53-53][os_en][0] [52-52][calc_rate][1] [51-48][kernel_h][11] [47-44][kernel_w][11] [43-43][stride_h][0] [42-42][stride_w][0] [41-40][pad_mode][1] [39-24][pad_const][0] [23-21][padsize_hu][1] [20-17][padsize_hd][1] [16-14][padsize_wl][1] [13-10][padsize_wr][1] [9-6][group][111] [5-3][dilation_h][1] [2-0][dilation_w][1]
+
+[0x0c0009c027000600] MPU_STORE_FM_DATA_0: [0x30] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001100 00000000 00001001 11000000 00100111 00000000 00000110 00000000]  [63-54][opcode][110000] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0c4006001e0012d0] MPU_STORE_FM_DATA_1: [0x31] line_stride[24] chx_stride[960] addr[4816]
+[0b 00001100 01000000 00000110 00000000 00011110 00000000 00010010 11010000]  [63-54][opcode][110001] [53-38][line_stride][11000] [37-19][chx_stride][11 11000000] [18-0][addr][10010 11010000]
+
+[0x2000000000100000] MPU_SPLIT_H: [0x80] ifm_split_h_size[0] ofm_split_h_size[0] pipe_bubble[64] mac_mode[0] conv1x1_wgt_mode[0]
+[0b 00100000 00000000 00000000 00000000 00000000 00010000 00000000 00000000]  [63-54][opcode][ 10000000] [53-38][ifm_split_h_size][0] [37-22][ofm_split_h_size][0] [21-14][pipe_bubble][1000000] [13-11][mac_mode][0] [10-10][conv1x1_wgt_mode][0] [9-0][reserve][0]
+
+[0xfea8507fd0600000] MODULE_TAIL_MPU1: [0x3fa] check_sum[2705456961] Preemption_indi[1]
+[0b 11111110 10101000 01010000 01111111 11010000 01100000 00000000 00000000]  [63-54][opcode][11 11111010] [53-22][check_sum][ 10100001 01000001 11111111 01000001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 13   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.6.fetch_param_data.layer
+---------------------------------------------
+set depends: null
+clr depends:
+  0. mpu0.Conv2d.layer.Conv_267_im_0.6
+---------------------------------------------
+[0xf500000000400180] MODULE_SYNC_NPU_DMA_IN_CH1: [0x3d4] sync_set[] sync_clr[mpu0] sync_id[6]
+[0b 11110101 00000000 00000000 00000000 00000000 01000000 00000001 10000000]  [63-54][opcode][11 11010100] [53-38][sync_set][0] [37-22][sync_clr][1] [21-6][sync_id][110] [5-0][reserve][0]
+
+[0xf900014040000180] MODULE_HEADER_NPU_DMA_IN_CH1: [0x3e4] cmd_num[5] hardlayer_num[1] cmd_id[6]
+[0b 11111001 00000000 00000001 01000000 01000000 00000000 00000001 10000000]  [63-54][opcode][11 11100100] [53-38][cmd_num][101] [37-30][hardlayer_num][1] [29-6][cmd_id][110] [5-0][reserve][0]
+
+[0x0002000008000000] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[16bit] src_line_size[8] src_line_stride[0]
+[0b 00000000 00000010 00000000 00000000 00001000 00000000 00000000 00000000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][10] [47-24][src_line_size][1000] [23-0][src_line_stride][0]
+
+[0x0040000000000000] DMA_IN_INFO_1: [0x01] src_patch_size[0] src_patch_stride[0]
+[0b 00000000 01000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1] [53-27][src_patch_size][0] [26-0][src_patch_stride][0]
+
+[0x0080000180003c30] DMA_IN_INFO_2: [0x02] src_offset_addr[48] dst_addr[15408]
+[0b 00000000 10000000 00000000 00000001 10000000 00000000 00111100 00110000]  [63-54][opcode][10] [53-27][src_offset_addr][110000] [26-0][dst_addr][111100 00110000]
+
+[0x00c0000000000000] DMA_IN_INFO_3: [0x03] src_hsize[0] src_wsize[0] src_ch[0] src_layout[stream] dst_layout[stream]
+[0b 00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11] [53-38][src_hsize][0] [37-22][src_wsize][0] [21-6][src_ch][0] [5-3][src_layout][0] [3-0][dst_layout][0]
+
+[0x010000000001c000] DMA_IN_INFO_4: [0x04] data_type[para] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[7] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00000000 00000000 00000000 00000000 00000001 11000000 00000000]  [63-54][opcode][100] [53-52][data_type][0] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][111] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0xfd30e0ffbc600000] MODULE_TAIL_NPU_DMA_IN_CH1: [0x3f4] check_sum[3280207601] Preemption_indi[1]
+[0b 11111101 00110000 11100000 11111111 10111100 01100000 00000000 00000000]  [63-54][opcode][11 11110100] [53-22][check_sum][ 11000011 10000011 11111110 11110001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 14   <---------
+---------------------------------------------
+hwlayer_name: mpu0.Conv2d.layer.Conv_267_im_0.6
+---------------------------------------------
+set depends:
+  0. npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.6.fetch_param_data.layer
+clr depends: null
+---------------------------------------------
+[0xf4000400000000c0] MODULE_SYNC_MPU0: [0x3d0] sync_set[npu_dma_in_ch1] sync_clr[] sync_id[3]
+[0b 11110100 00000000 00000100 00000000 00000000 00000000 00000000 11000000]  [63-54][opcode][11 11010000] [53-38][sync_set][10000] [37-22][sync_clr][0] [21-6][sync_id][11] [5-0][reserve][0]
+
+[0xf80002c0400000c0] MODULE_HEADER_MPU0: [0x3e0] cmd_num[11] hardlayer_num[1] cmd_id[3]
+[0b 11111000 00000000 00000010 11000000 01000000 00000000 00000000 11000000]  [63-54][opcode][11 11100000] [53-38][cmd_num][1011] [37-30][hardlayer_num][1] [29-6][cmd_id][11] [5-0][reserve][0]
+
+[0x000009c027000507] MPU_LOAD_INFO_FM_DATA0: [0x00] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp8] dtype_exp[4] dtype_bias[7]
+[0b 00000000 00000000 00001001 11000000 00100111 00000000 00000101 00000111]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][111]
+
+[0x0040008002800512] MPU_LOAD_INFO_FM_DATA1: [0x01] line_stride[16] chx_stride[640] load_num[1] work_mode[mac_core] blk_bubble[18]
+[0b 00000000 01000000 00000000 10000000 00000010 10000000 00000101 00010010]  [63-54][opcode][1] [53-35][line_stride][10000] [34-16][chx_stride][10 10000000] [15-10][load_num][1] [9-8][work_mode][1] [7-0][blk_bubble][10010]
+
+[0x008027009c01c010] MPU_LOAD_INFO_FM_DATA2: [0x02] blk_hsize[39] blk_wsize[39] blk_ch[7] w_blknum[1] split_h_en[disable]
+[0b 00000000 10000000 00100111 00000000 10011100 00000001 11000000 00010000]  [63-54][opcode][10] [53-40][blk_hsize][100111] [39-26][blk_wsize][100111] [25-14][blk_ch][111] [13-4][w_blknum][1] [3-3][split_h_en][0] [2-0][reserve][0]
+
+[0x080f380000000000] MPU_LOAD_NO_CASCADE_BUF_FM_LOAD_0_1: [0x20] addr0[124672] addr1[0] ch0[0] ch1[0]
+[0b 00001000 00001111 00111000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100000] [53-35][addr0][1 11100111 00000000] [34-16][addr1][0] [15-8][ch0][0] [7-0][ch1][0]
+
+[0x00c83c3403c3050b] MPU_LOAD_INFO_PARAM_DATA0: [0x03] param_alive[bias] bias_addr[15412] mode[non_cascade] wgt_addr[15408] dtype[Fp8] dtype_exp[4] dtype_bias[11]
+[0b 00000000 11001000 00111100 00110100 00000011 11000011 00000101 00001011]  [63-54][opcode][11] [53-51][param_alive][1] [50-32][bias_addr][111100 00110100] [31-31][mode][0] [30-12][wgt_addr][111100 00110000] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][1011]
+
+[0x0100000000206008] MPU_LOAD_INFO_PARAM_DATA1: [0x04] weight_ich_stride[0] weight_och_stride[32] mac_out_dtype[Fp16] mac_out_exp[0] mac_out_bias[0] bias_exp[4]
+[0b 00000001 00000000 00000000 00000000 00000000 00100000 01100000 00001000]  [63-54][opcode][100] [53-35][weight_ich_stride][0] [34-16][weight_och_stride][100000] [15-13][mac_out_dtype][11] [12-10][mac_out_exp][0] [9-4][mac_out_bias][0] [3-1][bias_exp][100] [0-0][reserve][0]
+
+[0x0140000000001c00] MPU_LOAD_INFO_PARAM_DATA2: [0x05] factor_addr[0] lut_addr[0] bias_bias[7] factor_scale_indi[0] lut_yk_exp[0] lut_yk_bias[0]
+[0b 00000001 01000000 00000000 00000000 00000000 00000000 00011100 00000000]  [63-54][opcode][101] [53-35][factor_addr][0] [34-16][lut_addr][0] [15-10][bias_bias][111] [9-9][factor_scale_indi][0] [8-6][lut_yk_exp][0] [5-0][lut_yk_bias][0]
+
+[0x14133100002245c9] MPU_CONV: [0x50] os_en[disable] calc_rate[1] kernel_h[3] kernel_w[3] stride_h[disable] stride_w[disable] pad_mode[constant_pad] pad_const[0] padsize_hu[1] padsize_hd[1] padsize_wl[1] padsize_wr[1] group[7] dilation_h[1] dilation_w[1]
+[0b 00010100 00010011 00110001 00000000 00000000 00100010 01000101 11001001]  [63-54][opcode][1010000] [53-53][os_en][0] [52-52][calc_rate][1] [51-48][kernel_h][11] [47-44][kernel_w][11] [43-43][stride_h][0] [42-42][stride_w][0] [41-40][pad_mode][1] [39-24][pad_const][0] [23-21][padsize_hu][1] [20-17][padsize_hd][1] [16-14][padsize_wl][1] [13-10][padsize_wr][1] [9-6][group][111] [5-3][dilation_h][1] [2-0][dilation_w][1]
+
+[0x0c0009c027000600] MPU_STORE_FM_DATA_0: [0x30] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001100 00000000 00001001 11000000 00100111 00000000 00000110 00000000]  [63-54][opcode][110000] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0c4006001e001690] MPU_STORE_FM_DATA_1: [0x31] line_stride[24] chx_stride[960] addr[5776]
+[0b 00001100 01000000 00000110 00000000 00011110 00000000 00010110 10010000]  [63-54][opcode][110001] [53-38][line_stride][11000] [37-19][chx_stride][11 11000000] [18-0][addr][10110 10010000]
+
+[0x2000000000100000] MPU_SPLIT_H: [0x80] ifm_split_h_size[0] ofm_split_h_size[0] pipe_bubble[64] mac_mode[0] conv1x1_wgt_mode[0]
+[0b 00100000 00000000 00000000 00000000 00000000 00010000 00000000 00000000]  [63-54][opcode][ 10000000] [53-38][ifm_split_h_size][0] [37-22][ofm_split_h_size][0] [21-14][pipe_bubble][1000000] [13-11][mac_mode][0] [10-10][conv1x1_wgt_mode][0] [9-0][reserve][0]
+
+[0xfc27b0a5d2600000] MODULE_TAIL_MPU0: [0x3f0] check_sum[2663552841] Preemption_indi[1]
+[0b 11111100 00100111 10110000 10100101 11010010 01100000 00000000 00000000]  [63-54][opcode][11 11110000] [53-22][check_sum][ 10011110 11000010 10010111 01001001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 15   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.7.fetch_param_data.layer
+---------------------------------------------
+set depends: null
+clr depends:
+  0. mpu1.Conv2d.layer.Conv_267_im_0.7
+---------------------------------------------
+[0xf5000001000001c0] MODULE_SYNC_NPU_DMA_IN_CH1: [0x3d4] sync_set[] sync_clr[mpu1] sync_id[7]
+[0b 11110101 00000000 00000000 00000001 00000000 00000000 00000001 11000000]  [63-54][opcode][11 11010100] [53-38][sync_set][0] [37-22][sync_clr][100 00000000] [21-6][sync_id][111] [5-0][reserve][0]
+
+[0xf9000140400001c0] MODULE_HEADER_NPU_DMA_IN_CH1: [0x3e4] cmd_num[5] hardlayer_num[1] cmd_id[7]
+[0b 11111001 00000000 00000001 01000000 01000000 00000000 00000001 11000000]  [63-54][opcode][11 11100100] [53-38][cmd_num][101] [37-30][hardlayer_num][1] [29-6][cmd_id][111] [5-0][reserve][0]
+
+[0x0002000008000000] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[16bit] src_line_size[8] src_line_stride[0]
+[0b 00000000 00000010 00000000 00000000 00001000 00000000 00000000 00000000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][10] [47-24][src_line_size][1000] [23-0][src_line_stride][0]
+
+[0x0040000000000000] DMA_IN_INFO_1: [0x01] src_patch_size[0] src_patch_stride[0]
+[0b 00000000 01000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1] [53-27][src_patch_size][0] [26-0][src_patch_stride][0]
+
+[0x00800001c0003c38] DMA_IN_INFO_2: [0x02] src_offset_addr[56] dst_addr[15416]
+[0b 00000000 10000000 00000000 00000001 11000000 00000000 00111100 00111000]  [63-54][opcode][10] [53-27][src_offset_addr][111000] [26-0][dst_addr][111100 00111000]
+
+[0x00c0000000000000] DMA_IN_INFO_3: [0x03] src_hsize[0] src_wsize[0] src_ch[0] src_layout[stream] dst_layout[stream]
+[0b 00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11] [53-38][src_hsize][0] [37-22][src_wsize][0] [21-6][src_ch][0] [5-3][src_layout][0] [3-0][dst_layout][0]
+
+[0x010000000001c000] DMA_IN_INFO_4: [0x04] data_type[para] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[7] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00000000 00000000 00000000 00000000 00000001 11000000 00000000]  [63-54][opcode][100] [53-52][data_type][0] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][111] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0xfd00e0ffce600000] MODULE_TAIL_NPU_DMA_IN_CH1: [0x3f4] check_sum[58982201] Preemption_indi[1]
+[0b 11111101 00000000 11100000 11111111 11001110 01100000 00000000 00000000]  [63-54][opcode][11 11110100] [53-22][check_sum][11 10000011 11111111 00111001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 16   <---------
+---------------------------------------------
+hwlayer_name: mpu1.Conv2d.layer.Conv_267_im_0.7
+---------------------------------------------
+set depends:
+  0. npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.7.fetch_param_data.layer
+clr depends: null
+---------------------------------------------
+[0xf6800400000000c0] MODULE_SYNC_MPU1: [0x3da] sync_set[npu_dma_in_ch1] sync_clr[] sync_id[3]
+[0b 11110110 10000000 00000100 00000000 00000000 00000000 00000000 11000000]  [63-54][opcode][11 11011010] [53-38][sync_set][10000] [37-22][sync_clr][0] [21-6][sync_id][11] [5-0][reserve][0]
+
+[0xfa8002c0400000c0] MODULE_HEADER_MPU1: [0x3ea] cmd_num[11] hardlayer_num[1] cmd_id[3]
+[0b 11111010 10000000 00000010 11000000 01000000 00000000 00000000 11000000]  [63-54][opcode][11 11101010] [53-38][cmd_num][1011] [37-30][hardlayer_num][1] [29-6][cmd_id][11] [5-0][reserve][0]
+
+[0x000009c027000507] MPU_LOAD_INFO_FM_DATA0: [0x00] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp8] dtype_exp[4] dtype_bias[7]
+[0b 00000000 00000000 00001001 11000000 00100111 00000000 00000101 00000111]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][111]
+
+[0x0040008002800512] MPU_LOAD_INFO_FM_DATA1: [0x01] line_stride[16] chx_stride[640] load_num[1] work_mode[mac_core] blk_bubble[18]
+[0b 00000000 01000000 00000000 10000000 00000010 10000000 00000101 00010010]  [63-54][opcode][1] [53-35][line_stride][10000] [34-16][chx_stride][10 10000000] [15-10][load_num][1] [9-8][work_mode][1] [7-0][blk_bubble][10010]
+
+[0x008027009c01c010] MPU_LOAD_INFO_FM_DATA2: [0x02] blk_hsize[39] blk_wsize[39] blk_ch[7] w_blknum[1] split_h_en[disable]
+[0b 00000000 10000000 00100111 00000000 10011100 00000001 11000000 00010000]  [63-54][opcode][10] [53-40][blk_hsize][100111] [39-26][blk_wsize][100111] [25-14][blk_ch][111] [13-4][w_blknum][1] [3-3][split_h_en][0] [2-0][reserve][0]
+
+[0x080f4c0000000000] MPU_LOAD_NO_CASCADE_BUF_FM_LOAD_0_1: [0x20] addr0[125312] addr1[0] ch0[0] ch1[0]
+[0b 00001000 00001111 01001100 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100000] [53-35][addr0][1 11101001 10000000] [34-16][addr1][0] [15-8][ch0][0] [7-0][ch1][0]
+
+[0x00c83c3c03c3850b] MPU_LOAD_INFO_PARAM_DATA0: [0x03] param_alive[bias] bias_addr[15420] mode[non_cascade] wgt_addr[15416] dtype[Fp8] dtype_exp[4] dtype_bias[11]
+[0b 00000000 11001000 00111100 00111100 00000011 11000011 10000101 00001011]  [63-54][opcode][11] [53-51][param_alive][1] [50-32][bias_addr][111100 00111100] [31-31][mode][0] [30-12][wgt_addr][111100 00111000] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][1011]
+
+[0x0100000000206008] MPU_LOAD_INFO_PARAM_DATA1: [0x04] weight_ich_stride[0] weight_och_stride[32] mac_out_dtype[Fp16] mac_out_exp[0] mac_out_bias[0] bias_exp[4]
+[0b 00000001 00000000 00000000 00000000 00000000 00100000 01100000 00001000]  [63-54][opcode][100] [53-35][weight_ich_stride][0] [34-16][weight_och_stride][100000] [15-13][mac_out_dtype][11] [12-10][mac_out_exp][0] [9-4][mac_out_bias][0] [3-1][bias_exp][100] [0-0][reserve][0]
+
+[0x0140000000001c00] MPU_LOAD_INFO_PARAM_DATA2: [0x05] factor_addr[0] lut_addr[0] bias_bias[7] factor_scale_indi[0] lut_yk_exp[0] lut_yk_bias[0]
+[0b 00000001 01000000 00000000 00000000 00000000 00000000 00011100 00000000]  [63-54][opcode][101] [53-35][factor_addr][0] [34-16][lut_addr][0] [15-10][bias_bias][111] [9-9][factor_scale_indi][0] [8-6][lut_yk_exp][0] [5-0][lut_yk_bias][0]
+
+[0x14133100002245c9] MPU_CONV: [0x50] os_en[disable] calc_rate[1] kernel_h[3] kernel_w[3] stride_h[disable] stride_w[disable] pad_mode[constant_pad] pad_const[0] padsize_hu[1] padsize_hd[1] padsize_wl[1] padsize_wr[1] group[7] dilation_h[1] dilation_w[1]
+[0b 00010100 00010011 00110001 00000000 00000000 00100010 01000101 11001001]  [63-54][opcode][1010000] [53-53][os_en][0] [52-52][calc_rate][1] [51-48][kernel_h][11] [47-44][kernel_w][11] [43-43][stride_h][0] [42-42][stride_w][0] [41-40][pad_mode][1] [39-24][pad_const][0] [23-21][padsize_hu][1] [20-17][padsize_hd][1] [16-14][padsize_wl][1] [13-10][padsize_wr][1] [9-6][group][111] [5-3][dilation_h][1] [2-0][dilation_w][1]
+
+[0x0c0009c027000600] MPU_STORE_FM_DATA_0: [0x30] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001100 00000000 00001001 11000000 00100111 00000000 00000110 00000000]  [63-54][opcode][110000] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0c4006001e001a50] MPU_STORE_FM_DATA_1: [0x31] line_stride[24] chx_stride[960] addr[6736]
+[0b 00001100 01000000 00000110 00000000 00011110 00000000 00011010 01010000]  [63-54][opcode][110001] [53-38][line_stride][11000] [37-19][chx_stride][11 11000000] [18-0][addr][11010 01010000]
+
+[0x2000000000100000] MPU_SPLIT_H: [0x80] ifm_split_h_size[0] ofm_split_h_size[0] pipe_bubble[64] mac_mode[0] conv1x1_wgt_mode[0]
+[0b 00100000 00000000 00000000 00000000 00000000 00010000 00000000 00000000]  [63-54][opcode][ 10000000] [53-38][ifm_split_h_size][0] [37-22][ofm_split_h_size][0] [21-14][pipe_bubble][1000000] [13-11][mac_mode][0] [10-10][conv1x1_wgt_mode][0] [9-0][reserve][0]
+
+[0xfea850cbc4600000] MODULE_TAIL_MPU1: [0x3fa] check_sum[2705534737] Preemption_indi[1]
+[0b 11111110 10101000 01010000 11001011 11000100 01100000 00000000 00000000]  [63-54][opcode][11 11111010] [53-22][check_sum][ 10100001 01000011 00101111 00010001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 17   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.8.fetch_param_data.layer
+---------------------------------------------
+set depends: null
+clr depends:
+  0. mpu0.Conv2d.layer.Conv_267_im_0.8
+---------------------------------------------
+[0xf500000000400200] MODULE_SYNC_NPU_DMA_IN_CH1: [0x3d4] sync_set[] sync_clr[mpu0] sync_id[8]
+[0b 11110101 00000000 00000000 00000000 00000000 01000000 00000010 00000000]  [63-54][opcode][11 11010100] [53-38][sync_set][0] [37-22][sync_clr][1] [21-6][sync_id][1000] [5-0][reserve][0]
+
+[0xf900014040000200] MODULE_HEADER_NPU_DMA_IN_CH1: [0x3e4] cmd_num[5] hardlayer_num[1] cmd_id[8]
+[0b 11111001 00000000 00000001 01000000 01000000 00000000 00000010 00000000]  [63-54][opcode][11 11100100] [53-38][cmd_num][101] [37-30][hardlayer_num][1] [29-6][cmd_id][1000] [5-0][reserve][0]
+
+[0x0002000008000000] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[16bit] src_line_size[8] src_line_stride[0]
+[0b 00000000 00000010 00000000 00000000 00001000 00000000 00000000 00000000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][10] [47-24][src_line_size][1000] [23-0][src_line_stride][0]
+
+[0x0040000000000000] DMA_IN_INFO_1: [0x01] src_patch_size[0] src_patch_stride[0]
+[0b 00000000 01000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1] [53-27][src_patch_size][0] [26-0][src_patch_stride][0]
+
+[0x0080000200003c40] DMA_IN_INFO_2: [0x02] src_offset_addr[64] dst_addr[15424]
+[0b 00000000 10000000 00000000 00000010 00000000 00000000 00111100 01000000]  [63-54][opcode][10] [53-27][src_offset_addr][1000000] [26-0][dst_addr][111100 01000000]
+
+[0x00c0000000000000] DMA_IN_INFO_3: [0x03] src_hsize[0] src_wsize[0] src_ch[0] src_layout[stream] dst_layout[stream]
+[0b 00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11] [53-38][src_hsize][0] [37-22][src_wsize][0] [21-6][src_ch][0] [5-3][src_layout][0] [3-0][dst_layout][0]
+
+[0x010000000001c000] DMA_IN_INFO_4: [0x04] data_type[para] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[7] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00000000 00000000 00000000 00000000 00000001 11000000 00000000]  [63-54][opcode][100] [53-52][data_type][0] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][111] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0xfd10e0ffe0a00000] MODULE_TAIL_NPU_DMA_IN_CH1: [0x3f4] check_sum[1132724098] Preemption_indi[1]
+[0b 11111101 00010000 11100000 11111111 11100000 10100000 00000000 00000000]  [63-54][opcode][11 11110100] [53-22][check_sum][1000011 10000011 11111111 10000010] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 18   <---------
+---------------------------------------------
+hwlayer_name: mpu0.Conv2d.layer.Conv_267_im_0.8
+---------------------------------------------
+set depends:
+  0. npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.8.fetch_param_data.layer
+clr depends: null
+---------------------------------------------
+[0xf400040000000100] MODULE_SYNC_MPU0: [0x3d0] sync_set[npu_dma_in_ch1] sync_clr[] sync_id[4]
+[0b 11110100 00000000 00000100 00000000 00000000 00000000 00000001 00000000]  [63-54][opcode][11 11010000] [53-38][sync_set][10000] [37-22][sync_clr][0] [21-6][sync_id][100] [5-0][reserve][0]
+
+[0xf80002c040000100] MODULE_HEADER_MPU0: [0x3e0] cmd_num[11] hardlayer_num[1] cmd_id[4]
+[0b 11111000 00000000 00000010 11000000 01000000 00000000 00000001 00000000]  [63-54][opcode][11 11100000] [53-38][cmd_num][1011] [37-30][hardlayer_num][1] [29-6][cmd_id][100] [5-0][reserve][0]
+
+[0x000009c027000507] MPU_LOAD_INFO_FM_DATA0: [0x00] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp8] dtype_exp[4] dtype_bias[7]
+[0b 00000000 00000000 00001001 11000000 00100111 00000000 00000101 00000111]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][111]
+
+[0x0040008002800512] MPU_LOAD_INFO_FM_DATA1: [0x01] line_stride[16] chx_stride[640] load_num[1] work_mode[mac_core] blk_bubble[18]
+[0b 00000000 01000000 00000000 10000000 00000010 10000000 00000101 00010010]  [63-54][opcode][1] [53-35][line_stride][10000] [34-16][chx_stride][10 10000000] [15-10][load_num][1] [9-8][work_mode][1] [7-0][blk_bubble][10010]
+
+[0x008027009c01c010] MPU_LOAD_INFO_FM_DATA2: [0x02] blk_hsize[39] blk_wsize[39] blk_ch[7] w_blknum[1] split_h_en[disable]
+[0b 00000000 10000000 00100111 00000000 10011100 00000001 11000000 00010000]  [63-54][opcode][10] [53-40][blk_hsize][100111] [39-26][blk_wsize][100111] [25-14][blk_ch][111] [13-4][w_blknum][1] [3-3][split_h_en][0] [2-0][reserve][0]
+
+[0x080f600000000000] MPU_LOAD_NO_CASCADE_BUF_FM_LOAD_0_1: [0x20] addr0[125952] addr1[0] ch0[0] ch1[0]
+[0b 00001000 00001111 01100000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100000] [53-35][addr0][1 11101100 00000000] [34-16][addr1][0] [15-8][ch0][0] [7-0][ch1][0]
+
+[0x00c83c4403c4050b] MPU_LOAD_INFO_PARAM_DATA0: [0x03] param_alive[bias] bias_addr[15428] mode[non_cascade] wgt_addr[15424] dtype[Fp8] dtype_exp[4] dtype_bias[11]
+[0b 00000000 11001000 00111100 01000100 00000011 11000100 00000101 00001011]  [63-54][opcode][11] [53-51][param_alive][1] [50-32][bias_addr][111100 01000100] [31-31][mode][0] [30-12][wgt_addr][111100 01000000] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][1011]
+
+[0x0100000000206008] MPU_LOAD_INFO_PARAM_DATA1: [0x04] weight_ich_stride[0] weight_och_stride[32] mac_out_dtype[Fp16] mac_out_exp[0] mac_out_bias[0] bias_exp[4]
+[0b 00000001 00000000 00000000 00000000 00000000 00100000 01100000 00001000]  [63-54][opcode][100] [53-35][weight_ich_stride][0] [34-16][weight_och_stride][100000] [15-13][mac_out_dtype][11] [12-10][mac_out_exp][0] [9-4][mac_out_bias][0] [3-1][bias_exp][100] [0-0][reserve][0]
+
+[0x0140000000001c00] MPU_LOAD_INFO_PARAM_DATA2: [0x05] factor_addr[0] lut_addr[0] bias_bias[7] factor_scale_indi[0] lut_yk_exp[0] lut_yk_bias[0]
+[0b 00000001 01000000 00000000 00000000 00000000 00000000 00011100 00000000]  [63-54][opcode][101] [53-35][factor_addr][0] [34-16][lut_addr][0] [15-10][bias_bias][111] [9-9][factor_scale_indi][0] [8-6][lut_yk_exp][0] [5-0][lut_yk_bias][0]
+
+[0x14133100002245c9] MPU_CONV: [0x50] os_en[disable] calc_rate[1] kernel_h[3] kernel_w[3] stride_h[disable] stride_w[disable] pad_mode[constant_pad] pad_const[0] padsize_hu[1] padsize_hd[1] padsize_wl[1] padsize_wr[1] group[7] dilation_h[1] dilation_w[1]
+[0b 00010100 00010011 00110001 00000000 00000000 00100010 01000101 11001001]  [63-54][opcode][1010000] [53-53][os_en][0] [52-52][calc_rate][1] [51-48][kernel_h][11] [47-44][kernel_w][11] [43-43][stride_h][0] [42-42][stride_w][0] [41-40][pad_mode][1] [39-24][pad_const][0] [23-21][padsize_hu][1] [20-17][padsize_hd][1] [16-14][padsize_wl][1] [13-10][padsize_wr][1] [9-6][group][111] [5-3][dilation_h][1] [2-0][dilation_w][1]
+
+[0x0c0009c027000600] MPU_STORE_FM_DATA_0: [0x30] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001100 00000000 00001001 11000000 00100111 00000000 00000110 00000000]  [63-54][opcode][110000] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0c4006001e001e10] MPU_STORE_FM_DATA_1: [0x31] line_stride[24] chx_stride[960] addr[7696]
+[0b 00001100 01000000 00000110 00000000 00011110 00000000 00011110 00010000]  [63-54][opcode][110001] [53-38][line_stride][11000] [37-19][chx_stride][11 11000000] [18-0][addr][11110 00010000]
+
+[0x2000000000100000] MPU_SPLIT_H: [0x80] ifm_split_h_size[0] ofm_split_h_size[0] pipe_bubble[64] mac_mode[0] conv1x1_wgt_mode[0]
+[0b 00100000 00000000 00000000 00000000 00000000 00010000 00000000 00000000]  [63-54][opcode][ 10000000] [53-38][ifm_split_h_size][0] [37-22][ofm_split_h_size][0] [21-14][pipe_bubble][1000000] [13-11][mac_mode][0] [10-10][conv1x1_wgt_mode][0] [9-0][reserve][0]
+
+[0xfc27b0f1c6600000] MODULE_TAIL_MPU0: [0x3f0] check_sum[2663630617] Preemption_indi[1]
+[0b 11111100 00100111 10110000 11110001 11000110 01100000 00000000 00000000]  [63-54][opcode][11 11110000] [53-22][check_sum][ 10011110 11000011 11000111 00011001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 19   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.9.fetch_param_data.layer
+---------------------------------------------
+set depends: null
+clr depends:
+  0. mpu1.Conv2d.layer.Conv_267_im_0.9
+---------------------------------------------
+[0xf500000100000240] MODULE_SYNC_NPU_DMA_IN_CH1: [0x3d4] sync_set[] sync_clr[mpu1] sync_id[9]
+[0b 11110101 00000000 00000000 00000001 00000000 00000000 00000010 01000000]  [63-54][opcode][11 11010100] [53-38][sync_set][0] [37-22][sync_clr][100 00000000] [21-6][sync_id][1001] [5-0][reserve][0]
+
+[0xf900014040000240] MODULE_HEADER_NPU_DMA_IN_CH1: [0x3e4] cmd_num[5] hardlayer_num[1] cmd_id[9]
+[0b 11111001 00000000 00000001 01000000 01000000 00000000 00000010 01000000]  [63-54][opcode][11 11100100] [53-38][cmd_num][101] [37-30][hardlayer_num][1] [29-6][cmd_id][1001] [5-0][reserve][0]
+
+[0x0002000008000000] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[16bit] src_line_size[8] src_line_stride[0]
+[0b 00000000 00000010 00000000 00000000 00001000 00000000 00000000 00000000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][10] [47-24][src_line_size][1000] [23-0][src_line_stride][0]
+
+[0x0040000000000000] DMA_IN_INFO_1: [0x01] src_patch_size[0] src_patch_stride[0]
+[0b 00000000 01000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1] [53-27][src_patch_size][0] [26-0][src_patch_stride][0]
+
+[0x0080000240003c48] DMA_IN_INFO_2: [0x02] src_offset_addr[72] dst_addr[15432]
+[0b 00000000 10000000 00000000 00000010 01000000 00000000 00111100 01001000]  [63-54][opcode][10] [53-27][src_offset_addr][1001000] [26-0][dst_addr][111100 01001000]
+
+[0x00c0000000000000] DMA_IN_INFO_3: [0x03] src_hsize[0] src_wsize[0] src_ch[0] src_layout[stream] dst_layout[stream]
+[0b 00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11] [53-38][src_hsize][0] [37-22][src_wsize][0] [21-6][src_ch][0] [5-3][src_layout][0] [3-0][dst_layout][0]
+
+[0x010000000001c000] DMA_IN_INFO_4: [0x04] data_type[para] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[7] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00000000 00000000 00000000 00000000 00000001 11000000 00000000]  [63-54][opcode][100] [53-52][data_type][0] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][111] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0xfd20e0fff2a00000] MODULE_TAIL_NPU_DMA_IN_CH1: [0x3f4] check_sum[2206465994] Preemption_indi[1]
+[0b 11111101 00100000 11100000 11111111 11110010 10100000 00000000 00000000]  [63-54][opcode][11 11110100] [53-22][check_sum][ 10000011 10000011 11111111 11001010] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 20   <---------
+---------------------------------------------
+hwlayer_name: mpu1.Conv2d.layer.Conv_267_im_0.9
+---------------------------------------------
+set depends:
+  0. npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.9.fetch_param_data.layer
+clr depends: null
+---------------------------------------------
+[0xf680040000000100] MODULE_SYNC_MPU1: [0x3da] sync_set[npu_dma_in_ch1] sync_clr[] sync_id[4]
+[0b 11110110 10000000 00000100 00000000 00000000 00000000 00000001 00000000]  [63-54][opcode][11 11011010] [53-38][sync_set][10000] [37-22][sync_clr][0] [21-6][sync_id][100] [5-0][reserve][0]
+
+[0xfa8002c040000100] MODULE_HEADER_MPU1: [0x3ea] cmd_num[11] hardlayer_num[1] cmd_id[4]
+[0b 11111010 10000000 00000010 11000000 01000000 00000000 00000001 00000000]  [63-54][opcode][11 11101010] [53-38][cmd_num][1011] [37-30][hardlayer_num][1] [29-6][cmd_id][100] [5-0][reserve][0]
+
+[0x000009c027000507] MPU_LOAD_INFO_FM_DATA0: [0x00] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp8] dtype_exp[4] dtype_bias[7]
+[0b 00000000 00000000 00001001 11000000 00100111 00000000 00000101 00000111]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][111]
+
+[0x0040008002800512] MPU_LOAD_INFO_FM_DATA1: [0x01] line_stride[16] chx_stride[640] load_num[1] work_mode[mac_core] blk_bubble[18]
+[0b 00000000 01000000 00000000 10000000 00000010 10000000 00000101 00010010]  [63-54][opcode][1] [53-35][line_stride][10000] [34-16][chx_stride][10 10000000] [15-10][load_num][1] [9-8][work_mode][1] [7-0][blk_bubble][10010]
+
+[0x008027009c01c010] MPU_LOAD_INFO_FM_DATA2: [0x02] blk_hsize[39] blk_wsize[39] blk_ch[7] w_blknum[1] split_h_en[disable]
+[0b 00000000 10000000 00100111 00000000 10011100 00000001 11000000 00010000]  [63-54][opcode][10] [53-40][blk_hsize][100111] [39-26][blk_wsize][100111] [25-14][blk_ch][111] [13-4][w_blknum][1] [3-3][split_h_en][0] [2-0][reserve][0]
+
+[0x080f740000000000] MPU_LOAD_NO_CASCADE_BUF_FM_LOAD_0_1: [0x20] addr0[126592] addr1[0] ch0[0] ch1[0]
+[0b 00001000 00001111 01110100 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100000] [53-35][addr0][1 11101110 10000000] [34-16][addr1][0] [15-8][ch0][0] [7-0][ch1][0]
+
+[0x00c83c4c03c4850b] MPU_LOAD_INFO_PARAM_DATA0: [0x03] param_alive[bias] bias_addr[15436] mode[non_cascade] wgt_addr[15432] dtype[Fp8] dtype_exp[4] dtype_bias[11]
+[0b 00000000 11001000 00111100 01001100 00000011 11000100 10000101 00001011]  [63-54][opcode][11] [53-51][param_alive][1] [50-32][bias_addr][111100 01001100] [31-31][mode][0] [30-12][wgt_addr][111100 01001000] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][1011]
+
+[0x0100000000206008] MPU_LOAD_INFO_PARAM_DATA1: [0x04] weight_ich_stride[0] weight_och_stride[32] mac_out_dtype[Fp16] mac_out_exp[0] mac_out_bias[0] bias_exp[4]
+[0b 00000001 00000000 00000000 00000000 00000000 00100000 01100000 00001000]  [63-54][opcode][100] [53-35][weight_ich_stride][0] [34-16][weight_och_stride][100000] [15-13][mac_out_dtype][11] [12-10][mac_out_exp][0] [9-4][mac_out_bias][0] [3-1][bias_exp][100] [0-0][reserve][0]
+
+[0x0140000000001c00] MPU_LOAD_INFO_PARAM_DATA2: [0x05] factor_addr[0] lut_addr[0] bias_bias[7] factor_scale_indi[0] lut_yk_exp[0] lut_yk_bias[0]
+[0b 00000001 01000000 00000000 00000000 00000000 00000000 00011100 00000000]  [63-54][opcode][101] [53-35][factor_addr][0] [34-16][lut_addr][0] [15-10][bias_bias][111] [9-9][factor_scale_indi][0] [8-6][lut_yk_exp][0] [5-0][lut_yk_bias][0]
+
+[0x14133100002245c9] MPU_CONV: [0x50] os_en[disable] calc_rate[1] kernel_h[3] kernel_w[3] stride_h[disable] stride_w[disable] pad_mode[constant_pad] pad_const[0] padsize_hu[1] padsize_hd[1] padsize_wl[1] padsize_wr[1] group[7] dilation_h[1] dilation_w[1]
+[0b 00010100 00010011 00110001 00000000 00000000 00100010 01000101 11001001]  [63-54][opcode][1010000] [53-53][os_en][0] [52-52][calc_rate][1] [51-48][kernel_h][11] [47-44][kernel_w][11] [43-43][stride_h][0] [42-42][stride_w][0] [41-40][pad_mode][1] [39-24][pad_const][0] [23-21][padsize_hu][1] [20-17][padsize_hd][1] [16-14][padsize_wl][1] [13-10][padsize_wr][1] [9-6][group][111] [5-3][dilation_h][1] [2-0][dilation_w][1]
+
+[0x0c0009c027000600] MPU_STORE_FM_DATA_0: [0x30] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001100 00000000 00001001 11000000 00100111 00000000 00000110 00000000]  [63-54][opcode][110000] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0c4006001e0021d0] MPU_STORE_FM_DATA_1: [0x31] line_stride[24] chx_stride[960] addr[8656]
+[0b 00001100 01000000 00000110 00000000 00011110 00000000 00100001 11010000]  [63-54][opcode][110001] [53-38][line_stride][11000] [37-19][chx_stride][11 11000000] [18-0][addr][100001 11010000]
+
+[0x2000000000100000] MPU_SPLIT_H: [0x80] ifm_split_h_size[0] ofm_split_h_size[0] pipe_bubble[64] mac_mode[0] conv1x1_wgt_mode[0]
+[0b 00100000 00000000 00000000 00000000 00000000 00010000 00000000 00000000]  [63-54][opcode][ 10000000] [53-38][ifm_split_h_size][0] [37-22][ofm_split_h_size][0] [21-14][pipe_bubble][1000000] [13-11][mac_mode][0] [10-10][conv1x1_wgt_mode][0] [9-0][reserve][0]
+
+[0xfea85117b8600000] MODULE_TAIL_MPU1: [0x3fa] check_sum[2705612513] Preemption_indi[1]
+[0b 11111110 10101000 01010001 00010111 10111000 01100000 00000000 00000000]  [63-54][opcode][11 11111010] [53-22][check_sum][ 10100001 01000100 01011110 11100001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 21   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.10.fetch_param_data.layer
+---------------------------------------------
+set depends: null
+clr depends:
+  0. mpu0.Conv2d.layer.Conv_267_im_0.10
+---------------------------------------------
+[0xf500000000400280] MODULE_SYNC_NPU_DMA_IN_CH1: [0x3d4] sync_set[] sync_clr[mpu0] sync_id[10]
+[0b 11110101 00000000 00000000 00000000 00000000 01000000 00000010 10000000]  [63-54][opcode][11 11010100] [53-38][sync_set][0] [37-22][sync_clr][1] [21-6][sync_id][1010] [5-0][reserve][0]
+
+[0xf900014040000280] MODULE_HEADER_NPU_DMA_IN_CH1: [0x3e4] cmd_num[5] hardlayer_num[1] cmd_id[10]
+[0b 11111001 00000000 00000001 01000000 01000000 00000000 00000010 10000000]  [63-54][opcode][11 11100100] [53-38][cmd_num][101] [37-30][hardlayer_num][1] [29-6][cmd_id][1010] [5-0][reserve][0]
+
+[0x0002000008000000] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[16bit] src_line_size[8] src_line_stride[0]
+[0b 00000000 00000010 00000000 00000000 00001000 00000000 00000000 00000000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][10] [47-24][src_line_size][1000] [23-0][src_line_stride][0]
+
+[0x0040000000000000] DMA_IN_INFO_1: [0x01] src_patch_size[0] src_patch_stride[0]
+[0b 00000000 01000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1] [53-27][src_patch_size][0] [26-0][src_patch_stride][0]
+
+[0x0080000280003c50] DMA_IN_INFO_2: [0x02] src_offset_addr[80] dst_addr[15440]
+[0b 00000000 10000000 00000000 00000010 10000000 00000000 00111100 01010000]  [63-54][opcode][10] [53-27][src_offset_addr][1010000] [26-0][dst_addr][111100 01010000]
+
+[0x00c0000000000000] DMA_IN_INFO_3: [0x03] src_hsize[0] src_wsize[0] src_ch[0] src_layout[stream] dst_layout[stream]
+[0b 00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11] [53-38][src_hsize][0] [37-22][src_wsize][0] [21-6][src_ch][0] [5-3][src_layout][0] [3-0][dst_layout][0]
+
+[0x010000000001c000] DMA_IN_INFO_4: [0x04] data_type[para] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[7] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00000000 00000000 00000000 00000000 00000001 11000000 00000000]  [63-54][opcode][100] [53-52][data_type][0] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][111] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0xfd30e10004a00000] MODULE_TAIL_NPU_DMA_IN_CH1: [0x3f4] check_sum[3280207890] Preemption_indi[1]
+[0b 11111101 00110000 11100001 00000000 00000100 10100000 00000000 00000000]  [63-54][opcode][11 11110100] [53-22][check_sum][ 11000011 10000100 00000000 00010010] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 22   <---------
+---------------------------------------------
+hwlayer_name: mpu0.Conv2d.layer.Conv_267_im_0.10
+---------------------------------------------
+set depends:
+  0. npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.10.fetch_param_data.layer
+clr depends: null
+---------------------------------------------
+[0xf400040000000140] MODULE_SYNC_MPU0: [0x3d0] sync_set[npu_dma_in_ch1] sync_clr[] sync_id[5]
+[0b 11110100 00000000 00000100 00000000 00000000 00000000 00000001 01000000]  [63-54][opcode][11 11010000] [53-38][sync_set][10000] [37-22][sync_clr][0] [21-6][sync_id][101] [5-0][reserve][0]
+
+[0xf80002c040000140] MODULE_HEADER_MPU0: [0x3e0] cmd_num[11] hardlayer_num[1] cmd_id[5]
+[0b 11111000 00000000 00000010 11000000 01000000 00000000 00000001 01000000]  [63-54][opcode][11 11100000] [53-38][cmd_num][1011] [37-30][hardlayer_num][1] [29-6][cmd_id][101] [5-0][reserve][0]
+
+[0x000009c027000507] MPU_LOAD_INFO_FM_DATA0: [0x00] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp8] dtype_exp[4] dtype_bias[7]
+[0b 00000000 00000000 00001001 11000000 00100111 00000000 00000101 00000111]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][111]
+
+[0x0040008002800512] MPU_LOAD_INFO_FM_DATA1: [0x01] line_stride[16] chx_stride[640] load_num[1] work_mode[mac_core] blk_bubble[18]
+[0b 00000000 01000000 00000000 10000000 00000010 10000000 00000101 00010010]  [63-54][opcode][1] [53-35][line_stride][10000] [34-16][chx_stride][10 10000000] [15-10][load_num][1] [9-8][work_mode][1] [7-0][blk_bubble][10010]
+
+[0x008027009c01c010] MPU_LOAD_INFO_FM_DATA2: [0x02] blk_hsize[39] blk_wsize[39] blk_ch[7] w_blknum[1] split_h_en[disable]
+[0b 00000000 10000000 00100111 00000000 10011100 00000001 11000000 00010000]  [63-54][opcode][10] [53-40][blk_hsize][100111] [39-26][blk_wsize][100111] [25-14][blk_ch][111] [13-4][w_blknum][1] [3-3][split_h_en][0] [2-0][reserve][0]
+
+[0x080f880000000000] MPU_LOAD_NO_CASCADE_BUF_FM_LOAD_0_1: [0x20] addr0[127232] addr1[0] ch0[0] ch1[0]
+[0b 00001000 00001111 10001000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100000] [53-35][addr0][1 11110001 00000000] [34-16][addr1][0] [15-8][ch0][0] [7-0][ch1][0]
+
+[0x00c83c5403c5050b] MPU_LOAD_INFO_PARAM_DATA0: [0x03] param_alive[bias] bias_addr[15444] mode[non_cascade] wgt_addr[15440] dtype[Fp8] dtype_exp[4] dtype_bias[11]
+[0b 00000000 11001000 00111100 01010100 00000011 11000101 00000101 00001011]  [63-54][opcode][11] [53-51][param_alive][1] [50-32][bias_addr][111100 01010100] [31-31][mode][0] [30-12][wgt_addr][111100 01010000] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][1011]
+
+[0x0100000000206008] MPU_LOAD_INFO_PARAM_DATA1: [0x04] weight_ich_stride[0] weight_och_stride[32] mac_out_dtype[Fp16] mac_out_exp[0] mac_out_bias[0] bias_exp[4]
+[0b 00000001 00000000 00000000 00000000 00000000 00100000 01100000 00001000]  [63-54][opcode][100] [53-35][weight_ich_stride][0] [34-16][weight_och_stride][100000] [15-13][mac_out_dtype][11] [12-10][mac_out_exp][0] [9-4][mac_out_bias][0] [3-1][bias_exp][100] [0-0][reserve][0]
+
+[0x0140000000001c00] MPU_LOAD_INFO_PARAM_DATA2: [0x05] factor_addr[0] lut_addr[0] bias_bias[7] factor_scale_indi[0] lut_yk_exp[0] lut_yk_bias[0]
+[0b 00000001 01000000 00000000 00000000 00000000 00000000 00011100 00000000]  [63-54][opcode][101] [53-35][factor_addr][0] [34-16][lut_addr][0] [15-10][bias_bias][111] [9-9][factor_scale_indi][0] [8-6][lut_yk_exp][0] [5-0][lut_yk_bias][0]
+
+[0x14133100002245c9] MPU_CONV: [0x50] os_en[disable] calc_rate[1] kernel_h[3] kernel_w[3] stride_h[disable] stride_w[disable] pad_mode[constant_pad] pad_const[0] padsize_hu[1] padsize_hd[1] padsize_wl[1] padsize_wr[1] group[7] dilation_h[1] dilation_w[1]
+[0b 00010100 00010011 00110001 00000000 00000000 00100010 01000101 11001001]  [63-54][opcode][1010000] [53-53][os_en][0] [52-52][calc_rate][1] [51-48][kernel_h][11] [47-44][kernel_w][11] [43-43][stride_h][0] [42-42][stride_w][0] [41-40][pad_mode][1] [39-24][pad_const][0] [23-21][padsize_hu][1] [20-17][padsize_hd][1] [16-14][padsize_wl][1] [13-10][padsize_wr][1] [9-6][group][111] [5-3][dilation_h][1] [2-0][dilation_w][1]
+
+[0x0c0009c027000600] MPU_STORE_FM_DATA_0: [0x30] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001100 00000000 00001001 11000000 00100111 00000000 00000110 00000000]  [63-54][opcode][110000] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0c4006001e002590] MPU_STORE_FM_DATA_1: [0x31] line_stride[24] chx_stride[960] addr[9616]
+[0b 00001100 01000000 00000110 00000000 00011110 00000000 00100101 10010000]  [63-54][opcode][110001] [53-38][line_stride][11000] [37-19][chx_stride][11 11000000] [18-0][addr][100101 10010000]
+
+[0x2000000000100000] MPU_SPLIT_H: [0x80] ifm_split_h_size[0] ofm_split_h_size[0] pipe_bubble[64] mac_mode[0] conv1x1_wgt_mode[0]
+[0b 00100000 00000000 00000000 00000000 00000000 00010000 00000000 00000000]  [63-54][opcode][ 10000000] [53-38][ifm_split_h_size][0] [37-22][ofm_split_h_size][0] [21-14][pipe_bubble][1000000] [13-11][mac_mode][0] [10-10][conv1x1_wgt_mode][0] [9-0][reserve][0]
+
+[0xfc27b13dba600000] MODULE_TAIL_MPU0: [0x3f0] check_sum[2663708393] Preemption_indi[1]
+[0b 11111100 00100111 10110001 00111101 10111010 01100000 00000000 00000000]  [63-54][opcode][11 11110000] [53-22][check_sum][ 10011110 11000100 11110110 11101001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 23   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.11.fetch_param_data.layer
+---------------------------------------------
+set depends: null
+clr depends:
+  0. mpu1.Conv2d.layer.Conv_267_im_0.11
+---------------------------------------------
+[0xf5000001000002c0] MODULE_SYNC_NPU_DMA_IN_CH1: [0x3d4] sync_set[] sync_clr[mpu1] sync_id[11]
+[0b 11110101 00000000 00000000 00000001 00000000 00000000 00000010 11000000]  [63-54][opcode][11 11010100] [53-38][sync_set][0] [37-22][sync_clr][100 00000000] [21-6][sync_id][1011] [5-0][reserve][0]
+
+[0xf9000140400002c0] MODULE_HEADER_NPU_DMA_IN_CH1: [0x3e4] cmd_num[5] hardlayer_num[1] cmd_id[11]
+[0b 11111001 00000000 00000001 01000000 01000000 00000000 00000010 11000000]  [63-54][opcode][11 11100100] [53-38][cmd_num][101] [37-30][hardlayer_num][1] [29-6][cmd_id][1011] [5-0][reserve][0]
+
+[0x0002000008000000] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[16bit] src_line_size[8] src_line_stride[0]
+[0b 00000000 00000010 00000000 00000000 00001000 00000000 00000000 00000000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][10] [47-24][src_line_size][1000] [23-0][src_line_stride][0]
+
+[0x0040000000000000] DMA_IN_INFO_1: [0x01] src_patch_size[0] src_patch_stride[0]
+[0b 00000000 01000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1] [53-27][src_patch_size][0] [26-0][src_patch_stride][0]
+
+[0x00800002c0003c58] DMA_IN_INFO_2: [0x02] src_offset_addr[88] dst_addr[15448]
+[0b 00000000 10000000 00000000 00000010 11000000 00000000 00111100 01011000]  [63-54][opcode][10] [53-27][src_offset_addr][1011000] [26-0][dst_addr][111100 01011000]
+
+[0x00c0000000000000] DMA_IN_INFO_3: [0x03] src_hsize[0] src_wsize[0] src_ch[0] src_layout[stream] dst_layout[stream]
+[0b 00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11] [53-38][src_hsize][0] [37-22][src_wsize][0] [21-6][src_ch][0] [5-3][src_layout][0] [3-0][dst_layout][0]
+
+[0x010000000001c000] DMA_IN_INFO_4: [0x04] data_type[para] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[7] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00000000 00000000 00000000 00000000 00000001 11000000 00000000]  [63-54][opcode][100] [53-52][data_type][0] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][111] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0xfd00e10016a00000] MODULE_TAIL_NPU_DMA_IN_CH1: [0x3f4] check_sum[58982490] Preemption_indi[1]
+[0b 11111101 00000000 11100001 00000000 00010110 10100000 00000000 00000000]  [63-54][opcode][11 11110100] [53-22][check_sum][11 10000100 00000000 01011010] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 24   <---------
+---------------------------------------------
+hwlayer_name: mpu1.Conv2d.layer.Conv_267_im_0.11
+---------------------------------------------
+set depends:
+  0. npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.11.fetch_param_data.layer
+clr depends: null
+---------------------------------------------
+[0xf680040000000140] MODULE_SYNC_MPU1: [0x3da] sync_set[npu_dma_in_ch1] sync_clr[] sync_id[5]
+[0b 11110110 10000000 00000100 00000000 00000000 00000000 00000001 01000000]  [63-54][opcode][11 11011010] [53-38][sync_set][10000] [37-22][sync_clr][0] [21-6][sync_id][101] [5-0][reserve][0]
+
+[0xfa8002c040000140] MODULE_HEADER_MPU1: [0x3ea] cmd_num[11] hardlayer_num[1] cmd_id[5]
+[0b 11111010 10000000 00000010 11000000 01000000 00000000 00000001 01000000]  [63-54][opcode][11 11101010] [53-38][cmd_num][1011] [37-30][hardlayer_num][1] [29-6][cmd_id][101] [5-0][reserve][0]
+
+[0x000009c027000507] MPU_LOAD_INFO_FM_DATA0: [0x00] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp8] dtype_exp[4] dtype_bias[7]
+[0b 00000000 00000000 00001001 11000000 00100111 00000000 00000101 00000111]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][111]
+
+[0x0040008002800512] MPU_LOAD_INFO_FM_DATA1: [0x01] line_stride[16] chx_stride[640] load_num[1] work_mode[mac_core] blk_bubble[18]
+[0b 00000000 01000000 00000000 10000000 00000010 10000000 00000101 00010010]  [63-54][opcode][1] [53-35][line_stride][10000] [34-16][chx_stride][10 10000000] [15-10][load_num][1] [9-8][work_mode][1] [7-0][blk_bubble][10010]
+
+[0x008027009c01c010] MPU_LOAD_INFO_FM_DATA2: [0x02] blk_hsize[39] blk_wsize[39] blk_ch[7] w_blknum[1] split_h_en[disable]
+[0b 00000000 10000000 00100111 00000000 10011100 00000001 11000000 00010000]  [63-54][opcode][10] [53-40][blk_hsize][100111] [39-26][blk_wsize][100111] [25-14][blk_ch][111] [13-4][w_blknum][1] [3-3][split_h_en][0] [2-0][reserve][0]
+
+[0x080f9c0000000000] MPU_LOAD_NO_CASCADE_BUF_FM_LOAD_0_1: [0x20] addr0[127872] addr1[0] ch0[0] ch1[0]
+[0b 00001000 00001111 10011100 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100000] [53-35][addr0][1 11110011 10000000] [34-16][addr1][0] [15-8][ch0][0] [7-0][ch1][0]
+
+[0x00c83c5c03c5850b] MPU_LOAD_INFO_PARAM_DATA0: [0x03] param_alive[bias] bias_addr[15452] mode[non_cascade] wgt_addr[15448] dtype[Fp8] dtype_exp[4] dtype_bias[11]
+[0b 00000000 11001000 00111100 01011100 00000011 11000101 10000101 00001011]  [63-54][opcode][11] [53-51][param_alive][1] [50-32][bias_addr][111100 01011100] [31-31][mode][0] [30-12][wgt_addr][111100 01011000] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][1011]
+
+[0x0100000000206008] MPU_LOAD_INFO_PARAM_DATA1: [0x04] weight_ich_stride[0] weight_och_stride[32] mac_out_dtype[Fp16] mac_out_exp[0] mac_out_bias[0] bias_exp[4]
+[0b 00000001 00000000 00000000 00000000 00000000 00100000 01100000 00001000]  [63-54][opcode][100] [53-35][weight_ich_stride][0] [34-16][weight_och_stride][100000] [15-13][mac_out_dtype][11] [12-10][mac_out_exp][0] [9-4][mac_out_bias][0] [3-1][bias_exp][100] [0-0][reserve][0]
+
+[0x0140000000001c00] MPU_LOAD_INFO_PARAM_DATA2: [0x05] factor_addr[0] lut_addr[0] bias_bias[7] factor_scale_indi[0] lut_yk_exp[0] lut_yk_bias[0]
+[0b 00000001 01000000 00000000 00000000 00000000 00000000 00011100 00000000]  [63-54][opcode][101] [53-35][factor_addr][0] [34-16][lut_addr][0] [15-10][bias_bias][111] [9-9][factor_scale_indi][0] [8-6][lut_yk_exp][0] [5-0][lut_yk_bias][0]
+
+[0x14133100002245c9] MPU_CONV: [0x50] os_en[disable] calc_rate[1] kernel_h[3] kernel_w[3] stride_h[disable] stride_w[disable] pad_mode[constant_pad] pad_const[0] padsize_hu[1] padsize_hd[1] padsize_wl[1] padsize_wr[1] group[7] dilation_h[1] dilation_w[1]
+[0b 00010100 00010011 00110001 00000000 00000000 00100010 01000101 11001001]  [63-54][opcode][1010000] [53-53][os_en][0] [52-52][calc_rate][1] [51-48][kernel_h][11] [47-44][kernel_w][11] [43-43][stride_h][0] [42-42][stride_w][0] [41-40][pad_mode][1] [39-24][pad_const][0] [23-21][padsize_hu][1] [20-17][padsize_hd][1] [16-14][padsize_wl][1] [13-10][padsize_wr][1] [9-6][group][111] [5-3][dilation_h][1] [2-0][dilation_w][1]
+
+[0x0c0009c027000600] MPU_STORE_FM_DATA_0: [0x30] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001100 00000000 00001001 11000000 00100111 00000000 00000110 00000000]  [63-54][opcode][110000] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0c4006001e002950] MPU_STORE_FM_DATA_1: [0x31] line_stride[24] chx_stride[960] addr[10576]
+[0b 00001100 01000000 00000110 00000000 00011110 00000000 00101001 01010000]  [63-54][opcode][110001] [53-38][line_stride][11000] [37-19][chx_stride][11 11000000] [18-0][addr][101001 01010000]
+
+[0x2000000000100000] MPU_SPLIT_H: [0x80] ifm_split_h_size[0] ofm_split_h_size[0] pipe_bubble[64] mac_mode[0] conv1x1_wgt_mode[0]
+[0b 00100000 00000000 00000000 00000000 00000000 00010000 00000000 00000000]  [63-54][opcode][ 10000000] [53-38][ifm_split_h_size][0] [37-22][ofm_split_h_size][0] [21-14][pipe_bubble][1000000] [13-11][mac_mode][0] [10-10][conv1x1_wgt_mode][0] [9-0][reserve][0]
+
+[0xfea85163ac600000] MODULE_TAIL_MPU1: [0x3fa] check_sum[2705690289] Preemption_indi[1]
+[0b 11111110 10101000 01010001 01100011 10101100 01100000 00000000 00000000]  [63-54][opcode][11 11111010] [53-22][check_sum][ 10100001 01000101 10001110 10110001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 25   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.12.fetch_param_data.layer
+---------------------------------------------
+set depends: null
+clr depends:
+  0. mpu0.Conv2d.layer.Conv_267_im_0.12
+---------------------------------------------
+[0xf500000000400300] MODULE_SYNC_NPU_DMA_IN_CH1: [0x3d4] sync_set[] sync_clr[mpu0] sync_id[12]
+[0b 11110101 00000000 00000000 00000000 00000000 01000000 00000011 00000000]  [63-54][opcode][11 11010100] [53-38][sync_set][0] [37-22][sync_clr][1] [21-6][sync_id][1100] [5-0][reserve][0]
+
+[0xf900014040000300] MODULE_HEADER_NPU_DMA_IN_CH1: [0x3e4] cmd_num[5] hardlayer_num[1] cmd_id[12]
+[0b 11111001 00000000 00000001 01000000 01000000 00000000 00000011 00000000]  [63-54][opcode][11 11100100] [53-38][cmd_num][101] [37-30][hardlayer_num][1] [29-6][cmd_id][1100] [5-0][reserve][0]
+
+[0x0002000008000000] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[16bit] src_line_size[8] src_line_stride[0]
+[0b 00000000 00000010 00000000 00000000 00001000 00000000 00000000 00000000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][10] [47-24][src_line_size][1000] [23-0][src_line_stride][0]
+
+[0x0040000000000000] DMA_IN_INFO_1: [0x01] src_patch_size[0] src_patch_stride[0]
+[0b 00000000 01000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1] [53-27][src_patch_size][0] [26-0][src_patch_stride][0]
+
+[0x0080000300003c60] DMA_IN_INFO_2: [0x02] src_offset_addr[96] dst_addr[15456]
+[0b 00000000 10000000 00000000 00000011 00000000 00000000 00111100 01100000]  [63-54][opcode][10] [53-27][src_offset_addr][1100000] [26-0][dst_addr][111100 01100000]
+
+[0x00c0000000000000] DMA_IN_INFO_3: [0x03] src_hsize[0] src_wsize[0] src_ch[0] src_layout[stream] dst_layout[stream]
+[0b 00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11] [53-38][src_hsize][0] [37-22][src_wsize][0] [21-6][src_ch][0] [5-3][src_layout][0] [3-0][dst_layout][0]
+
+[0x010000000001c000] DMA_IN_INFO_4: [0x04] data_type[para] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[7] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00000000 00000000 00000000 00000000 00000001 11000000 00000000]  [63-54][opcode][100] [53-52][data_type][0] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][111] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0xfd10e10028e00000] MODULE_TAIL_NPU_DMA_IN_CH1: [0x3f4] check_sum[1132724387] Preemption_indi[1]
+[0b 11111101 00010000 11100001 00000000 00101000 11100000 00000000 00000000]  [63-54][opcode][11 11110100] [53-22][check_sum][1000011 10000100 00000000 10100011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 26   <---------
+---------------------------------------------
+hwlayer_name: mpu0.Conv2d.layer.Conv_267_im_0.12
+---------------------------------------------
+set depends:
+  0. npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.12.fetch_param_data.layer
+clr depends: null
+---------------------------------------------
+[0xf400040000000180] MODULE_SYNC_MPU0: [0x3d0] sync_set[npu_dma_in_ch1] sync_clr[] sync_id[6]
+[0b 11110100 00000000 00000100 00000000 00000000 00000000 00000001 10000000]  [63-54][opcode][11 11010000] [53-38][sync_set][10000] [37-22][sync_clr][0] [21-6][sync_id][110] [5-0][reserve][0]
+
+[0xf80002c040000180] MODULE_HEADER_MPU0: [0x3e0] cmd_num[11] hardlayer_num[1] cmd_id[6]
+[0b 11111000 00000000 00000010 11000000 01000000 00000000 00000001 10000000]  [63-54][opcode][11 11100000] [53-38][cmd_num][1011] [37-30][hardlayer_num][1] [29-6][cmd_id][110] [5-0][reserve][0]
+
+[0x000009c027000507] MPU_LOAD_INFO_FM_DATA0: [0x00] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp8] dtype_exp[4] dtype_bias[7]
+[0b 00000000 00000000 00001001 11000000 00100111 00000000 00000101 00000111]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][111]
+
+[0x0040008002800512] MPU_LOAD_INFO_FM_DATA1: [0x01] line_stride[16] chx_stride[640] load_num[1] work_mode[mac_core] blk_bubble[18]
+[0b 00000000 01000000 00000000 10000000 00000010 10000000 00000101 00010010]  [63-54][opcode][1] [53-35][line_stride][10000] [34-16][chx_stride][10 10000000] [15-10][load_num][1] [9-8][work_mode][1] [7-0][blk_bubble][10010]
+
+[0x008027009c01c010] MPU_LOAD_INFO_FM_DATA2: [0x02] blk_hsize[39] blk_wsize[39] blk_ch[7] w_blknum[1] split_h_en[disable]
+[0b 00000000 10000000 00100111 00000000 10011100 00000001 11000000 00010000]  [63-54][opcode][10] [53-40][blk_hsize][100111] [39-26][blk_wsize][100111] [25-14][blk_ch][111] [13-4][w_blknum][1] [3-3][split_h_en][0] [2-0][reserve][0]
+
+[0x080fb00000000000] MPU_LOAD_NO_CASCADE_BUF_FM_LOAD_0_1: [0x20] addr0[128512] addr1[0] ch0[0] ch1[0]
+[0b 00001000 00001111 10110000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100000] [53-35][addr0][1 11110110 00000000] [34-16][addr1][0] [15-8][ch0][0] [7-0][ch1][0]
+
+[0x00c83c6403c6050b] MPU_LOAD_INFO_PARAM_DATA0: [0x03] param_alive[bias] bias_addr[15460] mode[non_cascade] wgt_addr[15456] dtype[Fp8] dtype_exp[4] dtype_bias[11]
+[0b 00000000 11001000 00111100 01100100 00000011 11000110 00000101 00001011]  [63-54][opcode][11] [53-51][param_alive][1] [50-32][bias_addr][111100 01100100] [31-31][mode][0] [30-12][wgt_addr][111100 01100000] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][1011]
+
+[0x0100000000206008] MPU_LOAD_INFO_PARAM_DATA1: [0x04] weight_ich_stride[0] weight_och_stride[32] mac_out_dtype[Fp16] mac_out_exp[0] mac_out_bias[0] bias_exp[4]
+[0b 00000001 00000000 00000000 00000000 00000000 00100000 01100000 00001000]  [63-54][opcode][100] [53-35][weight_ich_stride][0] [34-16][weight_och_stride][100000] [15-13][mac_out_dtype][11] [12-10][mac_out_exp][0] [9-4][mac_out_bias][0] [3-1][bias_exp][100] [0-0][reserve][0]
+
+[0x0140000000001c00] MPU_LOAD_INFO_PARAM_DATA2: [0x05] factor_addr[0] lut_addr[0] bias_bias[7] factor_scale_indi[0] lut_yk_exp[0] lut_yk_bias[0]
+[0b 00000001 01000000 00000000 00000000 00000000 00000000 00011100 00000000]  [63-54][opcode][101] [53-35][factor_addr][0] [34-16][lut_addr][0] [15-10][bias_bias][111] [9-9][factor_scale_indi][0] [8-6][lut_yk_exp][0] [5-0][lut_yk_bias][0]
+
+[0x14133100002245c9] MPU_CONV: [0x50] os_en[disable] calc_rate[1] kernel_h[3] kernel_w[3] stride_h[disable] stride_w[disable] pad_mode[constant_pad] pad_const[0] padsize_hu[1] padsize_hd[1] padsize_wl[1] padsize_wr[1] group[7] dilation_h[1] dilation_w[1]
+[0b 00010100 00010011 00110001 00000000 00000000 00100010 01000101 11001001]  [63-54][opcode][1010000] [53-53][os_en][0] [52-52][calc_rate][1] [51-48][kernel_h][11] [47-44][kernel_w][11] [43-43][stride_h][0] [42-42][stride_w][0] [41-40][pad_mode][1] [39-24][pad_const][0] [23-21][padsize_hu][1] [20-17][padsize_hd][1] [16-14][padsize_wl][1] [13-10][padsize_wr][1] [9-6][group][111] [5-3][dilation_h][1] [2-0][dilation_w][1]
+
+[0x0c0009c027000600] MPU_STORE_FM_DATA_0: [0x30] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001100 00000000 00001001 11000000 00100111 00000000 00000110 00000000]  [63-54][opcode][110000] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0c4006001e002d10] MPU_STORE_FM_DATA_1: [0x31] line_stride[24] chx_stride[960] addr[11536]
+[0b 00001100 01000000 00000110 00000000 00011110 00000000 00101101 00010000]  [63-54][opcode][110001] [53-38][line_stride][11000] [37-19][chx_stride][11 11000000] [18-0][addr][101101 00010000]
+
+[0x2000000000100000] MPU_SPLIT_H: [0x80] ifm_split_h_size[0] ofm_split_h_size[0] pipe_bubble[64] mac_mode[0] conv1x1_wgt_mode[0]
+[0b 00100000 00000000 00000000 00000000 00000000 00010000 00000000 00000000]  [63-54][opcode][ 10000000] [53-38][ifm_split_h_size][0] [37-22][ofm_split_h_size][0] [21-14][pipe_bubble][1000000] [13-11][mac_mode][0] [10-10][conv1x1_wgt_mode][0] [9-0][reserve][0]
+
+[0xfc27b189ae600000] MODULE_TAIL_MPU0: [0x3f0] check_sum[2663786169] Preemption_indi[1]
+[0b 11111100 00100111 10110001 10001001 10101110 01100000 00000000 00000000]  [63-54][opcode][11 11110000] [53-22][check_sum][ 10011110 11000110 00100110 10111001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 27   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.13.fetch_param_data.layer
+---------------------------------------------
+set depends: null
+clr depends:
+  0. mpu1.Conv2d.layer.Conv_267_im_0.13
+---------------------------------------------
+[0xf500000100000340] MODULE_SYNC_NPU_DMA_IN_CH1: [0x3d4] sync_set[] sync_clr[mpu1] sync_id[13]
+[0b 11110101 00000000 00000000 00000001 00000000 00000000 00000011 01000000]  [63-54][opcode][11 11010100] [53-38][sync_set][0] [37-22][sync_clr][100 00000000] [21-6][sync_id][1101] [5-0][reserve][0]
+
+[0xf900014040000340] MODULE_HEADER_NPU_DMA_IN_CH1: [0x3e4] cmd_num[5] hardlayer_num[1] cmd_id[13]
+[0b 11111001 00000000 00000001 01000000 01000000 00000000 00000011 01000000]  [63-54][opcode][11 11100100] [53-38][cmd_num][101] [37-30][hardlayer_num][1] [29-6][cmd_id][1101] [5-0][reserve][0]
+
+[0x0002000008000000] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[16bit] src_line_size[8] src_line_stride[0]
+[0b 00000000 00000010 00000000 00000000 00001000 00000000 00000000 00000000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][10] [47-24][src_line_size][1000] [23-0][src_line_stride][0]
+
+[0x0040000000000000] DMA_IN_INFO_1: [0x01] src_patch_size[0] src_patch_stride[0]
+[0b 00000000 01000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1] [53-27][src_patch_size][0] [26-0][src_patch_stride][0]
+
+[0x0080000340003c68] DMA_IN_INFO_2: [0x02] src_offset_addr[104] dst_addr[15464]
+[0b 00000000 10000000 00000000 00000011 01000000 00000000 00111100 01101000]  [63-54][opcode][10] [53-27][src_offset_addr][1101000] [26-0][dst_addr][111100 01101000]
+
+[0x00c0000000000000] DMA_IN_INFO_3: [0x03] src_hsize[0] src_wsize[0] src_ch[0] src_layout[stream] dst_layout[stream]
+[0b 00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11] [53-38][src_hsize][0] [37-22][src_wsize][0] [21-6][src_ch][0] [5-3][src_layout][0] [3-0][dst_layout][0]
+
+[0x010000000001c000] DMA_IN_INFO_4: [0x04] data_type[para] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[7] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00000000 00000000 00000000 00000000 00000001 11000000 00000000]  [63-54][opcode][100] [53-52][data_type][0] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][111] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0xfd20e1003ae00000] MODULE_TAIL_NPU_DMA_IN_CH1: [0x3f4] check_sum[2206466283] Preemption_indi[1]
+[0b 11111101 00100000 11100001 00000000 00111010 11100000 00000000 00000000]  [63-54][opcode][11 11110100] [53-22][check_sum][ 10000011 10000100 00000000 11101011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 28   <---------
+---------------------------------------------
+hwlayer_name: mpu1.Conv2d.layer.Conv_267_im_0.13
+---------------------------------------------
+set depends:
+  0. npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.13.fetch_param_data.layer
+clr depends: null
+---------------------------------------------
+[0xf680040000000180] MODULE_SYNC_MPU1: [0x3da] sync_set[npu_dma_in_ch1] sync_clr[] sync_id[6]
+[0b 11110110 10000000 00000100 00000000 00000000 00000000 00000001 10000000]  [63-54][opcode][11 11011010] [53-38][sync_set][10000] [37-22][sync_clr][0] [21-6][sync_id][110] [5-0][reserve][0]
+
+[0xfa8002c040000180] MODULE_HEADER_MPU1: [0x3ea] cmd_num[11] hardlayer_num[1] cmd_id[6]
+[0b 11111010 10000000 00000010 11000000 01000000 00000000 00000001 10000000]  [63-54][opcode][11 11101010] [53-38][cmd_num][1011] [37-30][hardlayer_num][1] [29-6][cmd_id][110] [5-0][reserve][0]
+
+[0x000009c027000507] MPU_LOAD_INFO_FM_DATA0: [0x00] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp8] dtype_exp[4] dtype_bias[7]
+[0b 00000000 00000000 00001001 11000000 00100111 00000000 00000101 00000111]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][111]
+
+[0x0040008002800512] MPU_LOAD_INFO_FM_DATA1: [0x01] line_stride[16] chx_stride[640] load_num[1] work_mode[mac_core] blk_bubble[18]
+[0b 00000000 01000000 00000000 10000000 00000010 10000000 00000101 00010010]  [63-54][opcode][1] [53-35][line_stride][10000] [34-16][chx_stride][10 10000000] [15-10][load_num][1] [9-8][work_mode][1] [7-0][blk_bubble][10010]
+
+[0x008027009c01c010] MPU_LOAD_INFO_FM_DATA2: [0x02] blk_hsize[39] blk_wsize[39] blk_ch[7] w_blknum[1] split_h_en[disable]
+[0b 00000000 10000000 00100111 00000000 10011100 00000001 11000000 00010000]  [63-54][opcode][10] [53-40][blk_hsize][100111] [39-26][blk_wsize][100111] [25-14][blk_ch][111] [13-4][w_blknum][1] [3-3][split_h_en][0] [2-0][reserve][0]
+
+[0x080fc40000000000] MPU_LOAD_NO_CASCADE_BUF_FM_LOAD_0_1: [0x20] addr0[129152] addr1[0] ch0[0] ch1[0]
+[0b 00001000 00001111 11000100 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100000] [53-35][addr0][1 11111000 10000000] [34-16][addr1][0] [15-8][ch0][0] [7-0][ch1][0]
+
+[0x00c83c6c03c6850b] MPU_LOAD_INFO_PARAM_DATA0: [0x03] param_alive[bias] bias_addr[15468] mode[non_cascade] wgt_addr[15464] dtype[Fp8] dtype_exp[4] dtype_bias[11]
+[0b 00000000 11001000 00111100 01101100 00000011 11000110 10000101 00001011]  [63-54][opcode][11] [53-51][param_alive][1] [50-32][bias_addr][111100 01101100] [31-31][mode][0] [30-12][wgt_addr][111100 01101000] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][1011]
+
+[0x0100000000206008] MPU_LOAD_INFO_PARAM_DATA1: [0x04] weight_ich_stride[0] weight_och_stride[32] mac_out_dtype[Fp16] mac_out_exp[0] mac_out_bias[0] bias_exp[4]
+[0b 00000001 00000000 00000000 00000000 00000000 00100000 01100000 00001000]  [63-54][opcode][100] [53-35][weight_ich_stride][0] [34-16][weight_och_stride][100000] [15-13][mac_out_dtype][11] [12-10][mac_out_exp][0] [9-4][mac_out_bias][0] [3-1][bias_exp][100] [0-0][reserve][0]
+
+[0x0140000000001c00] MPU_LOAD_INFO_PARAM_DATA2: [0x05] factor_addr[0] lut_addr[0] bias_bias[7] factor_scale_indi[0] lut_yk_exp[0] lut_yk_bias[0]
+[0b 00000001 01000000 00000000 00000000 00000000 00000000 00011100 00000000]  [63-54][opcode][101] [53-35][factor_addr][0] [34-16][lut_addr][0] [15-10][bias_bias][111] [9-9][factor_scale_indi][0] [8-6][lut_yk_exp][0] [5-0][lut_yk_bias][0]
+
+[0x14133100002245c9] MPU_CONV: [0x50] os_en[disable] calc_rate[1] kernel_h[3] kernel_w[3] stride_h[disable] stride_w[disable] pad_mode[constant_pad] pad_const[0] padsize_hu[1] padsize_hd[1] padsize_wl[1] padsize_wr[1] group[7] dilation_h[1] dilation_w[1]
+[0b 00010100 00010011 00110001 00000000 00000000 00100010 01000101 11001001]  [63-54][opcode][1010000] [53-53][os_en][0] [52-52][calc_rate][1] [51-48][kernel_h][11] [47-44][kernel_w][11] [43-43][stride_h][0] [42-42][stride_w][0] [41-40][pad_mode][1] [39-24][pad_const][0] [23-21][padsize_hu][1] [20-17][padsize_hd][1] [16-14][padsize_wl][1] [13-10][padsize_wr][1] [9-6][group][111] [5-3][dilation_h][1] [2-0][dilation_w][1]
+
+[0x0c0009c027000600] MPU_STORE_FM_DATA_0: [0x30] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001100 00000000 00001001 11000000 00100111 00000000 00000110 00000000]  [63-54][opcode][110000] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0c4006001e0030d0] MPU_STORE_FM_DATA_1: [0x31] line_stride[24] chx_stride[960] addr[12496]
+[0b 00001100 01000000 00000110 00000000 00011110 00000000 00110000 11010000]  [63-54][opcode][110001] [53-38][line_stride][11000] [37-19][chx_stride][11 11000000] [18-0][addr][110000 11010000]
+
+[0x2000000000100000] MPU_SPLIT_H: [0x80] ifm_split_h_size[0] ofm_split_h_size[0] pipe_bubble[64] mac_mode[0] conv1x1_wgt_mode[0]
+[0b 00100000 00000000 00000000 00000000 00000000 00010000 00000000 00000000]  [63-54][opcode][ 10000000] [53-38][ifm_split_h_size][0] [37-22][ofm_split_h_size][0] [21-14][pipe_bubble][1000000] [13-11][mac_mode][0] [10-10][conv1x1_wgt_mode][0] [9-0][reserve][0]
+
+[0xfea851afa0600000] MODULE_TAIL_MPU1: [0x3fa] check_sum[2705768065] Preemption_indi[1]
+[0b 11111110 10101000 01010001 10101111 10100000 01100000 00000000 00000000]  [63-54][opcode][11 11111010] [53-22][check_sum][ 10100001 01000110 10111110 10000001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 29   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.14.fetch_param_data.layer
+---------------------------------------------
+set depends: null
+clr depends:
+  0. mpu0.Conv2d.layer.Conv_267_im_0.14
+---------------------------------------------
+[0xf500000000400380] MODULE_SYNC_NPU_DMA_IN_CH1: [0x3d4] sync_set[] sync_clr[mpu0] sync_id[14]
+[0b 11110101 00000000 00000000 00000000 00000000 01000000 00000011 10000000]  [63-54][opcode][11 11010100] [53-38][sync_set][0] [37-22][sync_clr][1] [21-6][sync_id][1110] [5-0][reserve][0]
+
+[0xf900014040000380] MODULE_HEADER_NPU_DMA_IN_CH1: [0x3e4] cmd_num[5] hardlayer_num[1] cmd_id[14]
+[0b 11111001 00000000 00000001 01000000 01000000 00000000 00000011 10000000]  [63-54][opcode][11 11100100] [53-38][cmd_num][101] [37-30][hardlayer_num][1] [29-6][cmd_id][1110] [5-0][reserve][0]
+
+[0x0002000008000000] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[16bit] src_line_size[8] src_line_stride[0]
+[0b 00000000 00000010 00000000 00000000 00001000 00000000 00000000 00000000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][10] [47-24][src_line_size][1000] [23-0][src_line_stride][0]
+
+[0x0040000000000000] DMA_IN_INFO_1: [0x01] src_patch_size[0] src_patch_stride[0]
+[0b 00000000 01000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1] [53-27][src_patch_size][0] [26-0][src_patch_stride][0]
+
+[0x0080000380003c70] DMA_IN_INFO_2: [0x02] src_offset_addr[112] dst_addr[15472]
+[0b 00000000 10000000 00000000 00000011 10000000 00000000 00111100 01110000]  [63-54][opcode][10] [53-27][src_offset_addr][1110000] [26-0][dst_addr][111100 01110000]
+
+[0x00c0000000000000] DMA_IN_INFO_3: [0x03] src_hsize[0] src_wsize[0] src_ch[0] src_layout[stream] dst_layout[stream]
+[0b 00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11] [53-38][src_hsize][0] [37-22][src_wsize][0] [21-6][src_ch][0] [5-3][src_layout][0] [3-0][dst_layout][0]
+
+[0x010000000001c000] DMA_IN_INFO_4: [0x04] data_type[para] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[7] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00000000 00000000 00000000 00000000 00000001 11000000 00000000]  [63-54][opcode][100] [53-52][data_type][0] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][111] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0xfd30e1004ce00000] MODULE_TAIL_NPU_DMA_IN_CH1: [0x3f4] check_sum[3280208179] Preemption_indi[1]
+[0b 11111101 00110000 11100001 00000000 01001100 11100000 00000000 00000000]  [63-54][opcode][11 11110100] [53-22][check_sum][ 11000011 10000100 00000001 00110011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 30   <---------
+---------------------------------------------
+hwlayer_name: mpu0.Conv2d.layer.Conv_267_im_0.14
+---------------------------------------------
+set depends:
+  0. npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.14.fetch_param_data.layer
+clr depends:
+  0. npu_dma_out.DmaOut.layer.copy_out_482
+---------------------------------------------
+[0xf4000400080001c0] MODULE_SYNC_MPU0: [0x3d0] sync_set[npu_dma_in_ch1] sync_clr[npu_dma_out] sync_id[7]
+[0b 11110100 00000000 00000100 00000000 00001000 00000000 00000001 11000000]  [63-54][opcode][11 11010000] [53-38][sync_set][10000] [37-22][sync_clr][100000] [21-6][sync_id][111] [5-0][reserve][0]
+
+[0xf80002c0400001c0] MODULE_HEADER_MPU0: [0x3e0] cmd_num[11] hardlayer_num[1] cmd_id[7]
+[0b 11111000 00000000 00000010 11000000 01000000 00000000 00000001 11000000]  [63-54][opcode][11 11100000] [53-38][cmd_num][1011] [37-30][hardlayer_num][1] [29-6][cmd_id][111] [5-0][reserve][0]
+
+[0x000009c027000507] MPU_LOAD_INFO_FM_DATA0: [0x00] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp8] dtype_exp[4] dtype_bias[7]
+[0b 00000000 00000000 00001001 11000000 00100111 00000000 00000101 00000111]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][111]
+
+[0x0040008002800512] MPU_LOAD_INFO_FM_DATA1: [0x01] line_stride[16] chx_stride[640] load_num[1] work_mode[mac_core] blk_bubble[18]
+[0b 00000000 01000000 00000000 10000000 00000010 10000000 00000101 00010010]  [63-54][opcode][1] [53-35][line_stride][10000] [34-16][chx_stride][10 10000000] [15-10][load_num][1] [9-8][work_mode][1] [7-0][blk_bubble][10010]
+
+[0x008027009c01c010] MPU_LOAD_INFO_FM_DATA2: [0x02] blk_hsize[39] blk_wsize[39] blk_ch[7] w_blknum[1] split_h_en[disable]
+[0b 00000000 10000000 00100111 00000000 10011100 00000001 11000000 00010000]  [63-54][opcode][10] [53-40][blk_hsize][100111] [39-26][blk_wsize][100111] [25-14][blk_ch][111] [13-4][w_blknum][1] [3-3][split_h_en][0] [2-0][reserve][0]
+
+[0x080fd80000000000] MPU_LOAD_NO_CASCADE_BUF_FM_LOAD_0_1: [0x20] addr0[129792] addr1[0] ch0[0] ch1[0]
+[0b 00001000 00001111 11011000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100000] [53-35][addr0][1 11111011 00000000] [34-16][addr1][0] [15-8][ch0][0] [7-0][ch1][0]
+
+[0x00c83c7403c7050b] MPU_LOAD_INFO_PARAM_DATA0: [0x03] param_alive[bias] bias_addr[15476] mode[non_cascade] wgt_addr[15472] dtype[Fp8] dtype_exp[4] dtype_bias[11]
+[0b 00000000 11001000 00111100 01110100 00000011 11000111 00000101 00001011]  [63-54][opcode][11] [53-51][param_alive][1] [50-32][bias_addr][111100 01110100] [31-31][mode][0] [30-12][wgt_addr][111100 01110000] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][1011]
+
+[0x0100000000206008] MPU_LOAD_INFO_PARAM_DATA1: [0x04] weight_ich_stride[0] weight_och_stride[32] mac_out_dtype[Fp16] mac_out_exp[0] mac_out_bias[0] bias_exp[4]
+[0b 00000001 00000000 00000000 00000000 00000000 00100000 01100000 00001000]  [63-54][opcode][100] [53-35][weight_ich_stride][0] [34-16][weight_och_stride][100000] [15-13][mac_out_dtype][11] [12-10][mac_out_exp][0] [9-4][mac_out_bias][0] [3-1][bias_exp][100] [0-0][reserve][0]
+
+[0x0140000000001c00] MPU_LOAD_INFO_PARAM_DATA2: [0x05] factor_addr[0] lut_addr[0] bias_bias[7] factor_scale_indi[0] lut_yk_exp[0] lut_yk_bias[0]
+[0b 00000001 01000000 00000000 00000000 00000000 00000000 00011100 00000000]  [63-54][opcode][101] [53-35][factor_addr][0] [34-16][lut_addr][0] [15-10][bias_bias][111] [9-9][factor_scale_indi][0] [8-6][lut_yk_exp][0] [5-0][lut_yk_bias][0]
+
+[0x14133100002245c9] MPU_CONV: [0x50] os_en[disable] calc_rate[1] kernel_h[3] kernel_w[3] stride_h[disable] stride_w[disable] pad_mode[constant_pad] pad_const[0] padsize_hu[1] padsize_hd[1] padsize_wl[1] padsize_wr[1] group[7] dilation_h[1] dilation_w[1]
+[0b 00010100 00010011 00110001 00000000 00000000 00100010 01000101 11001001]  [63-54][opcode][1010000] [53-53][os_en][0] [52-52][calc_rate][1] [51-48][kernel_h][11] [47-44][kernel_w][11] [43-43][stride_h][0] [42-42][stride_w][0] [41-40][pad_mode][1] [39-24][pad_const][0] [23-21][padsize_hu][1] [20-17][padsize_hd][1] [16-14][padsize_wl][1] [13-10][padsize_wr][1] [9-6][group][111] [5-3][dilation_h][1] [2-0][dilation_w][1]
+
+[0x0c0009c027000600] MPU_STORE_FM_DATA_0: [0x30] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001100 00000000 00001001 11000000 00100111 00000000 00000110 00000000]  [63-54][opcode][110000] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0c4006001e003490] MPU_STORE_FM_DATA_1: [0x31] line_stride[24] chx_stride[960] addr[13456]
+[0b 00001100 01000000 00000110 00000000 00011110 00000000 00110100 10010000]  [63-54][opcode][110001] [53-38][line_stride][11000] [37-19][chx_stride][11 11000000] [18-0][addr][110100 10010000]
+
+[0x2000000000100000] MPU_SPLIT_H: [0x80] ifm_split_h_size[0] ofm_split_h_size[0] pipe_bubble[64] mac_mode[0] conv1x1_wgt_mode[0]
+[0b 00100000 00000000 00000000 00000000 00000000 00010000 00000000 00000000]  [63-54][opcode][ 10000000] [53-38][ifm_split_h_size][0] [37-22][ofm_split_h_size][0] [21-14][pipe_bubble][1000000] [13-11][mac_mode][0] [10-10][conv1x1_wgt_mode][0] [9-0][reserve][0]
+
+[0xfc27b1d5a2600000] MODULE_TAIL_MPU0: [0x3f0] check_sum[2663863945] Preemption_indi[1]
+[0b 11111100 00100111 10110001 11010101 10100010 01100000 00000000 00000000]  [63-54][opcode][11 11110000] [53-22][check_sum][ 10011110 11000111 01010110 10001001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 31   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.15.fetch_param_data.layer
+---------------------------------------------
+set depends: null
+clr depends:
+  0. mpu1.Conv2d.layer.Conv_267_im_0.15
+---------------------------------------------
+[0xf5000001000003c0] MODULE_SYNC_NPU_DMA_IN_CH1: [0x3d4] sync_set[] sync_clr[mpu1] sync_id[15]
+[0b 11110101 00000000 00000000 00000001 00000000 00000000 00000011 11000000]  [63-54][opcode][11 11010100] [53-38][sync_set][0] [37-22][sync_clr][100 00000000] [21-6][sync_id][1111] [5-0][reserve][0]
+
+[0xf9000140400003c0] MODULE_HEADER_NPU_DMA_IN_CH1: [0x3e4] cmd_num[5] hardlayer_num[1] cmd_id[15]
+[0b 11111001 00000000 00000001 01000000 01000000 00000000 00000011 11000000]  [63-54][opcode][11 11100100] [53-38][cmd_num][101] [37-30][hardlayer_num][1] [29-6][cmd_id][1111] [5-0][reserve][0]
+
+[0x0002000008000000] DMA_IN_INFO_0: [0x00] mode[non_cascade] data_from[ddr] src_bit_width[16bit] src_line_size[8] src_line_stride[0]
+[0b 00000000 00000010 00000000 00000000 00001000 00000000 00000000 00000000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_from][0] [50-48][src_bit_width][10] [47-24][src_line_size][1000] [23-0][src_line_stride][0]
+
+[0x0040000000000000] DMA_IN_INFO_1: [0x01] src_patch_size[0] src_patch_stride[0]
+[0b 00000000 01000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][1] [53-27][src_patch_size][0] [26-0][src_patch_stride][0]
+
+[0x00800003c0003c78] DMA_IN_INFO_2: [0x02] src_offset_addr[120] dst_addr[15480]
+[0b 00000000 10000000 00000000 00000011 11000000 00000000 00111100 01111000]  [63-54][opcode][10] [53-27][src_offset_addr][1111000] [26-0][dst_addr][111100 01111000]
+
+[0x00c0000000000000] DMA_IN_INFO_3: [0x03] src_hsize[0] src_wsize[0] src_ch[0] src_layout[stream] dst_layout[stream]
+[0b 00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11] [53-38][src_hsize][0] [37-22][src_wsize][0] [21-6][src_ch][0] [5-3][src_layout][0] [3-0][dst_layout][0]
+
+[0x010000000001c000] DMA_IN_INFO_4: [0x04] data_type[para] decompress_en[disable] pad_mode[no_padding] pad_const[0] pad_hsize[0] pad_wsize[0] src_base_id[7] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable]
+[0b 00000001 00000000 00000000 00000000 00000000 00000001 11000000 00000000]  [63-54][opcode][100] [53-52][data_type][0] [51-51][decompress_en][0] [50-49][pad_mode][0] [48-33][pad_const][0] [32-25][pad_hsize][0] [24-17][pad_wsize][0] [16-14][src_base_id][111] [13-11][reserve][0] [10-10][src_reuse_en][0] [9-6][src_reuse_id][0] [5-5][dst_reuse_en][0] [4-1][dst_reuse_id][0] [0-0][astype_en][0]
+
+[0xfd00e1005ee00000] MODULE_TAIL_NPU_DMA_IN_CH1: [0x3f4] check_sum[58982779] Preemption_indi[1]
+[0b 11111101 00000000 11100001 00000000 01011110 11100000 00000000 00000000]  [63-54][opcode][11 11110100] [53-22][check_sum][11 10000100 00000001 01111011] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 32   <---------
+---------------------------------------------
+hwlayer_name: mpu1.Conv2d.layer.Conv_267_im_0.15
+---------------------------------------------
+set depends:
+  0. npu_dma_in_ch1.FetchParam.layer.Conv2d.layer.Conv_267_im_0.15.fetch_param_data.layer
+clr depends:
+  0. npu_dma_out.DmaOut.layer.copy_out_482
+---------------------------------------------
+[0xf6800400080001c0] MODULE_SYNC_MPU1: [0x3da] sync_set[npu_dma_in_ch1] sync_clr[npu_dma_out] sync_id[7]
+[0b 11110110 10000000 00000100 00000000 00001000 00000000 00000001 11000000]  [63-54][opcode][11 11011010] [53-38][sync_set][10000] [37-22][sync_clr][100000] [21-6][sync_id][111] [5-0][reserve][0]
+
+[0xfa8002c0400001c0] MODULE_HEADER_MPU1: [0x3ea] cmd_num[11] hardlayer_num[1] cmd_id[7]
+[0b 11111010 10000000 00000010 11000000 01000000 00000000 00000001 11000000]  [63-54][opcode][11 11101010] [53-38][cmd_num][1011] [37-30][hardlayer_num][1] [29-6][cmd_id][111] [5-0][reserve][0]
+
+[0x000009c027000507] MPU_LOAD_INFO_FM_DATA0: [0x00] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp8] dtype_exp[4] dtype_bias[7]
+[0b 00000000 00000000 00001001 11000000 00100111 00000000 00000101 00000111]  [63-54][opcode][0] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][111]
+
+[0x0040008002800512] MPU_LOAD_INFO_FM_DATA1: [0x01] line_stride[16] chx_stride[640] load_num[1] work_mode[mac_core] blk_bubble[18]
+[0b 00000000 01000000 00000000 10000000 00000010 10000000 00000101 00010010]  [63-54][opcode][1] [53-35][line_stride][10000] [34-16][chx_stride][10 10000000] [15-10][load_num][1] [9-8][work_mode][1] [7-0][blk_bubble][10010]
+
+[0x008027009c01c010] MPU_LOAD_INFO_FM_DATA2: [0x02] blk_hsize[39] blk_wsize[39] blk_ch[7] w_blknum[1] split_h_en[disable]
+[0b 00000000 10000000 00100111 00000000 10011100 00000001 11000000 00010000]  [63-54][opcode][10] [53-40][blk_hsize][100111] [39-26][blk_wsize][100111] [25-14][blk_ch][111] [13-4][w_blknum][1] [3-3][split_h_en][0] [2-0][reserve][0]
+
+[0x080fec0000000000] MPU_LOAD_NO_CASCADE_BUF_FM_LOAD_0_1: [0x20] addr0[130432] addr1[0] ch0[0] ch1[0]
+[0b 00001000 00001111 11101100 00000000 00000000 00000000 00000000 00000000]  [63-54][opcode][100000] [53-35][addr0][1 11111101 10000000] [34-16][addr1][0] [15-8][ch0][0] [7-0][ch1][0]
+
+[0x00c83c7c03c7850b] MPU_LOAD_INFO_PARAM_DATA0: [0x03] param_alive[bias] bias_addr[15484] mode[non_cascade] wgt_addr[15480] dtype[Fp8] dtype_exp[4] dtype_bias[11]
+[0b 00000000 11001000 00111100 01111100 00000011 11000111 10000101 00001011]  [63-54][opcode][11] [53-51][param_alive][1] [50-32][bias_addr][111100 01111100] [31-31][mode][0] [30-12][wgt_addr][111100 01111000] [11-9][dtype][10] [8-6][dtype_exp][100] [5-0][dtype_bias][1011]
+
+[0x0100000000206008] MPU_LOAD_INFO_PARAM_DATA1: [0x04] weight_ich_stride[0] weight_och_stride[32] mac_out_dtype[Fp16] mac_out_exp[0] mac_out_bias[0] bias_exp[4]
+[0b 00000001 00000000 00000000 00000000 00000000 00100000 01100000 00001000]  [63-54][opcode][100] [53-35][weight_ich_stride][0] [34-16][weight_och_stride][100000] [15-13][mac_out_dtype][11] [12-10][mac_out_exp][0] [9-4][mac_out_bias][0] [3-1][bias_exp][100] [0-0][reserve][0]
+
+[0x0140000000001c00] MPU_LOAD_INFO_PARAM_DATA2: [0x05] factor_addr[0] lut_addr[0] bias_bias[7] factor_scale_indi[0] lut_yk_exp[0] lut_yk_bias[0]
+[0b 00000001 01000000 00000000 00000000 00000000 00000000 00011100 00000000]  [63-54][opcode][101] [53-35][factor_addr][0] [34-16][lut_addr][0] [15-10][bias_bias][111] [9-9][factor_scale_indi][0] [8-6][lut_yk_exp][0] [5-0][lut_yk_bias][0]
+
+[0x14133100002245c9] MPU_CONV: [0x50] os_en[disable] calc_rate[1] kernel_h[3] kernel_w[3] stride_h[disable] stride_w[disable] pad_mode[constant_pad] pad_const[0] padsize_hu[1] padsize_hd[1] padsize_wl[1] padsize_wr[1] group[7] dilation_h[1] dilation_w[1]
+[0b 00010100 00010011 00110001 00000000 00000000 00100010 01000101 11001001]  [63-54][opcode][1010000] [53-53][os_en][0] [52-52][calc_rate][1] [51-48][kernel_h][11] [47-44][kernel_w][11] [43-43][stride_h][0] [42-42][stride_w][0] [41-40][pad_mode][1] [39-24][pad_const][0] [23-21][padsize_hu][1] [20-17][padsize_hd][1] [16-14][padsize_wl][1] [13-10][padsize_wr][1] [9-6][group][111] [5-3][dilation_h][1] [2-0][dilation_w][1]
+
+[0x0c0009c027000600] MPU_STORE_FM_DATA_0: [0x30] mode[non_cascade] hsize[39] wsize[39] ch[0] dtype[Fp16] dtype_exp[0] dtype_bias[0]
+[0b 00001100 00000000 00001001 11000000 00100111 00000000 00000110 00000000]  [63-54][opcode][110000] [53-52][mode][0] [51-38][hsize][100111] [37-24][wsize][100111] [23-12][ch][0] [11-9][dtype][11] [8-6][dtype_exp][0] [5-0][dtype_bias][0]
+
+[0x0c4006001e003850] MPU_STORE_FM_DATA_1: [0x31] line_stride[24] chx_stride[960] addr[14416]
+[0b 00001100 01000000 00000110 00000000 00011110 00000000 00111000 01010000]  [63-54][opcode][110001] [53-38][line_stride][11000] [37-19][chx_stride][11 11000000] [18-0][addr][111000 01010000]
+
+[0x2000000000100000] MPU_SPLIT_H: [0x80] ifm_split_h_size[0] ofm_split_h_size[0] pipe_bubble[64] mac_mode[0] conv1x1_wgt_mode[0]
+[0b 00100000 00000000 00000000 00000000 00000000 00010000 00000000 00000000]  [63-54][opcode][ 10000000] [53-38][ifm_split_h_size][0] [37-22][ofm_split_h_size][0] [21-14][pipe_bubble][1000000] [13-11][mac_mode][0] [10-10][conv1x1_wgt_mode][0] [9-0][reserve][0]
+
+[0xfea851fb94600000] MODULE_TAIL_MPU1: [0x3fa] check_sum[2705845841] Preemption_indi[1]
+[0b 11111110 10101000 01010001 11111011 10010100 01100000 00000000 00000000]  [63-54][opcode][11 11111010] [53-22][check_sum][ 10100001 01000111 11101110 01010001] [52-21][Preemption_indi][1] [20-0][reserve][0]
+
+--------->   group: 33   <---------
+---------------------------------------------
+hwlayer_name: npu_dma_out.DmaOut.layer.copy_out_482
+---------------------------------------------
+set depends:
+  0. mpu0.Conv2d.layer.Conv_267_im_0.14
+  1. mpu1.Conv2d.layer.Conv_267_im_0.15
+clr depends: null
+---------------------------------------------
+[0xf541004000000000] MODULE_SYNC_NPU_DMA_OUT: [0x3d5] sync_set[mpu0,mpu1] sync_clr[] sync_id[0]
+[0b 11110101 01000001 00000000 01000000 00000000 00000000 00000000 00000000]  [63-54][opcode][11 11010101] [53-38][sync_set][100 00000001] [37-22][sync_clr][0] [21-6][sync_id][0] [5-0][reserve][0]
+
+[0xf940018040000000] MODULE_HEADER_NPU_DMA_OUT: [0x3e5] cmd_num[6] hardlayer_num[1] cmd_id[0] dummy_en[disable] dummy_indi[0] dummy_id[0]
+[0b 11111001 01000000 00000001 10000000 01000000 00000000 00000000 00000000]  [63-54][opcode][11 11100101] [53-38][cmd_num][110] [37-30][hardlayer_num][1] [29-6][cmd_id][0] [5-5][dummy_en][0] [4-4][dummy_indi][0] [3-1][dummy_id][0] [0-0][reserve][0]
+
+[0x0002000018000018] DMA_OUT_INFO_0: [0x00] mode[non_cascade] data_to[ddr] src_bit_width[16bit] src_line_size[24] src_line_stride[24]
+[0b 00000000 00000010 00000000 00000000 00011000 00000000 00000000 00011000]  [63-54][opcode][0] [53-53][mode][0] [52-51][data_to][0] [50-48][src_bit_width][10] [47-24][src_line_size][11000] [23-0][src_line_stride][11000]
+
+[0x0040001e000003c0] DMA_OUT_INFO_1: [0x01] src_patch_size[960] src_patch_stride[960]
+[0b 00000000 01000000 00000000 00011110 00000000 00000000 00000011 11000000]  [63-54][opcode][1] [53-27][src_patch_size][11 11000000] [26-0][src_patch_stride][11 11000000]
+
+[0x0080000080000000] DMA_OUT_INFO_2: [0x02] src_addr[16] dst_offset_addr[0]
+[0b 00000000 10000000 00000000 00000000 10000000 00000000 00000000 00000000]  [63-54][opcode][10] [53-27][src_addr][10000] [26-0][dst_offset_addr][0]
+
+[0x00c00000c00003c0] DMA_OUT_INFO_3: [0x03] dst_line_stride[3] dst_patch_stride[120]
+[0b 00000000 11000000 00000000 00000000 11000000 00000000 00000011 11000000]  [63-54][opcode][11] [53-30][dst_line_stride][11] [29-3][dst_patch_stride][1111000] [2-0][reserve][0]
+
+[0x010009c009c01fd9] DMA_OUT_INFO_4: [0x04] src_hsize[39] src_wsize[39] src_ch[127] src_layout[npufmt] dst_layout[nchw]
+[0b 00000001 00000000 00001001 11000000 00001001 11000000 00011111 11011001]  [63-54][opcode][100] [53-38][src_hsize][100111] [37-22][src_wsize][100111] [21-6][src_ch][1111111] [5-3][src_layout][11] [3-0][dst_layout][1]
+
+[0x0150000000009200] DMA_OUT_INFO_5: [0x05] data_type[feature_map] compress_en[disable] depad_en[disable] depad_hsize[0] depad_wsize[0] dst_base_id[0] src_reuse_en[disable] src_reuse_id[0] dst_reuse_en[disable] dst_reuse_id[0] astype_en[disable] dst_bit_width[16bit] src_dtype[fp] dst_dtype[fp]
+[0b 00000001 01010000 00000000 00000000 00000000 00000000 10010010 00000000]  [63-54][opcode][101] [53-52][data_type][1] [51-51][compress_en][0] [50-50][depad_en][0] [49-42][depad_hsize][0] [41-34][depad_wsize][0] [33-31][dst_base_id][0] [30-28][reserve][0] [27-27][src_reuse_en][0] [26-23][src_reuse_id][0] [22-22][dst_reuse_en][0] [21-18][dst_reuse_id][0] [17-17][astype_en][0] [16-14][dst_bit_width][10] [13-11][src_dtype][10] [10-8][dst_dtype][10] [7-0][reserve][0]
+
+[0xfd67b4b133e00000] MODULE_TAIL_NPU_DMA_OUT: [0x3f5] check_sum[2664613071] Preemption_indi[1]
+[0b 11111101 01100111 10110100 10110001 00110011 11100000 00000000 00000000]  [63-54][opcode][11 11110101] [53-22][check_sum][ 10011110 11010010 11000100 11001111] [52-21][Preemption_indi][1] [20-0][reserve][0]
+

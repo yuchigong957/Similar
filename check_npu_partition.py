@@ -498,6 +498,38 @@ def resolve_tensor_file(tensor_name, search_dirs, exts=(".bin", ".tensorproto", 
     return None
 
 
+def _tensor_shape(tensor):
+    if getattr(tensor, "dims", None):
+        return [int(d) for d in tensor.dims]
+
+    dims = []
+    for d in tensor.dims:
+        if hasattr(d, "dim_value") and d.dim_value:
+            dims.append(int(d.dim_value))
+        elif hasattr(d, "dim_param") and d.dim_param.isdigit():
+            dims.append(int(d.dim_param))
+        else:
+            return []
+    return dims
+
+
+def _reshape_if_possible(arr, tensor):
+    if arr is None:
+        return None
+
+    shape = _tensor_shape(tensor)
+    if shape:
+        expect = 1
+        for s in shape:
+            expect *= s
+        if expect and arr.size == expect:
+            try:
+                arr = arr.reshape(shape)
+            except Exception:
+                pass
+    return arr
+
+
 def tensorproto_to_ndarray(path, fp8_meta=None):
     tensor = onnx.TensorProto()
     with open(path, "rb") as f:
@@ -506,8 +538,8 @@ def tensorproto_to_ndarray(path, fp8_meta=None):
     try:
         data = numpy_helper.to_array(tensor)
         if data.dtype == np.float16 or data.dtype == np.float32:
-            return data
-        return data.astype(np.float32)
+            return _reshape_if_possible(data, tensor)
+        return _reshape_if_possible(data.astype(np.float32), tensor)
     except Exception:
         pass
 
@@ -526,21 +558,45 @@ def tensorproto_to_ndarray(path, fp8_meta=None):
             onnx.TensorProto.INT64: np.int64,
         }
         if tensor.data_type in dtype_map:
-            return np.frombuffer(raw, dtype=dtype_map[tensor.data_type])
+            return _reshape_if_possible(np.frombuffer(raw, dtype=dtype_map[tensor.data_type]), tensor)
+
+        # 未注明类型：基于元素个数估算字节宽度后解码 FP16/FP32/FP8
+        shape = _tensor_shape(tensor)
+        elem_count = 0
+        if shape:
+            elem_count = 1
+            for s in shape:
+                elem_count *= s
+        if elem_count:
+            bytes_per_elem = len(raw) // elem_count
+        else:
+            bytes_per_elem = None
+
+        if bytes_per_elem == 2:
+            return _reshape_if_possible(np.frombuffer(raw, dtype=np.float16), tensor)
+        if bytes_per_elem == 4:
+            return _reshape_if_possible(np.frombuffer(raw, dtype=np.float32), tensor)
+        if bytes_per_elem == 1:
+            spec = _parse_fp8_spec(fp8_meta)
+            try:
+                decoded = fp8_to_float16_bytes(raw, **spec)
+                return _reshape_if_possible(np.frombuffer(decoded, dtype=np.float16), tensor)
+            except Exception:
+                pass
 
         # 其余情况视为 FP8 raw bytes，尝试按照 meta 解码
         spec = _parse_fp8_spec(fp8_meta)
         try:
             decoded = fp8_to_float16_bytes(raw, **spec)
-            return np.frombuffer(decoded, dtype=np.float16)
+            return _reshape_if_possible(np.frombuffer(decoded, dtype=np.float16), tensor)
         except Exception:
-            return np.frombuffer(raw, dtype=np.float32)
+            return _reshape_if_possible(np.frombuffer(raw, dtype=np.float32), tensor)
 
     # fallback on field data
     if len(tensor.float_data):
-        return np.array(tensor.float_data, dtype=np.float32)
+        return _reshape_if_possible(np.array(tensor.float_data, dtype=np.float32), tensor)
     if len(tensor.int32_data):
-        return np.array(tensor.int32_data, dtype=np.int32)
+        return _reshape_if_possible(np.array(tensor.int32_data, dtype=np.int32), tensor)
 
     return None
 
@@ -563,6 +619,20 @@ def load_tensor_data(path, default_dtype=np.float16, fp8_meta=None):
         return np.fromfile(path, dtype=default_dtype)
     except Exception:
         return None
+
+
+def cast_tensor_dtype(data, target_dtype=np.float32):
+    if data is None:
+        return None
+    try:
+        if data.dtype == target_dtype:
+            return data
+        return data.astype(target_dtype)
+    except Exception:
+        try:
+            return np.asarray(data).astype(target_dtype)
+        except Exception:
+            return data
 
 def infer_onnx_layerwise(model, res_sv_dir, input_dir, from_onnx_res=False):
     org_model = copy.deepcopy(model)
@@ -1048,28 +1118,35 @@ def run():
     org_model = copy.deepcopy(model)
 
     fp8_quant_node_outs = dict()
+    fallback_to_graphwise = False
     if not is_cunstom_fp8_model(model):
         try:
             model, _ = onnxsim.simplify(model)
             model = onnx.shape_inference.infer_shapes(model)
         except Exception as e:
             print(type(e).__name__, e)
+        sess = None
+        try:
+            sess = ort.InferenceSession(org_model.SerializeToString())
+        except Exception as e:
+            print("[WARN] onnxruntime failed to create session, fallback to graphwise only:", e)
+            fallback_to_graphwise = True
 
-        sess = ort.InferenceSession(org_model.SerializeToString())
-        for idx, info in enumerate(sess.get_inputs()):
-            norm_name = replace_special_charactor_inverse(info.name)
-            data = np.fromfile(os.path.join(input_dir, norm_name + '.bin'), dtype=np.float16)
-            data.astype(np.float32).tofile(os.path.join(onnx_result_sv_dir, norm_name + '.bin'))
+        if sess is not None:
+            for idx, info in enumerate(sess.get_inputs()):
+                norm_name = replace_special_charactor_inverse(info.name)
+                data = np.fromfile(os.path.join(input_dir, norm_name + '.bin'), dtype=np.float16)
+                data.astype(np.float32).tofile(os.path.join(onnx_result_sv_dir, norm_name + '.bin'))
 
-        if compare_mode == 'graphwise':
-            org_model, org_onnx_layer_results = \
-                infer_onnx_layerwise(org_model, onnx_result_sv_dir, input_dir)
-        elif compare_mode == 'layerwise':
-            sub_models = split_to_single_op(org_model, sub_model_sv_dir=None)
-            for sub_model in sub_models:
-                _, sub_res = infer_onnx_layerwise(
-                    sub_model, onnx_result_sv_dir, onnx_result_sv_dir, from_onnx_res=True)
-                org_onnx_layer_results.update(sub_res)
+            if compare_mode == 'graphwise':
+                org_model, org_onnx_layer_results = \
+                    infer_onnx_layerwise(org_model, onnx_result_sv_dir, input_dir)
+            elif compare_mode == 'layerwise':
+                sub_models = split_to_single_op(org_model, sub_model_sv_dir=None)
+                for sub_model in sub_models:
+                    _, sub_res = infer_onnx_layerwise(
+                        sub_model, onnx_result_sv_dir, onnx_result_sv_dir, from_onnx_res=True)
+                    org_onnx_layer_results.update(sub_res)
     else:
         input_info = OrderedDict()
         for i_ in model.graph.input:
@@ -1095,6 +1172,9 @@ def run():
             layer_res.astype(np.float32).tofile(sv_path)
             org_onnx_layer_results.update({norm_layere_name:
                                            sv_path})
+
+    if fallback_to_graphwise:
+        compare_mode = 'graphwise'
 
     write_json(org_onnx_layer_results, os.path.join(
         onnx_result_sv_dir,
@@ -1151,7 +1231,8 @@ def run():
 
     for t in org_model.graph.input:
         t_name = replace_special_charactor_inverse(t.name)
-        iq_sv_layer_results[t_name] = org_onnx_layer_results[t_name]
+        if t_name in org_onnx_layer_results:
+            iq_sv_layer_results[t_name] = org_onnx_layer_results[t_name]
 
     # layerwise mode need group tlf_exec_order_and_paths
     tlf_exec_orders = OrderedDict()
@@ -1218,14 +1299,16 @@ def run():
             compare_results[inverse_tnsr_name] = dict()
 
         if tnsr_name in org_onnx_layer_results:
-            onnx_result = load_tensor_data(org_onnx_layer_results[tnsr_name], default_dtype=np.float32)
+            onnx_result = cast_tensor_dtype(
+                load_tensor_data(org_onnx_layer_results[tnsr_name], default_dtype=np.float32),
+                np.float32)
         else:
             continue
 
         fp8_meta = fp8_quant_node_outs.get(tnsr_name)
 
         tlf_out_path = infos.get('tlf')
-        tlf_out_data = load_tensor_data(tlf_out_path, fp8_meta=fp8_meta)
+        tlf_out_data = cast_tensor_dtype(load_tensor_data(tlf_out_path, fp8_meta=fp8_meta), np.float32)
 
         sv_out_path = infos['sv']
         sv_out_data = load_tensor_data(sv_out_path, fp8_meta=fp8_meta)
@@ -1233,14 +1316,26 @@ def run():
         iq_out_path = infos['iq']
         iq_out_data = None
         if os.path.exists(iq_out_path):
-            iq_out_data = load_tensor_data(iq_out_path, fp8_meta=fp8_meta)
+            iq_out_data = cast_tensor_dtype(load_tensor_data(iq_out_path, fp8_meta=fp8_meta), np.float32)
 
         sv_ref_out_path = infos['sv_ref']
         sv_ref_out_data = load_tensor_data(sv_ref_out_path, fp8_meta=fp8_meta)
 
         board_search_dirs = [d for d in [args.board_out, os.path.join(args.tnt_output, 'debug_out')] if d]
         board_out_path = resolve_tensor_file(tnsr_name, board_search_dirs)
-        board_out_data = load_tensor_data(board_out_path, fp8_meta=fp8_meta)
+        board_out_data = cast_tensor_dtype(load_tensor_data(board_out_path, fp8_meta=fp8_meta), np.float32)
+
+        # dtype normalisation for similarity calculation
+        target_dtype = np.float32
+        sv_raw = sv_out_data
+        sv_ref_raw = sv_ref_out_data
+        if sv_raw is not None and sv_ref_raw is not None and sv_raw.dtype != sv_ref_raw.dtype:
+            sv_ref_raw = sv_ref_raw.astype(sv_raw.dtype)
+
+        sv_out_data = cast_tensor_dtype(sv_out_data, target_dtype)
+        sv_ref_out_data = cast_tensor_dtype(sv_ref_raw, target_dtype)
+        tlf_out_data = cast_tensor_dtype(tlf_out_data, target_dtype)
+        board_out_data = cast_tensor_dtype(board_out_data, target_dtype)
 
         shape = []
         for tlf_info in tlf_infos:
